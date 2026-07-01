@@ -178,10 +178,10 @@ class CandidatePreScore(BaseModel):
 
 
 class SearchExecutionBudget(BaseModel):
-    max_provider_calls: int = 300
-    max_stage1_candidates: int = 20
+    max_provider_calls: int = 600
+    max_stage1_candidates: int = 15
     max_stage2_candidates: int = 8
-    max_stage2_date_samples: int = 5
+    max_stage2_date_samples: int = 3
     max_concurrency: int = 8
 
 
