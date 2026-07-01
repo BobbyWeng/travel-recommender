@@ -44,45 +44,13 @@ from starlette.responses import Response
 
 app = FastAPI(title="Travel Recommender API", version="0.5.0")
 
-_cors_origins = [
-    origin.strip()
-    for origin in settings.CORS_ORIGINS.split(",")
-    if origin.strip()
-]
-
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=_cors_origins,
-    allow_credentials=True,
+    allow_origins=["*"],
+    allow_credentials=False,
     allow_methods=["*"],
     allow_headers=["*"],
 )
-
-
-class DynamicCORSMiddleware(BaseHTTPMiddleware):
-    async def dispatch(self, request: Request, call_next):
-        origin = request.headers.get("origin", "")
-        response = await call_next(request)
-        if origin:
-            allowed = origin in _cors_origins
-            if not allowed:
-                from urllib.parse import urlparse
-                host = urlparse(origin).hostname or ""
-                if host.endswith(".vercel.app"):
-                    allowed = True
-                elif host in ("localhost", "127.0.0.1"):
-                    allowed = True
-            if allowed:
-                response.headers["Access-Control-Allow-Origin"] = origin
-                response.headers["Access-Control-Allow-Credentials"] = "true"
-                if "Access-Control-Allow-Methods" not in response.headers:
-                    response.headers["Access-Control-Allow-Methods"] = "GET,POST,PUT,DELETE,OPTIONS"
-                if "Access-Control-Allow-Headers" not in response.headers:
-                    response.headers["Access-Control-Allow-Headers"] = "*"
-        return response
-
-
-app.add_middleware(DynamicCORSMiddleware)
 
 _search_store: dict[str, dict] = {}
 _dest_svc: DestinationService | None = None
