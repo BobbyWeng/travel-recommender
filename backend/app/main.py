@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import asyncio
 import json
+import re
 import uuid
 from datetime import date, datetime
 from pathlib import Path
@@ -46,9 +47,26 @@ _cors_origins = [
     if origin.strip()
 ]
 
+
+def _allow_cors_origin(origin: str) -> bool:
+    if not origin:
+        return False
+    if origin in _cors_origins:
+        return True
+    from urllib.parse import urlparse
+    host = urlparse(origin).hostname or ""
+    if host.endswith(".vercel.app"):
+        return True
+    if host == "localhost" or host == "127.0.0.1":
+        return True
+    return False
+
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=_cors_origins,
+    allow_origin_regex=r"(https?://localhost(:\d+)?|https?://127\.0\.0\.1(:\d+)?|https://[a-z0-9-]+\.vercel\.app|"
+    + "|".join(re.escape(o) for o in _cors_origins if o.startswith("http"))
+    + r")",
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
