@@ -1,3 +1,44 @@
+export type DataKind = "LIVE" | "CACHED" | "HISTORICAL" | "ESTIMATED" | "MOCK" | "UNAVAILABLE";
+
+export interface SourceMetadata {
+  provider: string;
+  data_kind: DataKind;
+  fetched_at: string | null;
+  expires_at: string | null;
+  cache_hit: boolean;
+  fallback_used: boolean;
+  fallback_reason: string | null;
+}
+
+export interface DataQualitySummary {
+  completeness: number;
+  live_field_count: number;
+  cached_field_count: number;
+  historical_field_count: number;
+  estimated_field_count: number;
+  mock_field_count: number;
+  unavailable_field_count: number;
+}
+
+export interface SearchExecutionStats {
+  stage1_candidates: number;
+  stage2_candidates: number;
+  stage3_candidates: number;
+  provider_calls: number;
+  cache_hits: number;
+  provider_failures: number;
+  fallback_count: number;
+  elapsed_ms: number;
+  budget_exhausted: boolean;
+}
+
+export interface APIError {
+  status?: number;
+  code?: string;
+  message: string;
+  detail?: string;
+}
+
 export interface SearchConstraints {
   max_flight_hours?: number | null;
   max_stops?: number | null;
@@ -47,6 +88,10 @@ export interface ScoredDestination {
   cons: string[];
   recommendation_reason: string;
   data_source: string;
+  flight_data_kind: DataKind | null;
+  hotel_data_kind: DataKind | null;
+  weather_data_kind: DataKind | null;
+  data_quality: DataQualitySummary | null;
 }
 
 export interface SearchResponse {
@@ -58,10 +103,7 @@ export interface SearchResponse {
   data_source: string;
   warnings: string[];
   llm_explanation: string;
-}
-
-export interface NaturalLanguageSearchRequest {
-  query: string;
+  execution_stats: SearchExecutionStats | null;
 }
 
 export interface NaturalLanguageSearchResponse {
@@ -69,11 +111,6 @@ export interface NaturalLanguageSearchResponse {
   search_response: SearchResponse | null;
   llm_explanation: string;
   parse_error: string;
-}
-
-export interface TravelAdviceRequest {
-  destination_id: number;
-  preferences: string[];
 }
 
 export interface TravelAdviceResponse {

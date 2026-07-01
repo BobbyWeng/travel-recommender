@@ -1,4 +1,4 @@
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 from datetime import datetime, timedelta
 from typing import Any
 
@@ -14,17 +14,30 @@ class CacheEntry:
         return datetime.utcnow() < self.expires_at
 
 
+@dataclass
+class CacheStats:
+    hit: int = 0
+    miss: int = 0
+    set: int = 0
+    expired: int = 0
+    size: int = 0
+
+
 class SimpleCache:
     def __init__(self, default_ttl_hours: int = 4):
         self._store: dict[str, CacheEntry] = {}
         self._default_ttl_hours = default_ttl_hours
+        self._stats: CacheStats = CacheStats()
 
     def get(self, key: str) -> Any | None:
         entry = self._store.get(key)
         if entry and entry.is_valid():
+            self._stats.hit += 1
             return entry.data
         if entry:
+            self._stats.expired += 1
             del self._store[key]
+        self._stats.miss += 1
         return None
 
     def set(self, key: str, data: Any, ttl_hours: int | None = None) -> None:
@@ -36,12 +49,18 @@ class SimpleCache:
             observed_at=now,
             expires_at=now + timedelta(hours=ttl),
         )
+        self._stats.set += 1
 
     def clear(self) -> None:
         self._store.clear()
+        self._stats = CacheStats()
 
     def size(self) -> int:
         return len(self._store)
+
+    def get_stats(self) -> CacheStats:
+        self._stats.size = len(self._store)
+        return self._stats
 
 
 flight_cache = SimpleCache(default_ttl_hours=4)

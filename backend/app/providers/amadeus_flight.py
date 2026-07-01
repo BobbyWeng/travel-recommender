@@ -1,56 +1,25 @@
 from __future__ import annotations
 
-import time
 from datetime import date, timedelta
 
 import httpx
 
-from app.core.config import settings
+from app.providers.amadeus_auth import AmadeusAuthClient
 from app.providers.base import FlightProvider
-from app.schemas.search import FlightResult
+from app.schemas.search import FlightResult, SourceMetadata, DataKind
 
 
 class AmadeusFlightProvider(FlightProvider):
     def __init__(self):
-        self._client_id = settings.AMADEUS_CLIENT_ID
-        self._client_secret = settings.AMADEUS_CLIENT_SECRET
-        self._env = settings.AMADEUS_ENV
-        self._access_token: str | None = None
-        self._token_expires_at: float = 0
-        self._base_url = (
-            "https://test.api.amadeus.com"
-            if self._env == "sandbox"
-            else "https://api.amadeus.com"
-        )
-
-    async def _get_access_token(self) -> str:
-        if self._access_token and time.time() < self._token_expires_at:
-            return self._access_token
-
-        if not self._client_id or not self._client_secret:
-            raise ValueError("Amadeus API credentials not configured")
-
-        async with httpx.AsyncClient(timeout=30.0) as client:
-            resp = await client.post(
-                f"{self._base_url}/v1/security/oauth2/token",
-                data={
-                    "grant_type": "client_credentials",
-                    "client_id": self._client_id,
-                    "client_secret": self._client_secret,
-                },
-                headers={"Content-Type": "application/x-www-form-urlencoded"},
-            )
-            resp.raise_for_status()
-            data = resp.json()
-            self._access_token = data["access_token"]
-            self._token_expires_at = time.time() + data.get("expires_in", 1800) - 60
-            return self._access_token
+        self._auth = AmadeusAuthClient.get_instance()
+        self._env = self._auth._env
+        self._base_url = self._auth._base_url
 
     async def search_flights(
         self, origin: str, destination: str, depart_date: date, return_date: date
     ) -> FlightResult | None:
         try:
-            token = await self._get_access_token()
+            token = await self._auth.get_access_token()
         except Exception:
             return None
 
@@ -110,13 +79,14 @@ class AmadeusFlightProvider(FlightProvider):
             total_duration_min=total_duration_min,
             airline=", ".join(sorted(airlines)) if airlines else None,
             source="amadeus",
+            source_metadata=SourceMetadata(provider="amadeus", data_kind=DataKind.LIVE),
         )
 
     async def search_cheapest_dates(
         self, origin: str, destination: str, start_date: date, end_date: date
     ) -> list[FlightResult]:
         try:
-            token = await self._get_access_token()
+            token = await self._auth.get_access_token()
         except Exception:
             return []
 
@@ -161,6 +131,7 @@ class AmadeusFlightProvider(FlightProvider):
                             source="amadeus",
                             stops=0,
                             total_duration_min=0,
+                            source_metadata=SourceMetadata(provider="amadeus", data_kind=DataKind.LIVE),
                         )
                     )
                 except ValueError:

@@ -3,7 +3,7 @@ from __future__ import annotations
 from datetime import date
 
 from app.providers.base import FlightProvider
-from app.schemas.search import FlightResult
+from app.schemas.search import DataKind, FlightResult, SourceMetadata
 from app.core.cache import flight_cache
 from app.core.db_cache import get_db_cache
 
@@ -15,9 +15,13 @@ class FlightService:
     async def search(
         self, origin: str, destination: str, depart_date: date, return_date: date
     ) -> FlightResult | None:
-        cache_key = f"flight:{origin}:{destination}:{depart_date}:{return_date}"
+        cache_key = f"flight:{origin}:{destination}:{depart_date}:{return_date}:1:USD:eco"
         cached = flight_cache.get(cache_key)
         if cached is not None:
+            if cached.source_metadata and not cached.source_metadata.cache_hit:
+                cached.source_metadata.cache_hit = True
+                if cached.source_metadata.data_kind == DataKind.LIVE:
+                    cached.source_metadata.data_kind = DataKind.CACHED
             return cached
 
         db_cached = get_db_cache().get_flight_cache(origin, destination, depart_date, return_date)
@@ -56,4 +60,9 @@ class FlightService:
             total_duration_min=d.get("total_duration_min", 0),
             airline=d.get("airline"),
             source=d.get("provider", "cached"),
+            source_metadata=SourceMetadata(
+                provider=d.get("provider", "cached"),
+                data_kind=DataKind.CACHED,
+                cache_hit=True,
+            ),
         )

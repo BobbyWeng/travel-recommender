@@ -3,7 +3,7 @@ from __future__ import annotations
 from datetime import date
 
 from app.providers.base import HotelProvider
-from app.schemas.search import HotelResult
+from app.schemas.search import DataKind, HotelResult, SourceMetadata
 from app.core.cache import hotel_cache
 from app.core.db_cache import get_db_cache
 
@@ -15,9 +15,13 @@ class HotelService:
     async def search(
         self, city_iata: str, check_in: date, check_out: date, adults: int = 2
     ) -> HotelResult | None:
-        cache_key = f"hotel:{city_iata}:{check_in}:{check_out}"
+        cache_key = f"hotel:{city_iata}:{check_in}:{check_out}:{adults}"
         cached = hotel_cache.get(cache_key)
         if cached is not None:
+            if cached.source_metadata and not cached.source_metadata.cache_hit:
+                cached.source_metadata.cache_hit = True
+                if cached.source_metadata.data_kind == DataKind.LIVE:
+                    cached.source_metadata.data_kind = DataKind.CACHED
             return cached
 
         db_cached = get_db_cache().get_hotel_cache(city_iata, check_in, check_out)
@@ -54,4 +58,9 @@ class HotelService:
             hotel_class=d.get("hotel_class", 3.0),
             area=d.get("area", ""),
             source=d.get("provider", "cached"),
+            source_metadata=SourceMetadata(
+                provider=d.get("provider", "cached"),
+                data_kind=DataKind.CACHED,
+                cache_hit=True,
+            ),
         )

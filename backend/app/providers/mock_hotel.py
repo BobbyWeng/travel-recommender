@@ -3,7 +3,7 @@ from datetime import date
 
 from app.core.config import settings
 from app.providers.base import HotelProvider
-from app.schemas.search import HotelResult
+from app.schemas.search import HotelResult, SourceMetadata, DataKind
 
 _COST_LEVEL_NIGHTLY = {
     1: 80,
@@ -55,6 +55,7 @@ class MockHotelProvider(HotelProvider):
             hotel_class=hotel_class,
             area=area,
             source="mock",
+            source_metadata=SourceMetadata(provider="mock", data_kind=DataKind.MOCK),
         )
 
     def _season_factor(self, d: date) -> float:

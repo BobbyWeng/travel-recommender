@@ -1,55 +1,23 @@
 from __future__ import annotations
 
-import time
-
 import httpx
 
-from app.core.config import settings
+from app.providers.amadeus_auth import AmadeusAuthClient
 from app.providers.base import HotelProvider
-from app.schemas.search import HotelResult
+from app.schemas.search import HotelResult, SourceMetadata, DataKind
 
 
 class AmadeusHotelProvider(HotelProvider):
     def __init__(self):
-        self._client_id = settings.AMADEUS_CLIENT_ID
-        self._client_secret = settings.AMADEUS_CLIENT_SECRET
-        self._env = settings.AMADEUS_ENV
-        self._access_token: str | None = None
-        self._token_expires_at: float = 0
-        self._base_url = (
-            "https://test.api.amadeus.com"
-            if self._env == "sandbox"
-            else "https://api.amadeus.com"
-        )
-
-    async def _get_access_token(self) -> str:
-        if self._access_token and time.time() < self._token_expires_at:
-            return self._access_token
-
-        if not self._client_id or not self._client_secret:
-            raise ValueError("Amadeus API credentials not configured")
-
-        async with httpx.AsyncClient(timeout=30.0) as client:
-            resp = await client.post(
-                f"{self._base_url}/v1/security/oauth2/token",
-                data={
-                    "grant_type": "client_credentials",
-                    "client_id": self._client_id,
-                    "client_secret": self._client_secret,
-                },
-                headers={"Content-Type": "application/x-www-form-urlencoded"},
-            )
-            resp.raise_for_status()
-            data = resp.json()
-            self._access_token = data["access_token"]
-            self._token_expires_at = time.time() + data.get("expires_in", 1800) - 60
-            return self._access_token
+        self._auth = AmadeusAuthClient.get_instance()
+        self._env = self._auth._env
+        self._base_url = self._auth._base_url
 
     async def search_hotels(
         self, city_iata: str, check_in, check_out, adults: int = 2
     ) -> HotelResult | None:
         try:
-            token = await self._get_access_token()
+            token = await self._auth.get_access_token()
         except Exception:
             return None
 
@@ -113,4 +81,5 @@ class AmadeusHotelProvider(HotelProvider):
             hotel_class=3.0,
             area="city center",
             source="amadeus",
+            source_metadata=SourceMetadata(provider="amadeus", data_kind=DataKind.LIVE),
         )

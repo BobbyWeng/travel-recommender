@@ -1,6 +1,37 @@
-from datetime import date
+from datetime import date, datetime
+from decimal import Decimal
+from enum import Enum
 
 from pydantic import BaseModel, Field
+
+
+class DataKind(str, Enum):
+    LIVE = "LIVE"
+    CACHED = "CACHED"
+    HISTORICAL = "HISTORICAL"
+    ESTIMATED = "ESTIMATED"
+    MOCK = "MOCK"
+    UNAVAILABLE = "UNAVAILABLE"
+
+
+class SourceMetadata(BaseModel):
+    provider: str
+    data_kind: DataKind
+    fetched_at: datetime | None = None
+    expires_at: datetime | None = None
+    cache_hit: bool = False
+    fallback_used: bool = False
+    fallback_reason: str | None = None
+
+
+class DataQualitySummary(BaseModel):
+    completeness: float = 0.0
+    live_field_count: int = 0
+    cached_field_count: int = 0
+    historical_field_count: int = 0
+    estimated_field_count: int = 0
+    mock_field_count: int = 0
+    unavailable_field_count: int = 0
 
 
 class SearchConstraints(BaseModel):
@@ -30,6 +61,41 @@ class DateCombo(BaseModel):
     nights: int
 
 
+class FlightSegment(BaseModel):
+    origin: str
+    destination: str
+    departing_at: datetime
+    arriving_at: datetime
+    duration_minutes: int
+    marketing_carrier: str | None = None
+    operating_carrier: str | None = None
+    flight_number: str | None = None
+
+
+class FlightSlice(BaseModel):
+    segments: list[FlightSegment]
+    duration_minutes: int
+    stops: int
+
+
+class FlightOffer(BaseModel):
+    provider: str
+    provider_offer_id: str | None = None
+    origin: str
+    destination: str
+    departure_date: date
+    return_date: date | None = None
+    outbound: FlightSlice | None = None
+    inbound: FlightSlice | None = None
+    total_price: Decimal = Decimal("0")
+    currency: str = "USD"
+    airlines: list[str] = []
+    baggage_summary: str | None = None
+    expires_at: datetime | None = None
+    fetched_at: datetime | None = None
+    source: SourceMetadata | None = None
+
+
 class FlightResult(BaseModel):
     origin: str
     destination: str
@@ -41,6 +107,8 @@ class FlightResult(BaseModel):
     total_duration_min: int
     airline: str | None = None
     source: str = "unknown"
+    source_metadata: SourceMetadata | None = None
+    offer: FlightOffer | None = None
 
 
 class HotelResult(BaseModel):
@@ -53,6 +121,7 @@ class HotelResult(BaseModel):
     hotel_class: float = 3.0
     area: str = "downtown"
     source: str = "unknown"
+    source_metadata: SourceMetadata | None = None
 
 
 class WeatherDay(BaseModel):
@@ -65,12 +134,14 @@ class WeatherDay(BaseModel):
     uv_index: float
     weather_code: int
     source: str = "unknown"
+    source_metadata: SourceMetadata | None = None
 
 
 class WeatherResult(BaseModel):
     destination_iata: str
     days: list[WeatherDay]
     source: str = "unknown"
+    source_metadata: SourceMetadata | None = None
 
 
 class ClimateAverage(BaseModel):
@@ -95,6 +166,37 @@ class ScoreBreakdown(BaseModel):
     activities: float = Field(ge=0, le=100)
 
 
+class CandidatePreScore(BaseModel):
+    destination_id: int
+    climate_score: float = 0.0
+    preference_score: float = 0.0
+    transport_score: float = 0.0
+    affordability_score: float = 0.0
+    distance_score: float = 0.0
+    total_score: float = 0.0
+    filtered_reason: str | None = None
+
+
+class SearchExecutionBudget(BaseModel):
+    max_provider_calls: int = 300
+    max_stage1_candidates: int = 20
+    max_stage2_candidates: int = 8
+    max_stage2_date_samples: int = 5
+    max_concurrency: int = 8
+
+
+class SearchExecutionStats(BaseModel):
+    stage1_candidates: int = 0
+    stage2_candidates: int = 0
+    stage3_candidates: int = 0
+    provider_calls: int = 0
+    cache_hits: int = 0
+    provider_failures: int = 0
+    fallback_count: int = 0
+    elapsed_ms: int = 0
+    budget_exhausted: bool = False
+
+
 class ScoredDestination(BaseModel):
     destination_id: int
     city: str
@@ -114,6 +216,11 @@ class ScoredDestination(BaseModel):
     cons: list[str]
     recommendation_reason: str
     data_source: str = "unknown"
+    source_metadata: SourceMetadata | None = None
+    flight_data_kind: DataKind | None = None
+    hotel_data_kind: DataKind | None = None
+    weather_data_kind: DataKind | None = None
+    data_quality: DataQualitySummary | None = None
 
 
 class SearchResponse(BaseModel):
@@ -125,6 +232,7 @@ class SearchResponse(BaseModel):
     data_source: str = "unknown"
     warnings: list[str] = Field(default_factory=list)
     llm_explanation: str = ""
+    execution_stats: SearchExecutionStats | None = None
 
 
 class NaturalLanguageSearchRequest(BaseModel):

@@ -47,9 +47,27 @@ def create_flight_provider(dest_svc: DestinationService) -> FlightProvider:
     _setup_mock_data(dest_svc)
     mock = MockFlightProvider()
 
-    if settings.AMADEUS_CLIENT_ID and settings.AMADEUS_CLIENT_SECRET:
+    provider_setting = settings.FLIGHT_PROVIDER
+
+    if provider_setting == "mock":
+        if settings.APP_ENV == "production":
+            from app.providers.errors import ProviderError, ProviderErrorCode
+            raise ProviderError("factory", ProviderErrorCode.CONFIGURATION_ERROR, detail="Mock provider not allowed in production")
+        return mock
+
+    if provider_setting == "duffel" or (provider_setting == "auto" and settings.DUFFEL_ENABLED and settings.DUFFEL_ACCESS_TOKEN):
+        from app.providers.duffel_flight import DuffelFlightProvider
+        primary = DuffelFlightProvider()
+        return FallbackFlightProvider(primary=primary, fallback=mock)
+
+    if provider_setting == "amadeus" or (provider_setting == "auto" and settings.AMADEUS_CLIENT_ID and settings.AMADEUS_CLIENT_SECRET):
         from app.providers.amadeus_flight import AmadeusFlightProvider
-        return FallbackFlightProvider(primary=AmadeusFlightProvider(), fallback=mock)
+        primary = AmadeusFlightProvider()
+        return FallbackFlightProvider(primary=primary, fallback=mock)
+
+    if settings.APP_ENV == "production":
+        from app.providers.errors import ProviderError, ProviderErrorCode
+        raise ProviderError("factory", ProviderErrorCode.CONFIGURATION_ERROR, detail="No flight provider configured for production")
 
     return mock
 
@@ -70,11 +88,11 @@ def create_weather_provider(dest_svc: DestinationService) -> WeatherProvider:
     mock = MockWeatherProvider()
 
     return FallbackWeatherProvider(
-        primary=_create_real_weather_provider(),
+        primary=_create_real_weather_provider(dest_svc),
         fallback=mock,
     )
 
 
-def _create_real_weather_provider() -> WeatherProvider:
+def _create_real_weather_provider(dest_svc: DestinationService | None = None) -> WeatherProvider:
     from app.providers.openmeteo_weather import OpenMeteoWeatherProvider
-    return OpenMeteoWeatherProvider()
+    return OpenMeteoWeatherProvider(destination_service=dest_svc)

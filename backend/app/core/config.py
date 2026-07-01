@@ -18,6 +18,14 @@ class Settings(BaseSettings):
     LLM_BASE_URL: str = ""
     LLM_MODEL: str = "gemini-flash-latest"
     LLM_API_TYPE: str = "gemini"
+    ALLOW_MOCK_FALLBACK: bool = True
+    DUFFEL_ACCESS_TOKEN: str = ""
+    DUFFEL_BASE_URL: str = "https://api.duffel.com"
+    DUFFEL_TIMEOUT_SECONDS: int = 30
+    DUFFEL_MAX_RETRIES: int = 3
+    DUFFEL_ENABLED: bool = False
+    FLIGHT_PROVIDER: str = "auto"
+    CORS_ORIGINS: str = "http://localhost:3000"
 
     model_config = {"env_file": ".env", "env_file_encoding": "utf-8"}
 

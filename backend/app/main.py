@@ -38,11 +38,17 @@ from app.services.search_orchestrator import SearchOrchestrator
 from app.services.weather_service import WeatherService
 from app.core.cache import flight_cache, hotel_cache, weather_cache
 
-app = FastAPI(title="Travel Recommender API", version="0.4.0")
+app = FastAPI(title="Travel Recommender API", version="0.5.0")
+
+_cors_origins = [
+    origin.strip()
+    for origin in settings.CORS_ORIGINS.split(",")
+    if origin.strip()
+]
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=_cors_origins,
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -86,9 +92,6 @@ async def startup():
 @app.post("/search", response_model=SearchResponse)
 async def create_search(request: SearchRequestSchema):
     orchestrator = _get_orchestrator()
-    flight_cache.clear()
-    hotel_cache.clear()
-    weather_cache.clear()
 
     response = await orchestrator.execute(request)
 
@@ -109,9 +112,6 @@ async def create_search(request: SearchRequestSchema):
 @app.post("/search/explain", response_model=SearchResponse)
 async def create_search_with_explanation(request: SearchRequestSchema):
     orchestrator = _get_orchestrator()
-    flight_cache.clear()
-    hotel_cache.clear()
-    weather_cache.clear()
 
     response = await orchestrator.execute(request)
 
@@ -182,9 +182,6 @@ async def natural_language_search(request: NaturalLanguageSearchRequest):
 
     logger.info("NL search: starting orchestrator")
     orchestrator = _get_orchestrator()
-    flight_cache.clear()
-    hotel_cache.clear()
-    weather_cache.clear()
 
     response = await orchestrator.execute(parsed)
     
@@ -346,22 +343,42 @@ async def get_destination(dest_id: int):
 @app.get("/health")
 async def health():
     amadeus_configured = bool(settings.AMADEUS_CLIENT_ID and settings.AMADEUS_CLIENT_SECRET)
+    duffel_configured = bool(settings.DUFFEL_ENABLED and settings.DUFFEL_ACCESS_TOKEN)
     llm_svc = get_llm_service()
     cache_stats = get_db_cache().get_cache_stats()
+
+    if duffel_configured:
+        flight_provider = "duffel"
+    elif amadeus_configured:
+        flight_provider = "amadeus"
+    elif settings.APP_ENV == "production" and not settings.ALLOW_MOCK_FALLBACK:
+        flight_provider = "not_configured"
+    else:
+        flight_provider = "mock"
+
+    hotel_provider = "amadeus" if amadeus_configured else ("mock" if settings.ALLOW_MOCK_FALLBACK else "not_configured")
+
     return {
         "status": "ok",
-        "version": "0.4.0",
+        "version": "0.5.0",
+        "environment": settings.APP_ENV,
         "providers": {
-            "flight": "amadeus+mock" if amadeus_configured else "mock",
-            "hotel": "amadeus+mock" if amadeus_configured else "mock",
-            "weather": "open-meteo+mock",
+            "flight": flight_provider,
+            "hotel": hotel_provider,
+            "weather": "open-meteo",
         },
+        "duffel_configured": duffel_configured,
         "llm": {
             "enabled": llm_svc.enabled,
             "model": settings.LLM_MODEL if llm_svc.enabled else None,
         },
         "destinations_count": len(_get_dest_svc().get_all_destinations()),
         "cache": cache_stats,
+        "memory_cache": {
+            "flight": flight_cache.get_stats().__dict__,
+            "hotel": hotel_cache.get_stats().__dict__,
+            "weather": weather_cache.get_stats().__dict__,
+        },
     }
 
 

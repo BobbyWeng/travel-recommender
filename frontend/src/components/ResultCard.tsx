@@ -1,7 +1,7 @@
 "use client";
 
-import type { ScoredDestination } from "@/lib/types";
-import { formatPrice, formatDate, scoreColor } from "@/lib/utils";
+import type { ScoredDestination, DataKind } from "@/lib/types";
+import { formatPrice, formatDate, scoreColor, dataKindLabel } from "@/lib/utils";
 
 interface ResultCardProps {
   result: ScoredDestination;
@@ -10,42 +10,34 @@ interface ResultCardProps {
   selected?: boolean;
 }
 
-function DataSourceBadge({ source }: { source: string }) {
-  const sources = source.split("+");
-  const isReal = sources.some((s) => s === "amadeus" || s === "open-meteo");
-  const isMock = sources.some((s) => s === "mock");
-  const isCached = sources.some((s) => s === "cached");
+function DataKindBadge({ kind, label }: { kind: DataKind | null | undefined; label: string }) {
+  if (!kind) return null;
+  const isMock = kind === "MOCK";
+  const isLive = kind === "LIVE";
+  const isHistorical = kind === "HISTORICAL";
 
-  if (isCached) {
-    return (
-      <span className="inline-flex items-center text-xs px-2 py-0.5 bg-gray-100 text-gray-500 rounded-full">
-        缓存数据
-      </span>
-    );
-  }
-
-  if (isReal && !isMock) {
-    return (
-      <span className="inline-flex items-center text-xs px-2 py-0.5 bg-blue-50 text-blue-600 rounded-full">
-        <span className="w-1.5 h-1.5 bg-blue-500 rounded-full mr-1" />
-        实时数据
-      </span>
-    );
-  }
-
-  if (isReal && isMock) {
-    return (
-      <span className="inline-flex items-center text-xs px-2 py-0.5 bg-amber-50 text-amber-600 rounded-full">
-        <span className="w-1.5 h-1.5 bg-amber-500 rounded-full mr-1" />
-        部分 Mock
-      </span>
-    );
-  }
+  let colorClass = "bg-gray-50 text-gray-400";
+  if (isLive) colorClass = "bg-blue-50 text-blue-600";
+  else if (isHistorical) colorClass = "bg-amber-50 text-amber-600";
+  else if (isMock) colorClass = "bg-red-50 text-red-500";
+  else if (kind === "CACHED") colorClass = "bg-gray-100 text-gray-500";
 
   return (
-    <span className="inline-flex items-center text-xs px-2 py-0.5 bg-gray-50 text-gray-400 rounded-full">
-      Mock 数据
+    <span className={`inline-flex items-center text-xs px-1.5 py-0.5 rounded-full ${colorClass}`}>
+      {label}: {dataKindLabel(kind)}
     </span>
+  );
+}
+
+function PriceDisplay({ value, label }: { value: number | null | undefined; label: string }) {
+  const isMissing = !value || value === 0;
+  return (
+    <div className="bg-gray-50 rounded-lg p-2 text-center">
+      <div className="text-gray-500 text-xs">{label}</div>
+      <div className={`font-semibold ${isMissing ? "text-gray-400 text-xs" : "text-gray-900"}`}>
+        {isMissing ? "暂无实时数据" : formatPrice(value)}
+      </div>
+    </div>
   );
 }
 
@@ -91,7 +83,9 @@ export default function ResultCard({
               {result.city},{" "}
               <span className="text-gray-500 font-normal">{result.state}</span>
             </h3>
-            <DataSourceBadge source={result.data_source} />
+            <DataKindBadge kind={result.flight_data_kind} label="航班" />
+            <DataKindBadge kind={result.hotel_data_kind} label="酒店" />
+            <DataKindBadge kind={result.weather_data_kind} label="天气" />
           </div>
           <p className="text-sm text-gray-500 mt-1 ml-9">
             {formatDate(result.departure_date)} ~ {formatDate(result.return_date)}{" "}
@@ -107,18 +101,8 @@ export default function ResultCard({
       </div>
 
       <div className="grid grid-cols-3 gap-3 mb-4 text-sm">
-        <div className="bg-gray-50 rounded-lg p-2 text-center">
-          <div className="text-gray-500 text-xs">机票</div>
-          <div className="font-semibold text-gray-900">
-            {formatPrice(result.flight_price)}
-          </div>
-        </div>
-        <div className="bg-gray-50 rounded-lg p-2 text-center">
-          <div className="text-gray-500 text-xs">酒店</div>
-          <div className="font-semibold text-gray-900">
-            {formatPrice(result.hotel_price)}
-          </div>
-        </div>
+        <PriceDisplay value={result.flight_price} label="机票" />
+        <PriceDisplay value={result.hotel_price} label="酒店" />
         <div className="bg-blue-50 rounded-lg p-2 text-center">
           <div className="text-blue-600 text-xs">总计</div>
           <div className="font-bold text-blue-700">
@@ -126,6 +110,18 @@ export default function ResultCard({
           </div>
         </div>
       </div>
+
+      {result.flight_data_kind === "MOCK" && result.hotel_data_kind === "MOCK" && result.weather_data_kind === "MOCK" && (
+        <div className="mb-3 px-3 py-2 bg-red-50 border border-red-200 rounded-lg text-xs text-red-600 font-medium">
+          演示数据，不代表真实可预订价格
+        </div>
+      )}
+
+      {result.data_quality && result.data_quality.completeness < 1.0 && (
+        <div className="mb-3 text-xs text-amber-600">
+          数据完整度: {(result.data_quality.completeness * 100).toFixed(0)}%
+        </div>
+      )}
 
       <div className="flex items-center gap-2 mb-3 text-sm text-gray-600">
         <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">

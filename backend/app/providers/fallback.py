@@ -3,8 +3,10 @@ from __future__ import annotations
 import logging
 from datetime import date
 
+from app.core.config import settings
 from app.providers.base import FlightProvider, HotelProvider, WeatherProvider
-from app.schemas.search import ClimateAverage, FlightResult, HotelResult, WeatherResult
+from app.providers.errors import ProviderError, ProviderErrorCode
+from app.schemas.search import ClimateAverage, FlightResult, HotelResult, SourceMetadata, DataKind, WeatherResult
 
 logger = logging.getLogger(__name__)
 
@@ -24,8 +26,21 @@ class FallbackFlightProvider(FlightProvider):
         except Exception as e:
             logger.warning(f"Primary flight provider failed: {e}")
 
+        if not settings.ALLOW_MOCK_FALLBACK:
+            logger.warning("Mock fallback disabled; returning None for flight search")
+            return None
+
         logger.info("Falling back to mock flight provider")
-        return await self._fallback.search_flights(origin, destination, depart_date, return_date)
+        result = await self._fallback.search_flights(origin, destination, depart_date, return_date)
+        if result:
+            result.source = "mock"
+            result.source_metadata = SourceMetadata(
+                provider="mock",
+                data_kind=DataKind.MOCK,
+                fallback_used=True,
+                fallback_reason="primary_provider_failed",
+            )
+        return result
 
     async def search_cheapest_dates(
         self, origin: str, destination: str, start_date: date, end_date: date
@@ -36,6 +51,10 @@ class FallbackFlightProvider(FlightProvider):
                 return results
         except Exception as e:
             logger.warning(f"Primary flight provider failed: {e}")
+
+        if not settings.ALLOW_MOCK_FALLBACK:
+            logger.warning("Mock fallback disabled; returning empty list for cheapest dates")
+            return []
 
         return await self._fallback.search_cheapest_dates(origin, destination, start_date, end_date)
 
@@ -55,8 +74,21 @@ class FallbackHotelProvider(HotelProvider):
         except Exception as e:
             logger.warning(f"Primary hotel provider failed: {e}")
 
+        if not settings.ALLOW_MOCK_FALLBACK:
+            logger.warning("Mock fallback disabled; returning None for hotel search")
+            return None
+
         logger.info("Falling back to mock hotel provider")
-        return await self._fallback.search_hotels(city_iata, check_in, check_out, adults)
+        result = await self._fallback.search_hotels(city_iata, check_in, check_out, adults)
+        if result:
+            result.source = "mock"
+            result.source_metadata = SourceMetadata(
+                provider="mock",
+                data_kind=DataKind.MOCK,
+                fallback_used=True,
+                fallback_reason="primary_provider_failed",
+            )
+        return result
 
 
 class FallbackWeatherProvider(WeatherProvider):
@@ -73,6 +105,10 @@ class FallbackWeatherProvider(WeatherProvider):
                 return result
         except Exception as e:
             logger.warning(f"Primary weather provider failed: {e}")
+
+        if not settings.ALLOW_MOCK_FALLBACK:
+            logger.warning("Mock fallback disabled; returning empty weather result")
+            return WeatherResult(destination_iata="", days=[], source="unavailable")
 
         logger.info("Falling back to mock weather provider")
         return await self._fallback.get_forecast(lat, lon, start_date, end_date)

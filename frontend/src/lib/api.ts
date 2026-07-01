@@ -6,22 +6,44 @@ import type {
   HealthResponse,
   SearchHistoryItem,
   SearchHistoryDetail,
-  NaturalLanguageSearchRequest,
   NaturalLanguageSearchResponse,
-  TravelAdviceRequest,
   TravelAdviceResponse,
+  APIError,
 } from "./types";
 
-const API_BASE = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000";
+const API_BASE = process.env.NEXT_PUBLIC_API_BASE_URL || "http://localhost:8000";
 
 async function fetchAPI<T>(path: string, options?: RequestInit): Promise<T> {
-  const res = await fetch(`${API_BASE}${path}`, {
-    headers: { "Content-Type": "application/json", ...options?.headers },
-    ...options,
-  });
+  let res: Response;
+  try {
+    res = await fetch(`${API_BASE}${path}`, {
+      headers: { "Content-Type": "application/json", ...options?.headers },
+      ...options,
+    });
+  } catch {
+    const apiError: APIError = {
+      message: "网络连接失败，请检查网络后重试",
+      code: "NETWORK_ERROR",
+    };
+    throw apiError;
+  }
   if (!res.ok) {
-    const error = await res.json().catch(() => ({ detail: res.statusText }));
-    throw new Error(error.detail || `API error: ${res.status}`);
+    const errorBody = await res.json().catch(() => ({ detail: res.statusText }));
+    let message: string;
+    if (res.status === 404) {
+      message = "请求的资源不存在";
+    } else if (res.status >= 400 && res.status < 500) {
+      message = "请求参数有误，请检查输入";
+    } else {
+      message = "服务器暂时不可用，请稍后重试";
+    }
+    const apiError: APIError = {
+      status: res.status,
+      code: `${res.status}`,
+      message,
+      detail: errorBody.detail || res.statusText,
+    };
+    throw apiError;
   }
   return res.json();
 }

@@ -9,6 +9,7 @@ export default function SearchHistory() {
   const [searches, setSearches] = useState<SearchHistoryItem[]>([]);
   const [selected, setSelected] = useState<SearchHistoryDetail | null>(null);
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
     loadSearches();
@@ -18,7 +19,9 @@ export default function SearchHistory() {
     try {
       const data = await listSearches(50, 0);
       setSearches(data);
-    } catch {
+    } catch (err) {
+      console.error("Failed to load searches:", err instanceof Error ? err.message : err);
+      setError("加载搜索历史失败，请稍后重试");
     } finally {
       setLoading(false);
     }
@@ -28,12 +31,21 @@ export default function SearchHistory() {
     try {
       const detail = await getSearchDetail(id);
       setSelected(detail);
-    } catch {}
+    } catch (err) {
+      console.error("Failed to load search detail:", err instanceof Error ? err.message : err);
+      setError("加载搜索详情失败，请稍后重试");
+    }
   }
 
   if (loading) {
     return (
       <div className="text-center py-8 text-gray-400">加载中...</div>
+    );
+  }
+
+  if (error) {
+    return (
+      <div className="bg-red-50 border border-red-200 rounded-xl p-4 text-red-700">{error}</div>
     );
   }
 

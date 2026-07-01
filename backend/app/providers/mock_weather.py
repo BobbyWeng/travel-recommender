@@ -3,7 +3,7 @@ from datetime import date, timedelta
 
 from app.core.config import settings
 from app.providers.base import WeatherProvider
-from app.schemas.search import ClimateAverage, WeatherDay, WeatherResult
+from app.schemas.search import ClimateAverage, DataKind, SourceMetadata, WeatherDay, WeatherResult
 
 _CLIMATE_DATA: dict[str, dict[int, ClimateAverage]] = {}
 
@@ -56,6 +56,7 @@ class MockWeatherProvider(WeatherProvider):
                     uv_index=round(max(0, uv), 1),
                     weather_code=weather_code,
                     source="mock",
+                    source_metadata=SourceMetadata(provider="mock", data_kind=DataKind.MOCK),
                 )
             )
             current += timedelta(days=1)
@@ -64,6 +65,7 @@ class MockWeatherProvider(WeatherProvider):
             destination_iata=iata,
             days=days,
             source="mock",
+            source_metadata=SourceMetadata(provider="mock", data_kind=DataKind.MOCK),
         )
 
     async def get_climate_average(self, lat: float, lon: float, month: int) -> ClimateAverage | None:

@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import { useParams, useRouter } from "next/navigation";
 import { getDestination, getTravelAdvice } from "@/lib/api";
-import type { DestinationDetail, TravelAdviceResponse } from "@/lib/types";
+import type { DestinationDetail, TravelAdviceResponse, APIError } from "@/lib/types";
 
 const MONTH_NAMES = [
   "", "1月", "2月", "3月", "4月", "5月", "6月",
@@ -17,6 +17,7 @@ export default function DestinationPage() {
   const [advice, setAdvice] = useState<TravelAdviceResponse | null>(null);
   const [adviceLoading, setAdviceLoading] = useState(false);
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
     if (params.id) {
@@ -28,7 +29,9 @@ export default function DestinationPage() {
     try {
       const data = await getDestination(id);
       setDest(data);
-    } catch {
+    } catch (err) {
+      console.error("Failed to load destination:", (err as APIError)?.message || (err instanceof Error ? err.message : err));
+      setError((err as APIError)?.message || "加载目的地失败");
     } finally {
       setLoading(false);
     }
@@ -40,7 +43,9 @@ export default function DestinationPage() {
     try {
       const result = await getTravelAdvice(dest.id);
       setAdvice(result);
-    } catch {
+    } catch (err) {
+      console.error("Failed to get travel advice:", (err as APIError)?.message || (err instanceof Error ? err.message : err));
+      setError((err as APIError)?.message || "获取旅行建议失败");
     } finally {
       setAdviceLoading(false);
     }
@@ -50,6 +55,20 @@ export default function DestinationPage() {
     return (
       <div className="max-w-4xl mx-auto px-4 py-8 text-center text-gray-400">
         加载中...
+      </div>
+    );
+  }
+
+  if (error) {
+    return (
+      <div className="max-w-4xl mx-auto px-4 py-8">
+        <div className="bg-red-50 border border-red-200 rounded-xl p-4 text-red-700 mb-4">{error}</div>
+        <button
+          onClick={() => router.push("/")}
+          className="text-blue-500 hover:underline"
+        >
+          返回首页
+        </button>
       </div>
     );
   }

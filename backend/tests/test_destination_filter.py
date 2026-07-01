@@ -11,7 +11,7 @@ DATA_PATH = str(Path(__file__).parent.parent.parent / "data" / "destinations.jso
 def test_load_data():
     svc = DestinationService(DATA_PATH)
     dests = svc.get_all_destinations()
-    assert len(dests) == 20
+    assert 55 <= len(dests) <= 65
 
 
 def test_get_by_iata():

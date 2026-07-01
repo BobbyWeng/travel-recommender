@@ -7,11 +7,12 @@ import ResultCard from "@/components/ResultCard";
 import ComparePanel from "@/components/ComparePanel";
 import NaturalLanguageSearch from "@/components/NaturalLanguageSearch";
 import LLMExplanation from "@/components/LLMExplanation";
-import { searchWithExplanation, naturalLanguageSearch, explainSearchResults } from "@/lib/api";
+import { searchWithExplanation, explainSearchResults } from "@/lib/api";
 import type {
   SearchResponse,
   ScoredDestination,
   NaturalLanguageSearchResponse as NLSearchResponse,
+  APIError,
 } from "@/lib/types";
 
 type SearchMode = "form" | "natural";
@@ -39,7 +40,8 @@ export default function Home() {
     try {
       const result = await explainSearchResults(response.request_id);
       setLlmExplanation(result.explanation);
-    } catch {
+    } catch (err) {
+      console.error("Failed to load explanation:", err instanceof Error ? err.message : err);
     } finally {
       setExplanationLoading(false);
     }
@@ -58,6 +60,7 @@ export default function Home() {
     avoidHotWeather: boolean;
     avoidColdWeather: boolean;
     noCarRental: boolean;
+    domesticOnly: boolean;
   }) => {
     setIsLoading(true);
     setError(null);
@@ -82,7 +85,7 @@ export default function Home() {
           avoid_hot_weather: data.avoidHotWeather,
           avoid_cold_weather: data.avoidColdWeather,
           no_car_rental: data.noCarRental,
-          domestic_only: true,
+          domestic_only: data.domesticOnly,
         },
       });
       setResponse(result);
@@ -90,7 +93,8 @@ export default function Home() {
         setLlmExplanation(result.llm_explanation);
       }
     } catch (err) {
-      setError(err instanceof Error ? err.message : "搜索失败，请稍后重试");
+      const msg = (err as APIError)?.message || (err instanceof Error ? err.message : "搜索失败，请稍后重试");
+      setError(msg);
     } finally {
       setIsLoading(false);
     }
@@ -219,6 +223,22 @@ export default function Home() {
           {response.warnings.length > 0 && (
             <div className="bg-amber-50 border border-amber-200 rounded-lg p-3 text-sm text-amber-700">
               {response.warnings.join("; ")}
+            </div>
+          )}
+
+          {response.execution_stats && (
+            <div className="text-xs text-gray-400 mt-1">
+              搜索漏斗: {response.execution_stats.stage1_candidates} → {response.execution_stats.stage2_candidates} → {response.execution_stats.stage3_candidates} 候选 |{" "}
+              API调用: {response.execution_stats.provider_calls} |{" "}
+              缓存命中: {response.execution_stats.cache_hits} |{" "}
+              耗时: {(response.execution_stats.elapsed_ms / 1000).toFixed(1)}s
+              {response.execution_stats.budget_exhausted && " | 预算已耗尽，结果可能不完整"}
+            </div>
+          )}
+
+          {response.execution_stats?.budget_exhausted && (
+            <div className="bg-amber-50 border border-amber-200 rounded-lg p-3 text-sm text-amber-700">
+              搜索预算已耗尽，部分结果可能不完整，建议缩小搜索范围后重试
             </div>
           )}
 

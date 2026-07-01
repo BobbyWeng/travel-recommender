@@ -154,7 +154,24 @@
           "uv_index_avg": 2,
           "wind_speed_avg_kmh": 17.0
         }
-      ]
+      ],
+      "recommended_stay_days": 5,
+      "destination_type": "city",
+      "gateway_airports": [
+        {
+          "iata": "JFK",
+          "priority": 1
+        },
+        {
+          "iata": "LGA",
+          "priority": 2
+        },
+        {
+          "iata": "EWR",
+          "priority": 3
+        }
+      ],
+      "requires_car": false
     },
     {
       "id": 2,
@@ -309,7 +326,24 @@
           "uv_index_avg": 3,
           "wind_speed_avg_kmh": 12.0
         }
-      ]
+      ],
+      "recommended_stay_days": 4,
+      "destination_type": "city",
+      "gateway_airports": [
+        {
+          "iata": "LAX",
+          "priority": 1
+        },
+        {
+          "iata": "BUR",
+          "priority": 2
+        },
+        {
+          "iata": "SNA",
+          "priority": 3
+        }
+      ],
+      "requires_car": true
     },
     {
       "id": 3,
@@ -464,7 +498,24 @@
           "uv_index_avg": 2,
           "wind_speed_avg_kmh": 14.0
         }
-      ]
+      ],
+      "recommended_stay_days": 4,
+      "destination_type": "city",
+      "gateway_airports": [
+        {
+          "iata": "SFO",
+          "priority": 1
+        },
+        {
+          "iata": "OAK",
+          "priority": 2
+        },
+        {
+          "iata": "SJC",
+          "priority": 3
+        }
+      ],
+      "requires_car": false
     },
     {
       "id": 4,
@@ -619,7 +670,20 @@
           "uv_index_avg": 2,
           "wind_speed_avg_kmh": 17.0
         }
-      ]
+      ],
+      "recommended_stay_days": 4,
+      "destination_type": "city",
+      "gateway_airports": [
+        {
+          "iata": "ORD",
+          "priority": 1
+        },
+        {
+          "iata": "MDW",
+          "priority": 2
+        }
+      ],
+      "requires_car": false
     },
     {
       "id": 5,
@@ -774,7 +838,20 @@
           "uv_index_avg": 3,
           "wind_speed_avg_kmh": 14.0
         }
-      ]
+      ],
+      "recommended_stay_days": 5,
+      "destination_type": "beach",
+      "gateway_airports": [
+        {
+          "iata": "MIA",
+          "priority": 1
+        },
+        {
+          "iata": "FLL",
+          "priority": 2
+        }
+      ],
+      "requires_car": false
     },
     {
       "id": 6,
@@ -929,7 +1006,16 @@
           "uv_index_avg": 1,
           "wind_speed_avg_kmh": 13.0
         }
-      ]
+      ],
+      "recommended_stay_days": 4,
+      "destination_type": "city",
+      "gateway_airports": [
+        {
+          "iata": "SEA",
+          "priority": 1
+        }
+      ],
+      "requires_car": false
     },
     {
       "id": 7,
@@ -1084,7 +1170,16 @@
           "uv_index_avg": 2,
           "wind_speed_avg_kmh": 16.0
         }
-      ]
+      ],
+      "recommended_stay_days": 4,
+      "destination_type": "city",
+      "gateway_airports": [
+        {
+          "iata": "BOS",
+          "priority": 1
+        }
+      ],
+      "requires_car": false
     },
     {
       "id": 8,
@@ -1238,7 +1333,16 @@
           "uv_index_avg": 2,
           "wind_speed_avg_kmh": 13.0
         }
-      ]
+      ],
+      "recommended_stay_days": 4,
+      "destination_type": "nature_gateway",
+      "gateway_airports": [
+        {
+          "iata": "DEN",
+          "priority": 1
+        }
+      ],
+      "requires_car": false
     },
     {
       "id": 9,
@@ -1393,7 +1497,16 @@
           "uv_index_avg": 1,
           "wind_speed_avg_kmh": 12.0
         }
-      ]
+      ],
+      "recommended_stay_days": 3,
+      "destination_type": "city",
+      "gateway_airports": [
+        {
+          "iata": "PDX",
+          "priority": 1
+        }
+      ],
+      "requires_car": false
     },
     {
       "id": 10,
@@ -1548,7 +1661,16 @@
           "uv_index_avg": 3,
           "wind_speed_avg_kmh": 12.0
         }
-      ]
+      ],
+      "recommended_stay_days": 3,
+      "destination_type": "city",
+      "gateway_airports": [
+        {
+          "iata": "MSY",
+          "priority": 1
+        }
+      ],
+      "requires_car": false
     },
     {
       "id": 11,
@@ -1702,7 +1824,16 @@
           "uv_index_avg": 2,
           "wind_speed_avg_kmh": 14.0
         }
-      ]
+      ],
+      "recommended_stay_days": 4,
+      "destination_type": "city",
+      "gateway_airports": [
+        {
+          "iata": "BNA",
+          "priority": 1
+        }
+      ],
+      "requires_car": true
     },
     {
       "id": 12,
@@ -1856,7 +1987,16 @@
           "uv_index_avg": 3,
           "wind_speed_avg_kmh": 14.0
         }
-      ]
+      ],
+      "recommended_stay_days": 4,
+      "destination_type": "city",
+      "gateway_airports": [
+        {
+          "iata": "AUS",
+          "priority": 1
+        }
+      ],
+      "requires_car": true
     },
     {
       "id": 13,
@@ -2010,7 +2150,16 @@
           "uv_index_avg": 3,
           "wind_speed_avg_kmh": 12.0
         }
-      ]
+      ],
+      "recommended_stay_days": 3,
+      "destination_type": "beach",
+      "gateway_airports": [
+        {
+          "iata": "SAN",
+          "priority": 1
+        }
+      ],
+      "requires_car": false
     },
     {
       "id": 14,
@@ -2165,7 +2314,24 @@
           "uv_index_avg": 2,
           "wind_speed_avg_kmh": 15.0
         }
-      ]
+      ],
+      "recommended_stay_days": 4,
+      "destination_type": "city",
+      "gateway_airports": [
+        {
+          "iata": "DCA",
+          "priority": 1
+        },
+        {
+          "iata": "IAD",
+          "priority": 2
+        },
+        {
+          "iata": "BWI",
+          "priority": 3
+        }
+      ],
+      "requires_car": false
     },
     {
       "id": 15,
@@ -2319,7 +2485,16 @@
           "uv_index_avg": 2,
           "wind_speed_avg_kmh": 12.0
         }
-      ]
+      ],
+      "recommended_stay_days": 3,
+      "destination_type": "nature_gateway",
+      "gateway_airports": [
+        {
+          "iata": "SLC",
+          "priority": 1
+        }
+      ],
+      "requires_car": true
     },
     {
       "id": 16,
@@ -2474,7 +2649,16 @@
           "uv_index_avg": 3,
           "wind_speed_avg_kmh": 13.0
         }
-      ]
+      ],
+      "recommended_stay_days": 3,
+      "destination_type": "city",
+      "gateway_airports": [
+        {
+          "iata": "CHS",
+          "priority": 1
+        }
+      ],
+      "requires_car": true
     },
     {
       "id": 17,
@@ -2628,7 +2812,16 @@
           "uv_index_avg": 3,
           "wind_speed_avg_kmh": 12.0
         }
-      ]
+      ],
+      "recommended_stay_days": 3,
+      "destination_type": "resort",
+      "gateway_airports": [
+        {
+          "iata": "LAS",
+          "priority": 1
+        }
+      ],
+      "requires_car": true
     },
     {
       "id": 18,
@@ -2782,7 +2975,16 @@
           "uv_index_avg": 3,
           "wind_speed_avg_kmh": 10.0
         }
-      ]
+      ],
+      "recommended_stay_days": 3,
+      "destination_type": "nature_gateway",
+      "gateway_airports": [
+        {
+          "iata": "PHX",
+          "priority": 1
+        }
+      ],
+      "requires_car": true
     },
     {
       "id": 19,
@@ -2937,7 +3139,16 @@
           "uv_index_avg": 2,
           "wind_speed_avg_kmh": 16.0
         }
-      ]
+      ],
+      "recommended_stay_days": 4,
+      "destination_type": "city",
+      "gateway_airports": [
+        {
+          "iata": "MSP",
+          "priority": 1
+        }
+      ],
+      "requires_car": false
     },
     {
       "id": 20,
@@ -3091,6 +3302,6591 @@
           "sunshine_hours": 5.0,
           "uv_index_avg": 3,
           "wind_speed_avg_kmh": 14.0
+        }
+      ],
+      "recommended_stay_days": 4,
+      "destination_type": "city",
+      "gateway_airports": [
+        {
+          "iata": "ATL",
+          "priority": 1
+        }
+      ],
+      "requires_car": false
+    },
+    {
+      "id": 21,
+      "city": "Orlando",
+      "state": "FL",
+      "iata_code": "MCO",
+      "latitude": 28.43,
+      "longitude": -81.31,
+      "timezone": "America/New_York",
+      "cost_level": 3,
+      "public_transport_score": 5,
+      "walkability_score": 4,
+      "tags": [
+        "beach",
+        "family",
+        "entertainment",
+        "theme_parks"
+      ],
+      "recommended_stay_days": 5,
+      "destination_type": "resort",
+      "gateway_airports": [
+        {
+          "iata": "MCO",
+          "priority": 1
+        }
+      ],
+      "requires_car": false,
+      "country": "United States",
+      "country_code": "US",
+      "active": true,
+      "monthly_climate": [
+        {
+          "month": 1,
+          "temp_avg_c": 15,
+          "temp_max_avg_c": 18.5,
+          "temp_min_avg_c": 11.5,
+          "precip_days": 6,
+          "precip_mm": 50,
+          "sunshine_hours": 7,
+          "uv_index_avg": 4,
+          "wind_speed_avg_kmh": 16
+        },
+        {
+          "month": 2,
+          "temp_avg_c": 17,
+          "temp_max_avg_c": 20.5,
+          "temp_min_avg_c": 13.5,
+          "precip_days": 7,
+          "precip_mm": 60,
+          "sunshine_hours": 8,
+          "uv_index_avg": 5,
+          "wind_speed_avg_kmh": 16
+        },
+        {
+          "month": 3,
+          "temp_avg_c": 21,
+          "temp_max_avg_c": 24.5,
+          "temp_min_avg_c": 17.5,
+          "precip_days": 9,
+          "precip_mm": 80,
+          "sunshine_hours": 8.5,
+          "uv_index_avg": 7,
+          "wind_speed_avg_kmh": 15
+        },
+        {
+          "month": 4,
+          "temp_avg_c": 25,
+          "temp_max_avg_c": 28.5,
+          "temp_min_avg_c": 21.5,
+          "precip_days": 9,
+          "precip_mm": 90,
+          "sunshine_hours": 9,
+          "uv_index_avg": 9,
+          "wind_speed_avg_kmh": 13
+        },
+        {
+          "month": 5,
+          "temp_avg_c": 27,
+          "temp_max_avg_c": 30.5,
+          "temp_min_avg_c": 23.5,
+          "precip_days": 10,
+          "precip_mm": 100,
+          "sunshine_hours": 8.5,
+          "uv_index_avg": 10,
+          "wind_speed_avg_kmh": 12
+        },
+        {
+          "month": 6,
+          "temp_avg_c": 28,
+          "temp_max_avg_c": 31.5,
+          "temp_min_avg_c": 24.5,
+          "precip_days": 12,
+          "precip_mm": 130,
+          "sunshine_hours": 7.5,
+          "uv_index_avg": 10,
+          "wind_speed_avg_kmh": 12
+        },
+        {
+          "month": 7,
+          "temp_avg_c": 28,
+          "temp_max_avg_c": 31.5,
+          "temp_min_avg_c": 24.5,
+          "precip_days": 12,
+          "precip_mm": 130,
+          "sunshine_hours": 7.5,
+          "uv_index_avg": 10,
+          "wind_speed_avg_kmh": 12
+        },
+        {
+          "month": 8,
+          "temp_avg_c": 28,
+          "temp_max_avg_c": 31.5,
+          "temp_min_avg_c": 24.5,
+          "precip_days": 12,
+          "precip_mm": 130,
+          "sunshine_hours": 7.5,
+          "uv_index_avg": 10,
+          "wind_speed_avg_kmh": 12
+        },
+        {
+          "month": 9,
+          "temp_avg_c": 26,
+          "temp_max_avg_c": 29.5,
+          "temp_min_avg_c": 22.5,
+          "precip_days": 11,
+          "precip_mm": 120,
+          "sunshine_hours": 8,
+          "uv_index_avg": 9,
+          "wind_speed_avg_kmh": 13
+        },
+        {
+          "month": 10,
+          "temp_avg_c": 23,
+          "temp_max_avg_c": 26.5,
+          "temp_min_avg_c": 19.5,
+          "precip_days": 9,
+          "precip_mm": 90,
+          "sunshine_hours": 8.5,
+          "uv_index_avg": 7,
+          "wind_speed_avg_kmh": 15
+        },
+        {
+          "month": 11,
+          "temp_avg_c": 19,
+          "temp_max_avg_c": 22.5,
+          "temp_min_avg_c": 15.5,
+          "precip_days": 7,
+          "precip_mm": 60,
+          "sunshine_hours": 8,
+          "uv_index_avg": 5,
+          "wind_speed_avg_kmh": 16
+        },
+        {
+          "month": 12,
+          "temp_avg_c": 16,
+          "temp_max_avg_c": 19.5,
+          "temp_min_avg_c": 12.5,
+          "precip_days": 6,
+          "precip_mm": 50,
+          "sunshine_hours": 7.5,
+          "uv_index_avg": 4,
+          "wind_speed_avg_kmh": 16
+        }
+      ]
+    },
+    {
+      "id": 22,
+      "city": "Tampa",
+      "state": "FL",
+      "iata_code": "TPA",
+      "latitude": 27.95,
+      "longitude": -82.46,
+      "timezone": "America/New_York",
+      "cost_level": 2,
+      "public_transport_score": 5,
+      "walkability_score": 5,
+      "tags": [
+        "beach",
+        "food",
+        "budget",
+        "outdoor"
+      ],
+      "recommended_stay_days": 4,
+      "destination_type": "beach",
+      "gateway_airports": [
+        {
+          "iata": "TPA",
+          "priority": 1
+        }
+      ],
+      "requires_car": false,
+      "country": "United States",
+      "country_code": "US",
+      "active": true,
+      "monthly_climate": [
+        {
+          "month": 1,
+          "temp_avg_c": 15,
+          "temp_max_avg_c": 18.5,
+          "temp_min_avg_c": 11.5,
+          "precip_days": 6,
+          "precip_mm": 50,
+          "sunshine_hours": 7,
+          "uv_index_avg": 4,
+          "wind_speed_avg_kmh": 16
+        },
+        {
+          "month": 2,
+          "temp_avg_c": 17,
+          "temp_max_avg_c": 20.5,
+          "temp_min_avg_c": 13.5,
+          "precip_days": 7,
+          "precip_mm": 60,
+          "sunshine_hours": 8,
+          "uv_index_avg": 5,
+          "wind_speed_avg_kmh": 16
+        },
+        {
+          "month": 3,
+          "temp_avg_c": 21,
+          "temp_max_avg_c": 24.5,
+          "temp_min_avg_c": 17.5,
+          "precip_days": 9,
+          "precip_mm": 80,
+          "sunshine_hours": 8.5,
+          "uv_index_avg": 7,
+          "wind_speed_avg_kmh": 15
+        },
+        {
+          "month": 4,
+          "temp_avg_c": 25,
+          "temp_max_avg_c": 28.5,
+          "temp_min_avg_c": 21.5,
+          "precip_days": 9,
+          "precip_mm": 90,
+          "sunshine_hours": 9,
+          "uv_index_avg": 9,
+          "wind_speed_avg_kmh": 13
+        },
+        {
+          "month": 5,
+          "temp_avg_c": 27,
+          "temp_max_avg_c": 30.5,
+          "temp_min_avg_c": 23.5,
+          "precip_days": 10,
+          "precip_mm": 100,
+          "sunshine_hours": 8.5,
+          "uv_index_avg": 10,
+          "wind_speed_avg_kmh": 12
+        },
+        {
+          "month": 6,
+          "temp_avg_c": 28,
+          "temp_max_avg_c": 31.5,
+          "temp_min_avg_c": 24.5,
+          "precip_days": 12,
+          "precip_mm": 130,
+          "sunshine_hours": 7.5,
+          "uv_index_avg": 10,
+          "wind_speed_avg_kmh": 12
+        },
+        {
+          "month": 7,
+          "temp_avg_c": 28,
+          "temp_max_avg_c": 31.5,
+          "temp_min_avg_c": 24.5,
+          "precip_days": 12,
+          "precip_mm": 130,
+          "sunshine_hours": 7.5,
+          "uv_index_avg": 10,
+          "wind_speed_avg_kmh": 12
+        },
+        {
+          "month": 8,
+          "temp_avg_c": 28,
+          "temp_max_avg_c": 31.5,
+          "temp_min_avg_c": 24.5,
+          "precip_days": 12,
+          "precip_mm": 130,
+          "sunshine_hours": 7.5,
+          "uv_index_avg": 10,
+          "wind_speed_avg_kmh": 12
+        },
+        {
+          "month": 9,
+          "temp_avg_c": 26,
+          "temp_max_avg_c": 29.5,
+          "temp_min_avg_c": 22.5,
+          "precip_days": 11,
+          "precip_mm": 120,
+          "sunshine_hours": 8,
+          "uv_index_avg": 9,
+          "wind_speed_avg_kmh": 13
+        },
+        {
+          "month": 10,
+          "temp_avg_c": 23,
+          "temp_max_avg_c": 26.5,
+          "temp_min_avg_c": 19.5,
+          "precip_days": 9,
+          "precip_mm": 90,
+          "sunshine_hours": 8.5,
+          "uv_index_avg": 7,
+          "wind_speed_avg_kmh": 15
+        },
+        {
+          "month": 11,
+          "temp_avg_c": 19,
+          "temp_max_avg_c": 22.5,
+          "temp_min_avg_c": 15.5,
+          "precip_days": 7,
+          "precip_mm": 60,
+          "sunshine_hours": 8,
+          "uv_index_avg": 5,
+          "wind_speed_avg_kmh": 16
+        },
+        {
+          "month": 12,
+          "temp_avg_c": 16,
+          "temp_max_avg_c": 19.5,
+          "temp_min_avg_c": 12.5,
+          "precip_days": 6,
+          "precip_mm": 50,
+          "sunshine_hours": 7.5,
+          "uv_index_avg": 4,
+          "wind_speed_avg_kmh": 16
+        }
+      ]
+    },
+    {
+      "id": 23,
+      "city": "Fort Lauderdale",
+      "state": "FL",
+      "iata_code": "FLL",
+      "latitude": 26.12,
+      "longitude": -80.14,
+      "timezone": "America/New_York",
+      "cost_level": 3,
+      "public_transport_score": 5,
+      "walkability_score": 6,
+      "tags": [
+        "beach",
+        "nightlife",
+        "boating",
+        "shopping"
+      ],
+      "recommended_stay_days": 4,
+      "destination_type": "beach",
+      "gateway_airports": [
+        {
+          "iata": "FLL",
+          "priority": 1
+        },
+        {
+          "iata": "MIA",
+          "priority": 2
+        }
+      ],
+      "requires_car": false,
+      "country": "United States",
+      "country_code": "US",
+      "active": true,
+      "monthly_climate": [
+        {
+          "month": 1,
+          "temp_avg_c": 15,
+          "temp_max_avg_c": 18.5,
+          "temp_min_avg_c": 11.5,
+          "precip_days": 6,
+          "precip_mm": 50,
+          "sunshine_hours": 7,
+          "uv_index_avg": 4,
+          "wind_speed_avg_kmh": 16
+        },
+        {
+          "month": 2,
+          "temp_avg_c": 17,
+          "temp_max_avg_c": 20.5,
+          "temp_min_avg_c": 13.5,
+          "precip_days": 7,
+          "precip_mm": 60,
+          "sunshine_hours": 8,
+          "uv_index_avg": 5,
+          "wind_speed_avg_kmh": 16
+        },
+        {
+          "month": 3,
+          "temp_avg_c": 21,
+          "temp_max_avg_c": 24.5,
+          "temp_min_avg_c": 17.5,
+          "precip_days": 9,
+          "precip_mm": 80,
+          "sunshine_hours": 8.5,
+          "uv_index_avg": 7,
+          "wind_speed_avg_kmh": 15
+        },
+        {
+          "month": 4,
+          "temp_avg_c": 25,
+          "temp_max_avg_c": 28.5,
+          "temp_min_avg_c": 21.5,
+          "precip_days": 9,
+          "precip_mm": 90,
+          "sunshine_hours": 9,
+          "uv_index_avg": 9,
+          "wind_speed_avg_kmh": 13
+        },
+        {
+          "month": 5,
+          "temp_avg_c": 27,
+          "temp_max_avg_c": 30.5,
+          "temp_min_avg_c": 23.5,
+          "precip_days": 10,
+          "precip_mm": 100,
+          "sunshine_hours": 8.5,
+          "uv_index_avg": 10,
+          "wind_speed_avg_kmh": 12
+        },
+        {
+          "month": 6,
+          "temp_avg_c": 28,
+          "temp_max_avg_c": 31.5,
+          "temp_min_avg_c": 24.5,
+          "precip_days": 12,
+          "precip_mm": 130,
+          "sunshine_hours": 7.5,
+          "uv_index_avg": 10,
+          "wind_speed_avg_kmh": 12
+        },
+        {
+          "month": 7,
+          "temp_avg_c": 28,
+          "temp_max_avg_c": 31.5,
+          "temp_min_avg_c": 24.5,
+          "precip_days": 12,
+          "precip_mm": 130,
+          "sunshine_hours": 7.5,
+          "uv_index_avg": 10,
+          "wind_speed_avg_kmh": 12
+        },
+        {
+          "month": 8,
+          "temp_avg_c": 28,
+          "temp_max_avg_c": 31.5,
+          "temp_min_avg_c": 24.5,
+          "precip_days": 12,
+          "precip_mm": 130,
+          "sunshine_hours": 7.5,
+          "uv_index_avg": 10,
+          "wind_speed_avg_kmh": 12
+        },
+        {
+          "month": 9,
+          "temp_avg_c": 26,
+          "temp_max_avg_c": 29.5,
+          "temp_min_avg_c": 22.5,
+          "precip_days": 11,
+          "precip_mm": 120,
+          "sunshine_hours": 8,
+          "uv_index_avg": 9,
+          "wind_speed_avg_kmh": 13
+        },
+        {
+          "month": 10,
+          "temp_avg_c": 23,
+          "temp_max_avg_c": 26.5,
+          "temp_min_avg_c": 19.5,
+          "precip_days": 9,
+          "precip_mm": 90,
+          "sunshine_hours": 8.5,
+          "uv_index_avg": 7,
+          "wind_speed_avg_kmh": 15
+        },
+        {
+          "month": 11,
+          "temp_avg_c": 19,
+          "temp_max_avg_c": 22.5,
+          "temp_min_avg_c": 15.5,
+          "precip_days": 7,
+          "precip_mm": 60,
+          "sunshine_hours": 8,
+          "uv_index_avg": 5,
+          "wind_speed_avg_kmh": 16
+        },
+        {
+          "month": 12,
+          "temp_avg_c": 16,
+          "temp_max_avg_c": 19.5,
+          "temp_min_avg_c": 12.5,
+          "precip_days": 6,
+          "precip_mm": 50,
+          "sunshine_hours": 7.5,
+          "uv_index_avg": 4,
+          "wind_speed_avg_kmh": 16
+        }
+      ]
+    },
+    {
+      "id": 24,
+      "city": "Savannah",
+      "state": "GA",
+      "iata_code": "SAV",
+      "latitude": 32.08,
+      "longitude": -81.1,
+      "timezone": "America/New_York",
+      "cost_level": 2,
+      "public_transport_score": 4,
+      "walkability_score": 8,
+      "tags": [
+        "history",
+        "architecture",
+        "food",
+        "outdoor"
+      ],
+      "recommended_stay_days": 3,
+      "destination_type": "city",
+      "gateway_airports": [
+        {
+          "iata": "SAV",
+          "priority": 1
+        }
+      ],
+      "requires_car": false,
+      "country": "United States",
+      "country_code": "US",
+      "active": true,
+      "monthly_climate": [
+        {
+          "month": 1,
+          "temp_avg_c": 0,
+          "temp_max_avg_c": 6.0,
+          "temp_min_avg_c": -6.0,
+          "precip_days": 6,
+          "precip_mm": 45,
+          "sunshine_hours": 4,
+          "uv_index_avg": 1,
+          "wind_speed_avg_kmh": 17
+        },
+        {
+          "month": 2,
+          "temp_avg_c": 3,
+          "temp_max_avg_c": 9.0,
+          "temp_min_avg_c": -3.0,
+          "precip_days": 7,
+          "precip_mm": 55,
+          "sunshine_hours": 5,
+          "uv_index_avg": 2,
+          "wind_speed_avg_kmh": 16
+        },
+        {
+          "month": 3,
+          "temp_avg_c": 9,
+          "temp_max_avg_c": 15.0,
+          "temp_min_avg_c": 3.0,
+          "precip_days": 9,
+          "precip_mm": 75,
+          "sunshine_hours": 6.5,
+          "uv_index_avg": 4,
+          "wind_speed_avg_kmh": 15
+        },
+        {
+          "month": 4,
+          "temp_avg_c": 15,
+          "temp_max_avg_c": 21.0,
+          "temp_min_avg_c": 9.0,
+          "precip_days": 9,
+          "precip_mm": 80,
+          "sunshine_hours": 7,
+          "uv_index_avg": 6,
+          "wind_speed_avg_kmh": 13
+        },
+        {
+          "month": 5,
+          "temp_avg_c": 19,
+          "temp_max_avg_c": 25.0,
+          "temp_min_avg_c": 13.0,
+          "precip_days": 10,
+          "precip_mm": 85,
+          "sunshine_hours": 8,
+          "uv_index_avg": 7,
+          "wind_speed_avg_kmh": 12
+        },
+        {
+          "month": 6,
+          "temp_avg_c": 22,
+          "temp_max_avg_c": 28.0,
+          "temp_min_avg_c": 16.0,
+          "precip_days": 10,
+          "precip_mm": 80,
+          "sunshine_hours": 8,
+          "uv_index_avg": 8,
+          "wind_speed_avg_kmh": 12
+        },
+        {
+          "month": 7,
+          "temp_avg_c": 23,
+          "temp_max_avg_c": 29.0,
+          "temp_min_avg_c": 17.0,
+          "precip_days": 10,
+          "precip_mm": 80,
+          "sunshine_hours": 8,
+          "uv_index_avg": 8,
+          "wind_speed_avg_kmh": 12
+        },
+        {
+          "month": 8,
+          "temp_avg_c": 21,
+          "temp_max_avg_c": 27.0,
+          "temp_min_avg_c": 15.0,
+          "precip_days": 10,
+          "precip_mm": 80,
+          "sunshine_hours": 8,
+          "uv_index_avg": 7,
+          "wind_speed_avg_kmh": 13
+        },
+        {
+          "month": 9,
+          "temp_avg_c": 17,
+          "temp_max_avg_c": 23.0,
+          "temp_min_avg_c": 11.0,
+          "precip_days": 9,
+          "precip_mm": 80,
+          "sunshine_hours": 7,
+          "uv_index_avg": 6,
+          "wind_speed_avg_kmh": 14
+        },
+        {
+          "month": 10,
+          "temp_avg_c": 12,
+          "temp_max_avg_c": 18.0,
+          "temp_min_avg_c": 6.0,
+          "precip_days": 8,
+          "precip_mm": 70,
+          "sunshine_hours": 6,
+          "uv_index_avg": 4,
+          "wind_speed_avg_kmh": 15
+        },
+        {
+          "month": 11,
+          "temp_avg_c": 6,
+          "temp_max_avg_c": 12.0,
+          "temp_min_avg_c": 0.0,
+          "precip_days": 7,
+          "precip_mm": 55,
+          "sunshine_hours": 5,
+          "uv_index_avg": 2,
+          "wind_speed_avg_kmh": 16
+        },
+        {
+          "month": 12,
+          "temp_avg_c": 2,
+          "temp_max_avg_c": 8.0,
+          "temp_min_avg_c": -4.0,
+          "precip_days": 6,
+          "precip_mm": 50,
+          "sunshine_hours": 4,
+          "uv_index_avg": 1,
+          "wind_speed_avg_kmh": 17
+        }
+      ]
+    },
+    {
+      "id": 25,
+      "city": "Asheville",
+      "state": "NC",
+      "iata_code": "AVL",
+      "latitude": 35.6,
+      "longitude": -82.55,
+      "timezone": "America/New_York",
+      "cost_level": 2,
+      "public_transport_score": 3,
+      "walkability_score": 6,
+      "tags": [
+        "nature",
+        "hiking",
+        "art",
+        "outdoor"
+      ],
+      "recommended_stay_days": 4,
+      "destination_type": "nature_gateway",
+      "gateway_airports": [
+        {
+          "iata": "AVL",
+          "priority": 1
+        }
+      ],
+      "requires_car": true,
+      "country": "United States",
+      "country_code": "US",
+      "active": true,
+      "monthly_climate": [
+        {
+          "month": 1,
+          "temp_avg_c": 8,
+          "temp_max_avg_c": 12.5,
+          "temp_min_avg_c": 3.5,
+          "precip_days": 6,
+          "precip_mm": 60,
+          "sunshine_hours": 6,
+          "uv_index_avg": 2,
+          "wind_speed_avg_kmh": 13
+        },
+        {
+          "month": 2,
+          "temp_avg_c": 10,
+          "temp_max_avg_c": 14.5,
+          "temp_min_avg_c": 5.5,
+          "precip_days": 7,
+          "precip_mm": 70,
+          "sunshine_hours": 7,
+          "uv_index_avg": 3,
+          "wind_speed_avg_kmh": 13
+        },
+        {
+          "month": 3,
+          "temp_avg_c": 14,
+          "temp_max_avg_c": 18.5,
+          "temp_min_avg_c": 9.5,
+          "precip_days": 8,
+          "precip_mm": 85,
+          "sunshine_hours": 7.5,
+          "uv_index_avg": 5,
+          "wind_speed_avg_kmh": 12
+        },
+        {
+          "month": 4,
+          "temp_avg_c": 18,
+          "temp_max_avg_c": 22.5,
+          "temp_min_avg_c": 13.5,
+          "precip_days": 8,
+          "precip_mm": 90,
+          "sunshine_hours": 8,
+          "uv_index_avg": 7,
+          "wind_speed_avg_kmh": 11
+        },
+        {
+          "month": 5,
+          "temp_avg_c": 21,
+          "temp_max_avg_c": 25.5,
+          "temp_min_avg_c": 16.5,
+          "precip_days": 9,
+          "precip_mm": 95,
+          "sunshine_hours": 8,
+          "uv_index_avg": 8,
+          "wind_speed_avg_kmh": 11
+        },
+        {
+          "month": 6,
+          "temp_avg_c": 23,
+          "temp_max_avg_c": 27.5,
+          "temp_min_avg_c": 18.5,
+          "precip_days": 9,
+          "precip_mm": 90,
+          "sunshine_hours": 7.5,
+          "uv_index_avg": 9,
+          "wind_speed_avg_kmh": 11
+        },
+        {
+          "month": 7,
+          "temp_avg_c": 23,
+          "temp_max_avg_c": 27.5,
+          "temp_min_avg_c": 18.5,
+          "precip_days": 9,
+          "precip_mm": 90,
+          "sunshine_hours": 7.5,
+          "uv_index_avg": 9,
+          "wind_speed_avg_kmh": 11
+        },
+        {
+          "month": 8,
+          "temp_avg_c": 22,
+          "temp_max_avg_c": 26.5,
+          "temp_min_avg_c": 17.5,
+          "precip_days": 9,
+          "precip_mm": 95,
+          "sunshine_hours": 8,
+          "uv_index_avg": 8,
+          "wind_speed_avg_kmh": 11
+        },
+        {
+          "month": 9,
+          "temp_avg_c": 19,
+          "temp_max_avg_c": 23.5,
+          "temp_min_avg_c": 14.5,
+          "precip_days": 8,
+          "precip_mm": 90,
+          "sunshine_hours": 8,
+          "uv_index_avg": 7,
+          "wind_speed_avg_kmh": 12
+        },
+        {
+          "month": 10,
+          "temp_avg_c": 15,
+          "temp_max_avg_c": 19.5,
+          "temp_min_avg_c": 10.5,
+          "precip_days": 7,
+          "precip_mm": 80,
+          "sunshine_hours": 7.5,
+          "uv_index_avg": 5,
+          "wind_speed_avg_kmh": 13
+        },
+        {
+          "month": 11,
+          "temp_avg_c": 11,
+          "temp_max_avg_c": 15.5,
+          "temp_min_avg_c": 6.5,
+          "precip_days": 6,
+          "precip_mm": 65,
+          "sunshine_hours": 6.5,
+          "uv_index_avg": 3,
+          "wind_speed_avg_kmh": 13
+        },
+        {
+          "month": 12,
+          "temp_avg_c": 9,
+          "temp_max_avg_c": 13.5,
+          "temp_min_avg_c": 4.5,
+          "precip_days": 6,
+          "precip_mm": 60,
+          "sunshine_hours": 6,
+          "uv_index_avg": 2,
+          "wind_speed_avg_kmh": 13
+        }
+      ]
+    },
+    {
+      "id": 26,
+      "city": "Charlotte",
+      "state": "NC",
+      "iata_code": "CLT",
+      "latitude": 35.23,
+      "longitude": -80.84,
+      "timezone": "America/New_York",
+      "cost_level": 2,
+      "public_transport_score": 6,
+      "walkability_score": 5,
+      "tags": [
+        "city",
+        "food",
+        "shopping",
+        "sports"
+      ],
+      "recommended_stay_days": 3,
+      "destination_type": "city",
+      "gateway_airports": [
+        {
+          "iata": "CLT",
+          "priority": 1
+        }
+      ],
+      "requires_car": false,
+      "country": "United States",
+      "country_code": "US",
+      "active": true,
+      "monthly_climate": [
+        {
+          "month": 1,
+          "temp_avg_c": 8,
+          "temp_max_avg_c": 12.5,
+          "temp_min_avg_c": 3.5,
+          "precip_days": 6,
+          "precip_mm": 60,
+          "sunshine_hours": 6,
+          "uv_index_avg": 2,
+          "wind_speed_avg_kmh": 13
+        },
+        {
+          "month": 2,
+          "temp_avg_c": 10,
+          "temp_max_avg_c": 14.5,
+          "temp_min_avg_c": 5.5,
+          "precip_days": 7,
+          "precip_mm": 70,
+          "sunshine_hours": 7,
+          "uv_index_avg": 3,
+          "wind_speed_avg_kmh": 13
+        },
+        {
+          "month": 3,
+          "temp_avg_c": 14,
+          "temp_max_avg_c": 18.5,
+          "temp_min_avg_c": 9.5,
+          "precip_days": 8,
+          "precip_mm": 85,
+          "sunshine_hours": 7.5,
+          "uv_index_avg": 5,
+          "wind_speed_avg_kmh": 12
+        },
+        {
+          "month": 4,
+          "temp_avg_c": 18,
+          "temp_max_avg_c": 22.5,
+          "temp_min_avg_c": 13.5,
+          "precip_days": 8,
+          "precip_mm": 90,
+          "sunshine_hours": 8,
+          "uv_index_avg": 7,
+          "wind_speed_avg_kmh": 11
+        },
+        {
+          "month": 5,
+          "temp_avg_c": 21,
+          "temp_max_avg_c": 25.5,
+          "temp_min_avg_c": 16.5,
+          "precip_days": 9,
+          "precip_mm": 95,
+          "sunshine_hours": 8,
+          "uv_index_avg": 8,
+          "wind_speed_avg_kmh": 11
+        },
+        {
+          "month": 6,
+          "temp_avg_c": 23,
+          "temp_max_avg_c": 27.5,
+          "temp_min_avg_c": 18.5,
+          "precip_days": 9,
+          "precip_mm": 90,
+          "sunshine_hours": 7.5,
+          "uv_index_avg": 9,
+          "wind_speed_avg_kmh": 11
+        },
+        {
+          "month": 7,
+          "temp_avg_c": 23,
+          "temp_max_avg_c": 27.5,
+          "temp_min_avg_c": 18.5,
+          "precip_days": 9,
+          "precip_mm": 90,
+          "sunshine_hours": 7.5,
+          "uv_index_avg": 9,
+          "wind_speed_avg_kmh": 11
+        },
+        {
+          "month": 8,
+          "temp_avg_c": 22,
+          "temp_max_avg_c": 26.5,
+          "temp_min_avg_c": 17.5,
+          "precip_days": 9,
+          "precip_mm": 95,
+          "sunshine_hours": 8,
+          "uv_index_avg": 8,
+          "wind_speed_avg_kmh": 11
+        },
+        {
+          "month": 9,
+          "temp_avg_c": 19,
+          "temp_max_avg_c": 23.5,
+          "temp_min_avg_c": 14.5,
+          "precip_days": 8,
+          "precip_mm": 90,
+          "sunshine_hours": 8,
+          "uv_index_avg": 7,
+          "wind_speed_avg_kmh": 12
+        },
+        {
+          "month": 10,
+          "temp_avg_c": 15,
+          "temp_max_avg_c": 19.5,
+          "temp_min_avg_c": 10.5,
+          "precip_days": 7,
+          "precip_mm": 80,
+          "sunshine_hours": 7.5,
+          "uv_index_avg": 5,
+          "wind_speed_avg_kmh": 13
+        },
+        {
+          "month": 11,
+          "temp_avg_c": 11,
+          "temp_max_avg_c": 15.5,
+          "temp_min_avg_c": 6.5,
+          "precip_days": 6,
+          "precip_mm": 65,
+          "sunshine_hours": 6.5,
+          "uv_index_avg": 3,
+          "wind_speed_avg_kmh": 13
+        },
+        {
+          "month": 12,
+          "temp_avg_c": 9,
+          "temp_max_avg_c": 13.5,
+          "temp_min_avg_c": 4.5,
+          "precip_days": 6,
+          "precip_mm": 60,
+          "sunshine_hours": 6,
+          "uv_index_avg": 2,
+          "wind_speed_avg_kmh": 13
+        }
+      ]
+    },
+    {
+      "id": 27,
+      "city": "Raleigh",
+      "state": "NC",
+      "iata_code": "RDU",
+      "latitude": 35.78,
+      "longitude": -78.64,
+      "timezone": "America/New_York",
+      "cost_level": 2,
+      "public_transport_score": 5,
+      "walkability_score": 5,
+      "tags": [
+        "city",
+        "food",
+        "technology",
+        "museum"
+      ],
+      "recommended_stay_days": 3,
+      "destination_type": "city",
+      "gateway_airports": [
+        {
+          "iata": "RDU",
+          "priority": 1
+        }
+      ],
+      "requires_car": false,
+      "country": "United States",
+      "country_code": "US",
+      "active": true,
+      "monthly_climate": [
+        {
+          "month": 1,
+          "temp_avg_c": 8,
+          "temp_max_avg_c": 12.5,
+          "temp_min_avg_c": 3.5,
+          "precip_days": 6,
+          "precip_mm": 60,
+          "sunshine_hours": 6,
+          "uv_index_avg": 2,
+          "wind_speed_avg_kmh": 13
+        },
+        {
+          "month": 2,
+          "temp_avg_c": 10,
+          "temp_max_avg_c": 14.5,
+          "temp_min_avg_c": 5.5,
+          "precip_days": 7,
+          "precip_mm": 70,
+          "sunshine_hours": 7,
+          "uv_index_avg": 3,
+          "wind_speed_avg_kmh": 13
+        },
+        {
+          "month": 3,
+          "temp_avg_c": 14,
+          "temp_max_avg_c": 18.5,
+          "temp_min_avg_c": 9.5,
+          "precip_days": 8,
+          "precip_mm": 85,
+          "sunshine_hours": 7.5,
+          "uv_index_avg": 5,
+          "wind_speed_avg_kmh": 12
+        },
+        {
+          "month": 4,
+          "temp_avg_c": 18,
+          "temp_max_avg_c": 22.5,
+          "temp_min_avg_c": 13.5,
+          "precip_days": 8,
+          "precip_mm": 90,
+          "sunshine_hours": 8,
+          "uv_index_avg": 7,
+          "wind_speed_avg_kmh": 11
+        },
+        {
+          "month": 5,
+          "temp_avg_c": 21,
+          "temp_max_avg_c": 25.5,
+          "temp_min_avg_c": 16.5,
+          "precip_days": 9,
+          "precip_mm": 95,
+          "sunshine_hours": 8,
+          "uv_index_avg": 8,
+          "wind_speed_avg_kmh": 11
+        },
+        {
+          "month": 6,
+          "temp_avg_c": 23,
+          "temp_max_avg_c": 27.5,
+          "temp_min_avg_c": 18.5,
+          "precip_days": 9,
+          "precip_mm": 90,
+          "sunshine_hours": 7.5,
+          "uv_index_avg": 9,
+          "wind_speed_avg_kmh": 11
+        },
+        {
+          "month": 7,
+          "temp_avg_c": 23,
+          "temp_max_avg_c": 27.5,
+          "temp_min_avg_c": 18.5,
+          "precip_days": 9,
+          "precip_mm": 90,
+          "sunshine_hours": 7.5,
+          "uv_index_avg": 9,
+          "wind_speed_avg_kmh": 11
+        },
+        {
+          "month": 8,
+          "temp_avg_c": 22,
+          "temp_max_avg_c": 26.5,
+          "temp_min_avg_c": 17.5,
+          "precip_days": 9,
+          "precip_mm": 95,
+          "sunshine_hours": 8,
+          "uv_index_avg": 8,
+          "wind_speed_avg_kmh": 11
+        },
+        {
+          "month": 9,
+          "temp_avg_c": 19,
+          "temp_max_avg_c": 23.5,
+          "temp_min_avg_c": 14.5,
+          "precip_days": 8,
+          "precip_mm": 90,
+          "sunshine_hours": 8,
+          "uv_index_avg": 7,
+          "wind_speed_avg_kmh": 12
+        },
+        {
+          "month": 10,
+          "temp_avg_c": 15,
+          "temp_max_avg_c": 19.5,
+          "temp_min_avg_c": 10.5,
+          "precip_days": 7,
+          "precip_mm": 80,
+          "sunshine_hours": 7.5,
+          "uv_index_avg": 5,
+          "wind_speed_avg_kmh": 13
+        },
+        {
+          "month": 11,
+          "temp_avg_c": 11,
+          "temp_max_avg_c": 15.5,
+          "temp_min_avg_c": 6.5,
+          "precip_days": 6,
+          "precip_mm": 65,
+          "sunshine_hours": 6.5,
+          "uv_index_avg": 3,
+          "wind_speed_avg_kmh": 13
+        },
+        {
+          "month": 12,
+          "temp_avg_c": 9,
+          "temp_max_avg_c": 13.5,
+          "temp_min_avg_c": 4.5,
+          "precip_days": 6,
+          "precip_mm": 60,
+          "sunshine_hours": 6,
+          "uv_index_avg": 2,
+          "wind_speed_avg_kmh": 13
+        }
+      ]
+    },
+    {
+      "id": 28,
+      "city": "Philadelphia",
+      "state": "PA",
+      "iata_code": "PHL",
+      "latitude": 39.95,
+      "longitude": -75.17,
+      "timezone": "America/New_York",
+      "cost_level": 3,
+      "public_transport_score": 8,
+      "walkability_score": 8,
+      "tags": [
+        "history",
+        "food",
+        "museum",
+        "architecture"
+      ],
+      "recommended_stay_days": 4,
+      "destination_type": "city",
+      "gateway_airports": [
+        {
+          "iata": "PHL",
+          "priority": 1
+        }
+      ],
+      "requires_car": false,
+      "country": "United States",
+      "country_code": "US",
+      "active": true,
+      "monthly_climate": [
+        {
+          "month": 1,
+          "temp_avg_c": 0,
+          "temp_max_avg_c": 6.0,
+          "temp_min_avg_c": -6.0,
+          "precip_days": 6,
+          "precip_mm": 45,
+          "sunshine_hours": 4,
+          "uv_index_avg": 1,
+          "wind_speed_avg_kmh": 17
+        },
+        {
+          "month": 2,
+          "temp_avg_c": 3,
+          "temp_max_avg_c": 9.0,
+          "temp_min_avg_c": -3.0,
+          "precip_days": 7,
+          "precip_mm": 55,
+          "sunshine_hours": 5,
+          "uv_index_avg": 2,
+          "wind_speed_avg_kmh": 16
+        },
+        {
+          "month": 3,
+          "temp_avg_c": 9,
+          "temp_max_avg_c": 15.0,
+          "temp_min_avg_c": 3.0,
+          "precip_days": 9,
+          "precip_mm": 75,
+          "sunshine_hours": 6.5,
+          "uv_index_avg": 4,
+          "wind_speed_avg_kmh": 15
+        },
+        {
+          "month": 4,
+          "temp_avg_c": 15,
+          "temp_max_avg_c": 21.0,
+          "temp_min_avg_c": 9.0,
+          "precip_days": 9,
+          "precip_mm": 80,
+          "sunshine_hours": 7,
+          "uv_index_avg": 6,
+          "wind_speed_avg_kmh": 13
+        },
+        {
+          "month": 5,
+          "temp_avg_c": 19,
+          "temp_max_avg_c": 25.0,
+          "temp_min_avg_c": 13.0,
+          "precip_days": 10,
+          "precip_mm": 85,
+          "sunshine_hours": 8,
+          "uv_index_avg": 7,
+          "wind_speed_avg_kmh": 12
+        },
+        {
+          "month": 6,
+          "temp_avg_c": 22,
+          "temp_max_avg_c": 28.0,
+          "temp_min_avg_c": 16.0,
+          "precip_days": 10,
+          "precip_mm": 80,
+          "sunshine_hours": 8,
+          "uv_index_avg": 8,
+          "wind_speed_avg_kmh": 12
+        },
+        {
+          "month": 7,
+          "temp_avg_c": 23,
+          "temp_max_avg_c": 29.0,
+          "temp_min_avg_c": 17.0,
+          "precip_days": 10,
+          "precip_mm": 80,
+          "sunshine_hours": 8,
+          "uv_index_avg": 8,
+          "wind_speed_avg_kmh": 12
+        },
+        {
+          "month": 8,
+          "temp_avg_c": 21,
+          "temp_max_avg_c": 27.0,
+          "temp_min_avg_c": 15.0,
+          "precip_days": 10,
+          "precip_mm": 80,
+          "sunshine_hours": 8,
+          "uv_index_avg": 7,
+          "wind_speed_avg_kmh": 13
+        },
+        {
+          "month": 9,
+          "temp_avg_c": 17,
+          "temp_max_avg_c": 23.0,
+          "temp_min_avg_c": 11.0,
+          "precip_days": 9,
+          "precip_mm": 80,
+          "sunshine_hours": 7,
+          "uv_index_avg": 6,
+          "wind_speed_avg_kmh": 14
+        },
+        {
+          "month": 10,
+          "temp_avg_c": 12,
+          "temp_max_avg_c": 18.0,
+          "temp_min_avg_c": 6.0,
+          "precip_days": 8,
+          "precip_mm": 70,
+          "sunshine_hours": 6,
+          "uv_index_avg": 4,
+          "wind_speed_avg_kmh": 15
+        },
+        {
+          "month": 11,
+          "temp_avg_c": 6,
+          "temp_max_avg_c": 12.0,
+          "temp_min_avg_c": 0.0,
+          "precip_days": 7,
+          "precip_mm": 55,
+          "sunshine_hours": 5,
+          "uv_index_avg": 2,
+          "wind_speed_avg_kmh": 16
+        },
+        {
+          "month": 12,
+          "temp_avg_c": 2,
+          "temp_max_avg_c": 8.0,
+          "temp_min_avg_c": -4.0,
+          "precip_days": 6,
+          "precip_mm": 50,
+          "sunshine_hours": 4,
+          "uv_index_avg": 1,
+          "wind_speed_avg_kmh": 17
+        }
+      ]
+    },
+    {
+      "id": 29,
+      "city": "Pittsburgh",
+      "state": "PA",
+      "iata_code": "PIT",
+      "latitude": 40.44,
+      "longitude": -79.98,
+      "timezone": "America/New_York",
+      "cost_level": 2,
+      "public_transport_score": 6,
+      "walkability_score": 6,
+      "tags": [
+        "city",
+        "museum",
+        "food",
+        "architecture"
+      ],
+      "recommended_stay_days": 3,
+      "destination_type": "city",
+      "gateway_airports": [
+        {
+          "iata": "PIT",
+          "priority": 1
+        }
+      ],
+      "requires_car": false,
+      "country": "United States",
+      "country_code": "US",
+      "active": true,
+      "monthly_climate": [
+        {
+          "month": 1,
+          "temp_avg_c": 0,
+          "temp_max_avg_c": 6.0,
+          "temp_min_avg_c": -6.0,
+          "precip_days": 6,
+          "precip_mm": 45,
+          "sunshine_hours": 4,
+          "uv_index_avg": 1,
+          "wind_speed_avg_kmh": 17
+        },
+        {
+          "month": 2,
+          "temp_avg_c": 3,
+          "temp_max_avg_c": 9.0,
+          "temp_min_avg_c": -3.0,
+          "precip_days": 7,
+          "precip_mm": 55,
+          "sunshine_hours": 5,
+          "uv_index_avg": 2,
+          "wind_speed_avg_kmh": 16
+        },
+        {
+          "month": 3,
+          "temp_avg_c": 9,
+          "temp_max_avg_c": 15.0,
+          "temp_min_avg_c": 3.0,
+          "precip_days": 9,
+          "precip_mm": 75,
+          "sunshine_hours": 6.5,
+          "uv_index_avg": 4,
+          "wind_speed_avg_kmh": 15
+        },
+        {
+          "month": 4,
+          "temp_avg_c": 15,
+          "temp_max_avg_c": 21.0,
+          "temp_min_avg_c": 9.0,
+          "precip_days": 9,
+          "precip_mm": 80,
+          "sunshine_hours": 7,
+          "uv_index_avg": 6,
+          "wind_speed_avg_kmh": 13
+        },
+        {
+          "month": 5,
+          "temp_avg_c": 19,
+          "temp_max_avg_c": 25.0,
+          "temp_min_avg_c": 13.0,
+          "precip_days": 10,
+          "precip_mm": 85,
+          "sunshine_hours": 8,
+          "uv_index_avg": 7,
+          "wind_speed_avg_kmh": 12
+        },
+        {
+          "month": 6,
+          "temp_avg_c": 22,
+          "temp_max_avg_c": 28.0,
+          "temp_min_avg_c": 16.0,
+          "precip_days": 10,
+          "precip_mm": 80,
+          "sunshine_hours": 8,
+          "uv_index_avg": 8,
+          "wind_speed_avg_kmh": 12
+        },
+        {
+          "month": 7,
+          "temp_avg_c": 23,
+          "temp_max_avg_c": 29.0,
+          "temp_min_avg_c": 17.0,
+          "precip_days": 10,
+          "precip_mm": 80,
+          "sunshine_hours": 8,
+          "uv_index_avg": 8,
+          "wind_speed_avg_kmh": 12
+        },
+        {
+          "month": 8,
+          "temp_avg_c": 21,
+          "temp_max_avg_c": 27.0,
+          "temp_min_avg_c": 15.0,
+          "precip_days": 10,
+          "precip_mm": 80,
+          "sunshine_hours": 8,
+          "uv_index_avg": 7,
+          "wind_speed_avg_kmh": 13
+        },
+        {
+          "month": 9,
+          "temp_avg_c": 17,
+          "temp_max_avg_c": 23.0,
+          "temp_min_avg_c": 11.0,
+          "precip_days": 9,
+          "precip_mm": 80,
+          "sunshine_hours": 7,
+          "uv_index_avg": 6,
+          "wind_speed_avg_kmh": 14
+        },
+        {
+          "month": 10,
+          "temp_avg_c": 12,
+          "temp_max_avg_c": 18.0,
+          "temp_min_avg_c": 6.0,
+          "precip_days": 8,
+          "precip_mm": 70,
+          "sunshine_hours": 6,
+          "uv_index_avg": 4,
+          "wind_speed_avg_kmh": 15
+        },
+        {
+          "month": 11,
+          "temp_avg_c": 6,
+          "temp_max_avg_c": 12.0,
+          "temp_min_avg_c": 0.0,
+          "precip_days": 7,
+          "precip_mm": 55,
+          "sunshine_hours": 5,
+          "uv_index_avg": 2,
+          "wind_speed_avg_kmh": 16
+        },
+        {
+          "month": 12,
+          "temp_avg_c": 2,
+          "temp_max_avg_c": 8.0,
+          "temp_min_avg_c": -4.0,
+          "precip_days": 6,
+          "precip_mm": 50,
+          "sunshine_hours": 4,
+          "uv_index_avg": 1,
+          "wind_speed_avg_kmh": 17
+        }
+      ]
+    },
+    {
+      "id": 30,
+      "city": "Baltimore",
+      "state": "MD",
+      "iata_code": "BWI",
+      "latitude": 39.29,
+      "longitude": -76.61,
+      "timezone": "America/New_York",
+      "cost_level": 2,
+      "public_transport_score": 6,
+      "walkability_score": 6,
+      "tags": [
+        "city",
+        "history",
+        "food",
+        "museum"
+      ],
+      "recommended_stay_days": 3,
+      "destination_type": "city",
+      "gateway_airports": [
+        {
+          "iata": "BWI",
+          "priority": 1
+        }
+      ],
+      "requires_car": false,
+      "country": "United States",
+      "country_code": "US",
+      "active": true,
+      "monthly_climate": [
+        {
+          "month": 1,
+          "temp_avg_c": 0,
+          "temp_max_avg_c": 6.0,
+          "temp_min_avg_c": -6.0,
+          "precip_days": 6,
+          "precip_mm": 45,
+          "sunshine_hours": 4,
+          "uv_index_avg": 1,
+          "wind_speed_avg_kmh": 17
+        },
+        {
+          "month": 2,
+          "temp_avg_c": 3,
+          "temp_max_avg_c": 9.0,
+          "temp_min_avg_c": -3.0,
+          "precip_days": 7,
+          "precip_mm": 55,
+          "sunshine_hours": 5,
+          "uv_index_avg": 2,
+          "wind_speed_avg_kmh": 16
+        },
+        {
+          "month": 3,
+          "temp_avg_c": 9,
+          "temp_max_avg_c": 15.0,
+          "temp_min_avg_c": 3.0,
+          "precip_days": 9,
+          "precip_mm": 75,
+          "sunshine_hours": 6.5,
+          "uv_index_avg": 4,
+          "wind_speed_avg_kmh": 15
+        },
+        {
+          "month": 4,
+          "temp_avg_c": 15,
+          "temp_max_avg_c": 21.0,
+          "temp_min_avg_c": 9.0,
+          "precip_days": 9,
+          "precip_mm": 80,
+          "sunshine_hours": 7,
+          "uv_index_avg": 6,
+          "wind_speed_avg_kmh": 13
+        },
+        {
+          "month": 5,
+          "temp_avg_c": 19,
+          "temp_max_avg_c": 25.0,
+          "temp_min_avg_c": 13.0,
+          "precip_days": 10,
+          "precip_mm": 85,
+          "sunshine_hours": 8,
+          "uv_index_avg": 7,
+          "wind_speed_avg_kmh": 12
+        },
+        {
+          "month": 6,
+          "temp_avg_c": 22,
+          "temp_max_avg_c": 28.0,
+          "temp_min_avg_c": 16.0,
+          "precip_days": 10,
+          "precip_mm": 80,
+          "sunshine_hours": 8,
+          "uv_index_avg": 8,
+          "wind_speed_avg_kmh": 12
+        },
+        {
+          "month": 7,
+          "temp_avg_c": 23,
+          "temp_max_avg_c": 29.0,
+          "temp_min_avg_c": 17.0,
+          "precip_days": 10,
+          "precip_mm": 80,
+          "sunshine_hours": 8,
+          "uv_index_avg": 8,
+          "wind_speed_avg_kmh": 12
+        },
+        {
+          "month": 8,
+          "temp_avg_c": 21,
+          "temp_max_avg_c": 27.0,
+          "temp_min_avg_c": 15.0,
+          "precip_days": 10,
+          "precip_mm": 80,
+          "sunshine_hours": 8,
+          "uv_index_avg": 7,
+          "wind_speed_avg_kmh": 13
+        },
+        {
+          "month": 9,
+          "temp_avg_c": 17,
+          "temp_max_avg_c": 23.0,
+          "temp_min_avg_c": 11.0,
+          "precip_days": 9,
+          "precip_mm": 80,
+          "sunshine_hours": 7,
+          "uv_index_avg": 6,
+          "wind_speed_avg_kmh": 14
+        },
+        {
+          "month": 10,
+          "temp_avg_c": 12,
+          "temp_max_avg_c": 18.0,
+          "temp_min_avg_c": 6.0,
+          "precip_days": 8,
+          "precip_mm": 70,
+          "sunshine_hours": 6,
+          "uv_index_avg": 4,
+          "wind_speed_avg_kmh": 15
+        },
+        {
+          "month": 11,
+          "temp_avg_c": 6,
+          "temp_max_avg_c": 12.0,
+          "temp_min_avg_c": 0.0,
+          "precip_days": 7,
+          "precip_mm": 55,
+          "sunshine_hours": 5,
+          "uv_index_avg": 2,
+          "wind_speed_avg_kmh": 16
+        },
+        {
+          "month": 12,
+          "temp_avg_c": 2,
+          "temp_max_avg_c": 8.0,
+          "temp_min_avg_c": -4.0,
+          "precip_days": 6,
+          "precip_mm": 50,
+          "sunshine_hours": 4,
+          "uv_index_avg": 1,
+          "wind_speed_avg_kmh": 17
+        }
+      ]
+    },
+    {
+      "id": 31,
+      "city": "Cleveland",
+      "state": "OH",
+      "iata_code": "CLE",
+      "latitude": 41.5,
+      "longitude": -81.69,
+      "timezone": "America/New_York",
+      "cost_level": 1,
+      "public_transport_score": 5,
+      "walkability_score": 5,
+      "tags": [
+        "city",
+        "museum",
+        "music",
+        "history"
+      ],
+      "recommended_stay_days": 3,
+      "destination_type": "city",
+      "gateway_airports": [
+        {
+          "iata": "CLE",
+          "priority": 1
+        }
+      ],
+      "requires_car": false,
+      "country": "United States",
+      "country_code": "US",
+      "active": true,
+      "monthly_climate": [
+        {
+          "month": 1,
+          "temp_avg_c": 0,
+          "temp_max_avg_c": 6.0,
+          "temp_min_avg_c": -6.0,
+          "precip_days": 6,
+          "precip_mm": 45,
+          "sunshine_hours": 4,
+          "uv_index_avg": 1,
+          "wind_speed_avg_kmh": 17
+        },
+        {
+          "month": 2,
+          "temp_avg_c": 3,
+          "temp_max_avg_c": 9.0,
+          "temp_min_avg_c": -3.0,
+          "precip_days": 7,
+          "precip_mm": 55,
+          "sunshine_hours": 5,
+          "uv_index_avg": 2,
+          "wind_speed_avg_kmh": 16
+        },
+        {
+          "month": 3,
+          "temp_avg_c": 9,
+          "temp_max_avg_c": 15.0,
+          "temp_min_avg_c": 3.0,
+          "precip_days": 9,
+          "precip_mm": 75,
+          "sunshine_hours": 6.5,
+          "uv_index_avg": 4,
+          "wind_speed_avg_kmh": 15
+        },
+        {
+          "month": 4,
+          "temp_avg_c": 15,
+          "temp_max_avg_c": 21.0,
+          "temp_min_avg_c": 9.0,
+          "precip_days": 9,
+          "precip_mm": 80,
+          "sunshine_hours": 7,
+          "uv_index_avg": 6,
+          "wind_speed_avg_kmh": 13
+        },
+        {
+          "month": 5,
+          "temp_avg_c": 19,
+          "temp_max_avg_c": 25.0,
+          "temp_min_avg_c": 13.0,
+          "precip_days": 10,
+          "precip_mm": 85,
+          "sunshine_hours": 8,
+          "uv_index_avg": 7,
+          "wind_speed_avg_kmh": 12
+        },
+        {
+          "month": 6,
+          "temp_avg_c": 22,
+          "temp_max_avg_c": 28.0,
+          "temp_min_avg_c": 16.0,
+          "precip_days": 10,
+          "precip_mm": 80,
+          "sunshine_hours": 8,
+          "uv_index_avg": 8,
+          "wind_speed_avg_kmh": 12
+        },
+        {
+          "month": 7,
+          "temp_avg_c": 23,
+          "temp_max_avg_c": 29.0,
+          "temp_min_avg_c": 17.0,
+          "precip_days": 10,
+          "precip_mm": 80,
+          "sunshine_hours": 8,
+          "uv_index_avg": 8,
+          "wind_speed_avg_kmh": 12
+        },
+        {
+          "month": 8,
+          "temp_avg_c": 21,
+          "temp_max_avg_c": 27.0,
+          "temp_min_avg_c": 15.0,
+          "precip_days": 10,
+          "precip_mm": 80,
+          "sunshine_hours": 8,
+          "uv_index_avg": 7,
+          "wind_speed_avg_kmh": 13
+        },
+        {
+          "month": 9,
+          "temp_avg_c": 17,
+          "temp_max_avg_c": 23.0,
+          "temp_min_avg_c": 11.0,
+          "precip_days": 9,
+          "precip_mm": 80,
+          "sunshine_hours": 7,
+          "uv_index_avg": 6,
+          "wind_speed_avg_kmh": 14
+        },
+        {
+          "month": 10,
+          "temp_avg_c": 12,
+          "temp_max_avg_c": 18.0,
+          "temp_min_avg_c": 6.0,
+          "precip_days": 8,
+          "precip_mm": 70,
+          "sunshine_hours": 6,
+          "uv_index_avg": 4,
+          "wind_speed_avg_kmh": 15
+        },
+        {
+          "month": 11,
+          "temp_avg_c": 6,
+          "temp_max_avg_c": 12.0,
+          "temp_min_avg_c": 0.0,
+          "precip_days": 7,
+          "precip_mm": 55,
+          "sunshine_hours": 5,
+          "uv_index_avg": 2,
+          "wind_speed_avg_kmh": 16
+        },
+        {
+          "month": 12,
+          "temp_avg_c": 2,
+          "temp_max_avg_c": 8.0,
+          "temp_min_avg_c": -4.0,
+          "precip_days": 6,
+          "precip_mm": 50,
+          "sunshine_hours": 4,
+          "uv_index_avg": 1,
+          "wind_speed_avg_kmh": 17
+        }
+      ]
+    },
+    {
+      "id": 32,
+      "city": "Cincinnati",
+      "state": "OH",
+      "iata_code": "CVG",
+      "latitude": 39.1,
+      "longitude": -84.51,
+      "timezone": "America/New_York",
+      "cost_level": 2,
+      "public_transport_score": 4,
+      "walkability_score": 5,
+      "tags": [
+        "city",
+        "food",
+        "architecture",
+        "history"
+      ],
+      "recommended_stay_days": 3,
+      "destination_type": "city",
+      "gateway_airports": [
+        {
+          "iata": "CVG",
+          "priority": 1
+        }
+      ],
+      "requires_car": false,
+      "country": "United States",
+      "country_code": "US",
+      "active": true,
+      "monthly_climate": [
+        {
+          "month": 1,
+          "temp_avg_c": 0,
+          "temp_max_avg_c": 6.0,
+          "temp_min_avg_c": -6.0,
+          "precip_days": 6,
+          "precip_mm": 45,
+          "sunshine_hours": 4,
+          "uv_index_avg": 1,
+          "wind_speed_avg_kmh": 17
+        },
+        {
+          "month": 2,
+          "temp_avg_c": 3,
+          "temp_max_avg_c": 9.0,
+          "temp_min_avg_c": -3.0,
+          "precip_days": 7,
+          "precip_mm": 55,
+          "sunshine_hours": 5,
+          "uv_index_avg": 2,
+          "wind_speed_avg_kmh": 16
+        },
+        {
+          "month": 3,
+          "temp_avg_c": 9,
+          "temp_max_avg_c": 15.0,
+          "temp_min_avg_c": 3.0,
+          "precip_days": 9,
+          "precip_mm": 75,
+          "sunshine_hours": 6.5,
+          "uv_index_avg": 4,
+          "wind_speed_avg_kmh": 15
+        },
+        {
+          "month": 4,
+          "temp_avg_c": 15,
+          "temp_max_avg_c": 21.0,
+          "temp_min_avg_c": 9.0,
+          "precip_days": 9,
+          "precip_mm": 80,
+          "sunshine_hours": 7,
+          "uv_index_avg": 6,
+          "wind_speed_avg_kmh": 13
+        },
+        {
+          "month": 5,
+          "temp_avg_c": 19,
+          "temp_max_avg_c": 25.0,
+          "temp_min_avg_c": 13.0,
+          "precip_days": 10,
+          "precip_mm": 85,
+          "sunshine_hours": 8,
+          "uv_index_avg": 7,
+          "wind_speed_avg_kmh": 12
+        },
+        {
+          "month": 6,
+          "temp_avg_c": 22,
+          "temp_max_avg_c": 28.0,
+          "temp_min_avg_c": 16.0,
+          "precip_days": 10,
+          "precip_mm": 80,
+          "sunshine_hours": 8,
+          "uv_index_avg": 8,
+          "wind_speed_avg_kmh": 12
+        },
+        {
+          "month": 7,
+          "temp_avg_c": 23,
+          "temp_max_avg_c": 29.0,
+          "temp_min_avg_c": 17.0,
+          "precip_days": 10,
+          "precip_mm": 80,
+          "sunshine_hours": 8,
+          "uv_index_avg": 8,
+          "wind_speed_avg_kmh": 12
+        },
+        {
+          "month": 8,
+          "temp_avg_c": 21,
+          "temp_max_avg_c": 27.0,
+          "temp_min_avg_c": 15.0,
+          "precip_days": 10,
+          "precip_mm": 80,
+          "sunshine_hours": 8,
+          "uv_index_avg": 7,
+          "wind_speed_avg_kmh": 13
+        },
+        {
+          "month": 9,
+          "temp_avg_c": 17,
+          "temp_max_avg_c": 23.0,
+          "temp_min_avg_c": 11.0,
+          "precip_days": 9,
+          "precip_mm": 80,
+          "sunshine_hours": 7,
+          "uv_index_avg": 6,
+          "wind_speed_avg_kmh": 14
+        },
+        {
+          "month": 10,
+          "temp_avg_c": 12,
+          "temp_max_avg_c": 18.0,
+          "temp_min_avg_c": 6.0,
+          "precip_days": 8,
+          "precip_mm": 70,
+          "sunshine_hours": 6,
+          "uv_index_avg": 4,
+          "wind_speed_avg_kmh": 15
+        },
+        {
+          "month": 11,
+          "temp_avg_c": 6,
+          "temp_max_avg_c": 12.0,
+          "temp_min_avg_c": 0.0,
+          "precip_days": 7,
+          "precip_mm": 55,
+          "sunshine_hours": 5,
+          "uv_index_avg": 2,
+          "wind_speed_avg_kmh": 16
+        },
+        {
+          "month": 12,
+          "temp_avg_c": 2,
+          "temp_max_avg_c": 8.0,
+          "temp_min_avg_c": -4.0,
+          "precip_days": 6,
+          "precip_mm": 50,
+          "sunshine_hours": 4,
+          "uv_index_avg": 1,
+          "wind_speed_avg_kmh": 17
+        }
+      ]
+    },
+    {
+      "id": 33,
+      "city": "Detroit",
+      "state": "MI",
+      "iata_code": "DTW",
+      "latitude": 42.33,
+      "longitude": -83.05,
+      "timezone": "America/Detroit",
+      "cost_level": 1,
+      "public_transport_score": 4,
+      "walkability_score": 4,
+      "tags": [
+        "city",
+        "music",
+        "history",
+        "museum"
+      ],
+      "recommended_stay_days": 3,
+      "destination_type": "city",
+      "gateway_airports": [
+        {
+          "iata": "DTW",
+          "priority": 1
+        }
+      ],
+      "requires_car": true,
+      "country": "United States",
+      "country_code": "US",
+      "active": true,
+      "monthly_climate": [
+        {
+          "month": 1,
+          "temp_avg_c": 0,
+          "temp_max_avg_c": 6.0,
+          "temp_min_avg_c": -6.0,
+          "precip_days": 6,
+          "precip_mm": 45,
+          "sunshine_hours": 4,
+          "uv_index_avg": 1,
+          "wind_speed_avg_kmh": 17
+        },
+        {
+          "month": 2,
+          "temp_avg_c": 3,
+          "temp_max_avg_c": 9.0,
+          "temp_min_avg_c": -3.0,
+          "precip_days": 7,
+          "precip_mm": 55,
+          "sunshine_hours": 5,
+          "uv_index_avg": 2,
+          "wind_speed_avg_kmh": 16
+        },
+        {
+          "month": 3,
+          "temp_avg_c": 9,
+          "temp_max_avg_c": 15.0,
+          "temp_min_avg_c": 3.0,
+          "precip_days": 9,
+          "precip_mm": 75,
+          "sunshine_hours": 6.5,
+          "uv_index_avg": 4,
+          "wind_speed_avg_kmh": 15
+        },
+        {
+          "month": 4,
+          "temp_avg_c": 15,
+          "temp_max_avg_c": 21.0,
+          "temp_min_avg_c": 9.0,
+          "precip_days": 9,
+          "precip_mm": 80,
+          "sunshine_hours": 7,
+          "uv_index_avg": 6,
+          "wind_speed_avg_kmh": 13
+        },
+        {
+          "month": 5,
+          "temp_avg_c": 19,
+          "temp_max_avg_c": 25.0,
+          "temp_min_avg_c": 13.0,
+          "precip_days": 10,
+          "precip_mm": 85,
+          "sunshine_hours": 8,
+          "uv_index_avg": 7,
+          "wind_speed_avg_kmh": 12
+        },
+        {
+          "month": 6,
+          "temp_avg_c": 22,
+          "temp_max_avg_c": 28.0,
+          "temp_min_avg_c": 16.0,
+          "precip_days": 10,
+          "precip_mm": 80,
+          "sunshine_hours": 8,
+          "uv_index_avg": 8,
+          "wind_speed_avg_kmh": 12
+        },
+        {
+          "month": 7,
+          "temp_avg_c": 23,
+          "temp_max_avg_c": 29.0,
+          "temp_min_avg_c": 17.0,
+          "precip_days": 10,
+          "precip_mm": 80,
+          "sunshine_hours": 8,
+          "uv_index_avg": 8,
+          "wind_speed_avg_kmh": 12
+        },
+        {
+          "month": 8,
+          "temp_avg_c": 21,
+          "temp_max_avg_c": 27.0,
+          "temp_min_avg_c": 15.0,
+          "precip_days": 10,
+          "precip_mm": 80,
+          "sunshine_hours": 8,
+          "uv_index_avg": 7,
+          "wind_speed_avg_kmh": 13
+        },
+        {
+          "month": 9,
+          "temp_avg_c": 17,
+          "temp_max_avg_c": 23.0,
+          "temp_min_avg_c": 11.0,
+          "precip_days": 9,
+          "precip_mm": 80,
+          "sunshine_hours": 7,
+          "uv_index_avg": 6,
+          "wind_speed_avg_kmh": 14
+        },
+        {
+          "month": 10,
+          "temp_avg_c": 12,
+          "temp_max_avg_c": 18.0,
+          "temp_min_avg_c": 6.0,
+          "precip_days": 8,
+          "precip_mm": 70,
+          "sunshine_hours": 6,
+          "uv_index_avg": 4,
+          "wind_speed_avg_kmh": 15
+        },
+        {
+          "month": 11,
+          "temp_avg_c": 6,
+          "temp_max_avg_c": 12.0,
+          "temp_min_avg_c": 0.0,
+          "precip_days": 7,
+          "precip_mm": 55,
+          "sunshine_hours": 5,
+          "uv_index_avg": 2,
+          "wind_speed_avg_kmh": 16
+        },
+        {
+          "month": 12,
+          "temp_avg_c": 2,
+          "temp_max_avg_c": 8.0,
+          "temp_min_avg_c": -4.0,
+          "precip_days": 6,
+          "precip_mm": 50,
+          "sunshine_hours": 4,
+          "uv_index_avg": 1,
+          "wind_speed_avg_kmh": 17
+        }
+      ]
+    },
+    {
+      "id": 34,
+      "city": "Milwaukee",
+      "state": "WI",
+      "iata_code": "MKE",
+      "latitude": 43.04,
+      "longitude": -87.91,
+      "timezone": "America/Chicago",
+      "cost_level": 2,
+      "public_transport_score": 5,
+      "walkability_score": 6,
+      "tags": [
+        "city",
+        "food",
+        "museum",
+        "history"
+      ],
+      "recommended_stay_days": 3,
+      "destination_type": "city",
+      "gateway_airports": [
+        {
+          "iata": "MKE",
+          "priority": 1
+        }
+      ],
+      "requires_car": false,
+      "country": "United States",
+      "country_code": "US",
+      "active": true,
+      "monthly_climate": [
+        {
+          "month": 1,
+          "temp_avg_c": 0,
+          "temp_max_avg_c": 6.0,
+          "temp_min_avg_c": -6.0,
+          "precip_days": 6,
+          "precip_mm": 45,
+          "sunshine_hours": 4,
+          "uv_index_avg": 1,
+          "wind_speed_avg_kmh": 17
+        },
+        {
+          "month": 2,
+          "temp_avg_c": 3,
+          "temp_max_avg_c": 9.0,
+          "temp_min_avg_c": -3.0,
+          "precip_days": 7,
+          "precip_mm": 55,
+          "sunshine_hours": 5,
+          "uv_index_avg": 2,
+          "wind_speed_avg_kmh": 16
+        },
+        {
+          "month": 3,
+          "temp_avg_c": 9,
+          "temp_max_avg_c": 15.0,
+          "temp_min_avg_c": 3.0,
+          "precip_days": 9,
+          "precip_mm": 75,
+          "sunshine_hours": 6.5,
+          "uv_index_avg": 4,
+          "wind_speed_avg_kmh": 15
+        },
+        {
+          "month": 4,
+          "temp_avg_c": 15,
+          "temp_max_avg_c": 21.0,
+          "temp_min_avg_c": 9.0,
+          "precip_days": 9,
+          "precip_mm": 80,
+          "sunshine_hours": 7,
+          "uv_index_avg": 6,
+          "wind_speed_avg_kmh": 13
+        },
+        {
+          "month": 5,
+          "temp_avg_c": 19,
+          "temp_max_avg_c": 25.0,
+          "temp_min_avg_c": 13.0,
+          "precip_days": 10,
+          "precip_mm": 85,
+          "sunshine_hours": 8,
+          "uv_index_avg": 7,
+          "wind_speed_avg_kmh": 12
+        },
+        {
+          "month": 6,
+          "temp_avg_c": 22,
+          "temp_max_avg_c": 28.0,
+          "temp_min_avg_c": 16.0,
+          "precip_days": 10,
+          "precip_mm": 80,
+          "sunshine_hours": 8,
+          "uv_index_avg": 8,
+          "wind_speed_avg_kmh": 12
+        },
+        {
+          "month": 7,
+          "temp_avg_c": 23,
+          "temp_max_avg_c": 29.0,
+          "temp_min_avg_c": 17.0,
+          "precip_days": 10,
+          "precip_mm": 80,
+          "sunshine_hours": 8,
+          "uv_index_avg": 8,
+          "wind_speed_avg_kmh": 12
+        },
+        {
+          "month": 8,
+          "temp_avg_c": 21,
+          "temp_max_avg_c": 27.0,
+          "temp_min_avg_c": 15.0,
+          "precip_days": 10,
+          "precip_mm": 80,
+          "sunshine_hours": 8,
+          "uv_index_avg": 7,
+          "wind_speed_avg_kmh": 13
+        },
+        {
+          "month": 9,
+          "temp_avg_c": 17,
+          "temp_max_avg_c": 23.0,
+          "temp_min_avg_c": 11.0,
+          "precip_days": 9,
+          "precip_mm": 80,
+          "sunshine_hours": 7,
+          "uv_index_avg": 6,
+          "wind_speed_avg_kmh": 14
+        },
+        {
+          "month": 10,
+          "temp_avg_c": 12,
+          "temp_max_avg_c": 18.0,
+          "temp_min_avg_c": 6.0,
+          "precip_days": 8,
+          "precip_mm": 70,
+          "sunshine_hours": 6,
+          "uv_index_avg": 4,
+          "wind_speed_avg_kmh": 15
+        },
+        {
+          "month": 11,
+          "temp_avg_c": 6,
+          "temp_max_avg_c": 12.0,
+          "temp_min_avg_c": 0.0,
+          "precip_days": 7,
+          "precip_mm": 55,
+          "sunshine_hours": 5,
+          "uv_index_avg": 2,
+          "wind_speed_avg_kmh": 16
+        },
+        {
+          "month": 12,
+          "temp_avg_c": 2,
+          "temp_max_avg_c": 8.0,
+          "temp_min_avg_c": -4.0,
+          "precip_days": 6,
+          "precip_mm": 50,
+          "sunshine_hours": 4,
+          "uv_index_avg": 1,
+          "wind_speed_avg_kmh": 17
+        }
+      ]
+    },
+    {
+      "id": 35,
+      "city": "Indianapolis",
+      "state": "IN",
+      "iata_code": "IND",
+      "latitude": 39.77,
+      "longitude": -86.16,
+      "timezone": "America/Indiana/Indianapolis",
+      "cost_level": 2,
+      "public_transport_score": 4,
+      "walkability_score": 4,
+      "tags": [
+        "city",
+        "sports",
+        "museum",
+        "family"
+      ],
+      "recommended_stay_days": 3,
+      "destination_type": "city",
+      "gateway_airports": [
+        {
+          "iata": "IND",
+          "priority": 1
+        }
+      ],
+      "requires_car": true,
+      "country": "United States",
+      "country_code": "US",
+      "active": true,
+      "monthly_climate": [
+        {
+          "month": 1,
+          "temp_avg_c": 0,
+          "temp_max_avg_c": 6.0,
+          "temp_min_avg_c": -6.0,
+          "precip_days": 6,
+          "precip_mm": 45,
+          "sunshine_hours": 4,
+          "uv_index_avg": 1,
+          "wind_speed_avg_kmh": 17
+        },
+        {
+          "month": 2,
+          "temp_avg_c": 3,
+          "temp_max_avg_c": 9.0,
+          "temp_min_avg_c": -3.0,
+          "precip_days": 7,
+          "precip_mm": 55,
+          "sunshine_hours": 5,
+          "uv_index_avg": 2,
+          "wind_speed_avg_kmh": 16
+        },
+        {
+          "month": 3,
+          "temp_avg_c": 9,
+          "temp_max_avg_c": 15.0,
+          "temp_min_avg_c": 3.0,
+          "precip_days": 9,
+          "precip_mm": 75,
+          "sunshine_hours": 6.5,
+          "uv_index_avg": 4,
+          "wind_speed_avg_kmh": 15
+        },
+        {
+          "month": 4,
+          "temp_avg_c": 15,
+          "temp_max_avg_c": 21.0,
+          "temp_min_avg_c": 9.0,
+          "precip_days": 9,
+          "precip_mm": 80,
+          "sunshine_hours": 7,
+          "uv_index_avg": 6,
+          "wind_speed_avg_kmh": 13
+        },
+        {
+          "month": 5,
+          "temp_avg_c": 19,
+          "temp_max_avg_c": 25.0,
+          "temp_min_avg_c": 13.0,
+          "precip_days": 10,
+          "precip_mm": 85,
+          "sunshine_hours": 8,
+          "uv_index_avg": 7,
+          "wind_speed_avg_kmh": 12
+        },
+        {
+          "month": 6,
+          "temp_avg_c": 22,
+          "temp_max_avg_c": 28.0,
+          "temp_min_avg_c": 16.0,
+          "precip_days": 10,
+          "precip_mm": 80,
+          "sunshine_hours": 8,
+          "uv_index_avg": 8,
+          "wind_speed_avg_kmh": 12
+        },
+        {
+          "month": 7,
+          "temp_avg_c": 23,
+          "temp_max_avg_c": 29.0,
+          "temp_min_avg_c": 17.0,
+          "precip_days": 10,
+          "precip_mm": 80,
+          "sunshine_hours": 8,
+          "uv_index_avg": 8,
+          "wind_speed_avg_kmh": 12
+        },
+        {
+          "month": 8,
+          "temp_avg_c": 21,
+          "temp_max_avg_c": 27.0,
+          "temp_min_avg_c": 15.0,
+          "precip_days": 10,
+          "precip_mm": 80,
+          "sunshine_hours": 8,
+          "uv_index_avg": 7,
+          "wind_speed_avg_kmh": 13
+        },
+        {
+          "month": 9,
+          "temp_avg_c": 17,
+          "temp_max_avg_c": 23.0,
+          "temp_min_avg_c": 11.0,
+          "precip_days": 9,
+          "precip_mm": 80,
+          "sunshine_hours": 7,
+          "uv_index_avg": 6,
+          "wind_speed_avg_kmh": 14
+        },
+        {
+          "month": 10,
+          "temp_avg_c": 12,
+          "temp_max_avg_c": 18.0,
+          "temp_min_avg_c": 6.0,
+          "precip_days": 8,
+          "precip_mm": 70,
+          "sunshine_hours": 6,
+          "uv_index_avg": 4,
+          "wind_speed_avg_kmh": 15
+        },
+        {
+          "month": 11,
+          "temp_avg_c": 6,
+          "temp_max_avg_c": 12.0,
+          "temp_min_avg_c": 0.0,
+          "precip_days": 7,
+          "precip_mm": 55,
+          "sunshine_hours": 5,
+          "uv_index_avg": 2,
+          "wind_speed_avg_kmh": 16
+        },
+        {
+          "month": 12,
+          "temp_avg_c": 2,
+          "temp_max_avg_c": 8.0,
+          "temp_min_avg_c": -4.0,
+          "precip_days": 6,
+          "precip_mm": 50,
+          "sunshine_hours": 4,
+          "uv_index_avg": 1,
+          "wind_speed_avg_kmh": 17
+        }
+      ]
+    },
+    {
+      "id": 36,
+      "city": "Kansas City",
+      "state": "MO",
+      "iata_code": "MCI",
+      "latitude": 39.1,
+      "longitude": -94.58,
+      "timezone": "America/Chicago",
+      "cost_level": 1,
+      "public_transport_score": 3,
+      "walkability_score": 4,
+      "tags": [
+        "city",
+        "food",
+        "music",
+        "history"
+      ],
+      "recommended_stay_days": 3,
+      "destination_type": "city",
+      "gateway_airports": [
+        {
+          "iata": "MCI",
+          "priority": 1
+        }
+      ],
+      "requires_car": true,
+      "country": "United States",
+      "country_code": "US",
+      "active": true,
+      "monthly_climate": [
+        {
+          "month": 1,
+          "temp_avg_c": 0,
+          "temp_max_avg_c": 6.0,
+          "temp_min_avg_c": -6.0,
+          "precip_days": 6,
+          "precip_mm": 45,
+          "sunshine_hours": 4,
+          "uv_index_avg": 1,
+          "wind_speed_avg_kmh": 17
+        },
+        {
+          "month": 2,
+          "temp_avg_c": 3,
+          "temp_max_avg_c": 9.0,
+          "temp_min_avg_c": -3.0,
+          "precip_days": 7,
+          "precip_mm": 55,
+          "sunshine_hours": 5,
+          "uv_index_avg": 2,
+          "wind_speed_avg_kmh": 16
+        },
+        {
+          "month": 3,
+          "temp_avg_c": 9,
+          "temp_max_avg_c": 15.0,
+          "temp_min_avg_c": 3.0,
+          "precip_days": 9,
+          "precip_mm": 75,
+          "sunshine_hours": 6.5,
+          "uv_index_avg": 4,
+          "wind_speed_avg_kmh": 15
+        },
+        {
+          "month": 4,
+          "temp_avg_c": 15,
+          "temp_max_avg_c": 21.0,
+          "temp_min_avg_c": 9.0,
+          "precip_days": 9,
+          "precip_mm": 80,
+          "sunshine_hours": 7,
+          "uv_index_avg": 6,
+          "wind_speed_avg_kmh": 13
+        },
+        {
+          "month": 5,
+          "temp_avg_c": 19,
+          "temp_max_avg_c": 25.0,
+          "temp_min_avg_c": 13.0,
+          "precip_days": 10,
+          "precip_mm": 85,
+          "sunshine_hours": 8,
+          "uv_index_avg": 7,
+          "wind_speed_avg_kmh": 12
+        },
+        {
+          "month": 6,
+          "temp_avg_c": 22,
+          "temp_max_avg_c": 28.0,
+          "temp_min_avg_c": 16.0,
+          "precip_days": 10,
+          "precip_mm": 80,
+          "sunshine_hours": 8,
+          "uv_index_avg": 8,
+          "wind_speed_avg_kmh": 12
+        },
+        {
+          "month": 7,
+          "temp_avg_c": 23,
+          "temp_max_avg_c": 29.0,
+          "temp_min_avg_c": 17.0,
+          "precip_days": 10,
+          "precip_mm": 80,
+          "sunshine_hours": 8,
+          "uv_index_avg": 8,
+          "wind_speed_avg_kmh": 12
+        },
+        {
+          "month": 8,
+          "temp_avg_c": 21,
+          "temp_max_avg_c": 27.0,
+          "temp_min_avg_c": 15.0,
+          "precip_days": 10,
+          "precip_mm": 80,
+          "sunshine_hours": 8,
+          "uv_index_avg": 7,
+          "wind_speed_avg_kmh": 13
+        },
+        {
+          "month": 9,
+          "temp_avg_c": 17,
+          "temp_max_avg_c": 23.0,
+          "temp_min_avg_c": 11.0,
+          "precip_days": 9,
+          "precip_mm": 80,
+          "sunshine_hours": 7,
+          "uv_index_avg": 6,
+          "wind_speed_avg_kmh": 14
+        },
+        {
+          "month": 10,
+          "temp_avg_c": 12,
+          "temp_max_avg_c": 18.0,
+          "temp_min_avg_c": 6.0,
+          "precip_days": 8,
+          "precip_mm": 70,
+          "sunshine_hours": 6,
+          "uv_index_avg": 4,
+          "wind_speed_avg_kmh": 15
+        },
+        {
+          "month": 11,
+          "temp_avg_c": 6,
+          "temp_max_avg_c": 12.0,
+          "temp_min_avg_c": 0.0,
+          "precip_days": 7,
+          "precip_mm": 55,
+          "sunshine_hours": 5,
+          "uv_index_avg": 2,
+          "wind_speed_avg_kmh": 16
+        },
+        {
+          "month": 12,
+          "temp_avg_c": 2,
+          "temp_max_avg_c": 8.0,
+          "temp_min_avg_c": -4.0,
+          "precip_days": 6,
+          "precip_mm": 50,
+          "sunshine_hours": 4,
+          "uv_index_avg": 1,
+          "wind_speed_avg_kmh": 17
+        }
+      ]
+    },
+    {
+      "id": 37,
+      "city": "St. Louis",
+      "state": "MO",
+      "iata_code": "STL",
+      "latitude": 38.63,
+      "longitude": -90.2,
+      "timezone": "America/Chicago",
+      "cost_level": 1,
+      "public_transport_score": 5,
+      "walkability_score": 5,
+      "tags": [
+        "city",
+        "history",
+        "museum",
+        "food"
+      ],
+      "recommended_stay_days": 3,
+      "destination_type": "city",
+      "gateway_airports": [
+        {
+          "iata": "STL",
+          "priority": 1
+        }
+      ],
+      "requires_car": false,
+      "country": "United States",
+      "country_code": "US",
+      "active": true,
+      "monthly_climate": [
+        {
+          "month": 1,
+          "temp_avg_c": 0,
+          "temp_max_avg_c": 6.0,
+          "temp_min_avg_c": -6.0,
+          "precip_days": 6,
+          "precip_mm": 45,
+          "sunshine_hours": 4,
+          "uv_index_avg": 1,
+          "wind_speed_avg_kmh": 17
+        },
+        {
+          "month": 2,
+          "temp_avg_c": 3,
+          "temp_max_avg_c": 9.0,
+          "temp_min_avg_c": -3.0,
+          "precip_days": 7,
+          "precip_mm": 55,
+          "sunshine_hours": 5,
+          "uv_index_avg": 2,
+          "wind_speed_avg_kmh": 16
+        },
+        {
+          "month": 3,
+          "temp_avg_c": 9,
+          "temp_max_avg_c": 15.0,
+          "temp_min_avg_c": 3.0,
+          "precip_days": 9,
+          "precip_mm": 75,
+          "sunshine_hours": 6.5,
+          "uv_index_avg": 4,
+          "wind_speed_avg_kmh": 15
+        },
+        {
+          "month": 4,
+          "temp_avg_c": 15,
+          "temp_max_avg_c": 21.0,
+          "temp_min_avg_c": 9.0,
+          "precip_days": 9,
+          "precip_mm": 80,
+          "sunshine_hours": 7,
+          "uv_index_avg": 6,
+          "wind_speed_avg_kmh": 13
+        },
+        {
+          "month": 5,
+          "temp_avg_c": 19,
+          "temp_max_avg_c": 25.0,
+          "temp_min_avg_c": 13.0,
+          "precip_days": 10,
+          "precip_mm": 85,
+          "sunshine_hours": 8,
+          "uv_index_avg": 7,
+          "wind_speed_avg_kmh": 12
+        },
+        {
+          "month": 6,
+          "temp_avg_c": 22,
+          "temp_max_avg_c": 28.0,
+          "temp_min_avg_c": 16.0,
+          "precip_days": 10,
+          "precip_mm": 80,
+          "sunshine_hours": 8,
+          "uv_index_avg": 8,
+          "wind_speed_avg_kmh": 12
+        },
+        {
+          "month": 7,
+          "temp_avg_c": 23,
+          "temp_max_avg_c": 29.0,
+          "temp_min_avg_c": 17.0,
+          "precip_days": 10,
+          "precip_mm": 80,
+          "sunshine_hours": 8,
+          "uv_index_avg": 8,
+          "wind_speed_avg_kmh": 12
+        },
+        {
+          "month": 8,
+          "temp_avg_c": 21,
+          "temp_max_avg_c": 27.0,
+          "temp_min_avg_c": 15.0,
+          "precip_days": 10,
+          "precip_mm": 80,
+          "sunshine_hours": 8,
+          "uv_index_avg": 7,
+          "wind_speed_avg_kmh": 13
+        },
+        {
+          "month": 9,
+          "temp_avg_c": 17,
+          "temp_max_avg_c": 23.0,
+          "temp_min_avg_c": 11.0,
+          "precip_days": 9,
+          "precip_mm": 80,
+          "sunshine_hours": 7,
+          "uv_index_avg": 6,
+          "wind_speed_avg_kmh": 14
+        },
+        {
+          "month": 10,
+          "temp_avg_c": 12,
+          "temp_max_avg_c": 18.0,
+          "temp_min_avg_c": 6.0,
+          "precip_days": 8,
+          "precip_mm": 70,
+          "sunshine_hours": 6,
+          "uv_index_avg": 4,
+          "wind_speed_avg_kmh": 15
+        },
+        {
+          "month": 11,
+          "temp_avg_c": 6,
+          "temp_max_avg_c": 12.0,
+          "temp_min_avg_c": 0.0,
+          "precip_days": 7,
+          "precip_mm": 55,
+          "sunshine_hours": 5,
+          "uv_index_avg": 2,
+          "wind_speed_avg_kmh": 16
+        },
+        {
+          "month": 12,
+          "temp_avg_c": 2,
+          "temp_max_avg_c": 8.0,
+          "temp_min_avg_c": -4.0,
+          "precip_days": 6,
+          "precip_mm": 50,
+          "sunshine_hours": 4,
+          "uv_index_avg": 1,
+          "wind_speed_avg_kmh": 17
+        }
+      ]
+    },
+    {
+      "id": 38,
+      "city": "Dallas",
+      "state": "TX",
+      "iata_code": "DFW",
+      "latitude": 32.78,
+      "longitude": -96.8,
+      "timezone": "America/Chicago",
+      "cost_level": 3,
+      "public_transport_score": 4,
+      "walkability_score": 4,
+      "tags": [
+        "city",
+        "food",
+        "shopping",
+        "nightlife"
+      ],
+      "recommended_stay_days": 3,
+      "destination_type": "city",
+      "gateway_airports": [
+        {
+          "iata": "DFW",
+          "priority": 1
+        },
+        {
+          "iata": "DAL",
+          "priority": 2
+        }
+      ],
+      "requires_car": true,
+      "country": "United States",
+      "country_code": "US",
+      "active": true,
+      "monthly_climate": [
+        {
+          "month": 1,
+          "temp_avg_c": 0,
+          "temp_max_avg_c": 6.0,
+          "temp_min_avg_c": -6.0,
+          "precip_days": 6,
+          "precip_mm": 45,
+          "sunshine_hours": 4,
+          "uv_index_avg": 1,
+          "wind_speed_avg_kmh": 17
+        },
+        {
+          "month": 2,
+          "temp_avg_c": 3,
+          "temp_max_avg_c": 9.0,
+          "temp_min_avg_c": -3.0,
+          "precip_days": 7,
+          "precip_mm": 55,
+          "sunshine_hours": 5,
+          "uv_index_avg": 2,
+          "wind_speed_avg_kmh": 16
+        },
+        {
+          "month": 3,
+          "temp_avg_c": 9,
+          "temp_max_avg_c": 15.0,
+          "temp_min_avg_c": 3.0,
+          "precip_days": 9,
+          "precip_mm": 75,
+          "sunshine_hours": 6.5,
+          "uv_index_avg": 4,
+          "wind_speed_avg_kmh": 15
+        },
+        {
+          "month": 4,
+          "temp_avg_c": 15,
+          "temp_max_avg_c": 21.0,
+          "temp_min_avg_c": 9.0,
+          "precip_days": 9,
+          "precip_mm": 80,
+          "sunshine_hours": 7,
+          "uv_index_avg": 6,
+          "wind_speed_avg_kmh": 13
+        },
+        {
+          "month": 5,
+          "temp_avg_c": 19,
+          "temp_max_avg_c": 25.0,
+          "temp_min_avg_c": 13.0,
+          "precip_days": 10,
+          "precip_mm": 85,
+          "sunshine_hours": 8,
+          "uv_index_avg": 7,
+          "wind_speed_avg_kmh": 12
+        },
+        {
+          "month": 6,
+          "temp_avg_c": 22,
+          "temp_max_avg_c": 28.0,
+          "temp_min_avg_c": 16.0,
+          "precip_days": 10,
+          "precip_mm": 80,
+          "sunshine_hours": 8,
+          "uv_index_avg": 8,
+          "wind_speed_avg_kmh": 12
+        },
+        {
+          "month": 7,
+          "temp_avg_c": 23,
+          "temp_max_avg_c": 29.0,
+          "temp_min_avg_c": 17.0,
+          "precip_days": 10,
+          "precip_mm": 80,
+          "sunshine_hours": 8,
+          "uv_index_avg": 8,
+          "wind_speed_avg_kmh": 12
+        },
+        {
+          "month": 8,
+          "temp_avg_c": 21,
+          "temp_max_avg_c": 27.0,
+          "temp_min_avg_c": 15.0,
+          "precip_days": 10,
+          "precip_mm": 80,
+          "sunshine_hours": 8,
+          "uv_index_avg": 7,
+          "wind_speed_avg_kmh": 13
+        },
+        {
+          "month": 9,
+          "temp_avg_c": 17,
+          "temp_max_avg_c": 23.0,
+          "temp_min_avg_c": 11.0,
+          "precip_days": 9,
+          "precip_mm": 80,
+          "sunshine_hours": 7,
+          "uv_index_avg": 6,
+          "wind_speed_avg_kmh": 14
+        },
+        {
+          "month": 10,
+          "temp_avg_c": 12,
+          "temp_max_avg_c": 18.0,
+          "temp_min_avg_c": 6.0,
+          "precip_days": 8,
+          "precip_mm": 70,
+          "sunshine_hours": 6,
+          "uv_index_avg": 4,
+          "wind_speed_avg_kmh": 15
+        },
+        {
+          "month": 11,
+          "temp_avg_c": 6,
+          "temp_max_avg_c": 12.0,
+          "temp_min_avg_c": 0.0,
+          "precip_days": 7,
+          "precip_mm": 55,
+          "sunshine_hours": 5,
+          "uv_index_avg": 2,
+          "wind_speed_avg_kmh": 16
+        },
+        {
+          "month": 12,
+          "temp_avg_c": 2,
+          "temp_max_avg_c": 8.0,
+          "temp_min_avg_c": -4.0,
+          "precip_days": 6,
+          "precip_mm": 50,
+          "sunshine_hours": 4,
+          "uv_index_avg": 1,
+          "wind_speed_avg_kmh": 17
+        }
+      ]
+    },
+    {
+      "id": 39,
+      "city": "Houston",
+      "state": "TX",
+      "iata_code": "IAH",
+      "latitude": 29.76,
+      "longitude": -95.37,
+      "timezone": "America/Chicago",
+      "cost_level": 2,
+      "public_transport_score": 4,
+      "walkability_score": 3,
+      "tags": [
+        "city",
+        "food",
+        "museum",
+        "shopping"
+      ],
+      "recommended_stay_days": 3,
+      "destination_type": "city",
+      "gateway_airports": [
+        {
+          "iata": "IAH",
+          "priority": 1
+        },
+        {
+          "iata": "HOU",
+          "priority": 2
+        }
+      ],
+      "requires_car": true,
+      "country": "United States",
+      "country_code": "US",
+      "active": true,
+      "monthly_climate": [
+        {
+          "month": 1,
+          "temp_avg_c": 13,
+          "temp_max_avg_c": 17.0,
+          "temp_min_avg_c": 9.0,
+          "precip_days": 6,
+          "precip_mm": 40,
+          "sunshine_hours": 6,
+          "uv_index_avg": 4,
+          "wind_speed_avg_kmh": 16
+        },
+        {
+          "month": 2,
+          "temp_avg_c": 15,
+          "temp_max_avg_c": 19.0,
+          "temp_min_avg_c": 11.0,
+          "precip_days": 6,
+          "precip_mm": 45,
+          "sunshine_hours": 7,
+          "uv_index_avg": 5,
+          "wind_speed_avg_kmh": 16
+        },
+        {
+          "month": 3,
+          "temp_avg_c": 19,
+          "temp_max_avg_c": 23.0,
+          "temp_min_avg_c": 15.0,
+          "precip_days": 6,
+          "precip_mm": 55,
+          "sunshine_hours": 7,
+          "uv_index_avg": 7,
+          "wind_speed_avg_kmh": 15
+        },
+        {
+          "month": 4,
+          "temp_avg_c": 23,
+          "temp_max_avg_c": 27.0,
+          "temp_min_avg_c": 19.0,
+          "precip_days": 6,
+          "precip_mm": 60,
+          "sunshine_hours": 7.5,
+          "uv_index_avg": 9,
+          "wind_speed_avg_kmh": 13
+        },
+        {
+          "month": 5,
+          "temp_avg_c": 26,
+          "temp_max_avg_c": 30.0,
+          "temp_min_avg_c": 22.0,
+          "precip_days": 7,
+          "precip_mm": 70,
+          "sunshine_hours": 7.5,
+          "uv_index_avg": 10,
+          "wind_speed_avg_kmh": 12
+        },
+        {
+          "month": 6,
+          "temp_avg_c": 28,
+          "temp_max_avg_c": 32.0,
+          "temp_min_avg_c": 24.0,
+          "precip_days": 7,
+          "precip_mm": 65,
+          "sunshine_hours": 8,
+          "uv_index_avg": 11,
+          "wind_speed_avg_kmh": 12
+        },
+        {
+          "month": 7,
+          "temp_avg_c": 28,
+          "temp_max_avg_c": 32.0,
+          "temp_min_avg_c": 24.0,
+          "precip_days": 6,
+          "precip_mm": 55,
+          "sunshine_hours": 8,
+          "uv_index_avg": 11,
+          "wind_speed_avg_kmh": 12
+        },
+        {
+          "month": 8,
+          "temp_avg_c": 28,
+          "temp_max_avg_c": 32.0,
+          "temp_min_avg_c": 24.0,
+          "precip_days": 6,
+          "precip_mm": 55,
+          "sunshine_hours": 8,
+          "uv_index_avg": 11,
+          "wind_speed_avg_kmh": 12
+        },
+        {
+          "month": 9,
+          "temp_avg_c": 25,
+          "temp_max_avg_c": 29.0,
+          "temp_min_avg_c": 21.0,
+          "precip_days": 7,
+          "precip_mm": 70,
+          "sunshine_hours": 7.5,
+          "uv_index_avg": 9,
+          "wind_speed_avg_kmh": 14
+        },
+        {
+          "month": 10,
+          "temp_avg_c": 21,
+          "temp_max_avg_c": 25.0,
+          "temp_min_avg_c": 17.0,
+          "precip_days": 7,
+          "precip_mm": 65,
+          "sunshine_hours": 7,
+          "uv_index_avg": 7,
+          "wind_speed_avg_kmh": 15
+        },
+        {
+          "month": 11,
+          "temp_avg_c": 17,
+          "temp_max_avg_c": 21.0,
+          "temp_min_avg_c": 13.0,
+          "precip_days": 6,
+          "precip_mm": 50,
+          "sunshine_hours": 6.5,
+          "uv_index_avg": 5,
+          "wind_speed_avg_kmh": 16
+        },
+        {
+          "month": 12,
+          "temp_avg_c": 14,
+          "temp_max_avg_c": 18.0,
+          "temp_min_avg_c": 10.0,
+          "precip_days": 6,
+          "precip_mm": 45,
+          "sunshine_hours": 6,
+          "uv_index_avg": 4,
+          "wind_speed_avg_kmh": 16
+        }
+      ]
+    },
+    {
+      "id": 40,
+      "city": "San Antonio",
+      "state": "TX",
+      "iata_code": "SAT",
+      "latitude": 29.42,
+      "longitude": -98.49,
+      "timezone": "America/Chicago",
+      "cost_level": 1,
+      "public_transport_score": 4,
+      "walkability_score": 6,
+      "tags": [
+        "city",
+        "history",
+        "food",
+        "culture"
+      ],
+      "recommended_stay_days": 3,
+      "destination_type": "city",
+      "gateway_airports": [
+        {
+          "iata": "SAT",
+          "priority": 1
+        }
+      ],
+      "requires_car": false,
+      "country": "United States",
+      "country_code": "US",
+      "active": true,
+      "monthly_climate": [
+        {
+          "month": 1,
+          "temp_avg_c": 13,
+          "temp_max_avg_c": 17.0,
+          "temp_min_avg_c": 9.0,
+          "precip_days": 6,
+          "precip_mm": 40,
+          "sunshine_hours": 6,
+          "uv_index_avg": 4,
+          "wind_speed_avg_kmh": 16
+        },
+        {
+          "month": 2,
+          "temp_avg_c": 15,
+          "temp_max_avg_c": 19.0,
+          "temp_min_avg_c": 11.0,
+          "precip_days": 6,
+          "precip_mm": 45,
+          "sunshine_hours": 7,
+          "uv_index_avg": 5,
+          "wind_speed_avg_kmh": 16
+        },
+        {
+          "month": 3,
+          "temp_avg_c": 19,
+          "temp_max_avg_c": 23.0,
+          "temp_min_avg_c": 15.0,
+          "precip_days": 6,
+          "precip_mm": 55,
+          "sunshine_hours": 7,
+          "uv_index_avg": 7,
+          "wind_speed_avg_kmh": 15
+        },
+        {
+          "month": 4,
+          "temp_avg_c": 23,
+          "temp_max_avg_c": 27.0,
+          "temp_min_avg_c": 19.0,
+          "precip_days": 6,
+          "precip_mm": 60,
+          "sunshine_hours": 7.5,
+          "uv_index_avg": 9,
+          "wind_speed_avg_kmh": 13
+        },
+        {
+          "month": 5,
+          "temp_avg_c": 26,
+          "temp_max_avg_c": 30.0,
+          "temp_min_avg_c": 22.0,
+          "precip_days": 7,
+          "precip_mm": 70,
+          "sunshine_hours": 7.5,
+          "uv_index_avg": 10,
+          "wind_speed_avg_kmh": 12
+        },
+        {
+          "month": 6,
+          "temp_avg_c": 28,
+          "temp_max_avg_c": 32.0,
+          "temp_min_avg_c": 24.0,
+          "precip_days": 7,
+          "precip_mm": 65,
+          "sunshine_hours": 8,
+          "uv_index_avg": 11,
+          "wind_speed_avg_kmh": 12
+        },
+        {
+          "month": 7,
+          "temp_avg_c": 28,
+          "temp_max_avg_c": 32.0,
+          "temp_min_avg_c": 24.0,
+          "precip_days": 6,
+          "precip_mm": 55,
+          "sunshine_hours": 8,
+          "uv_index_avg": 11,
+          "wind_speed_avg_kmh": 12
+        },
+        {
+          "month": 8,
+          "temp_avg_c": 28,
+          "temp_max_avg_c": 32.0,
+          "temp_min_avg_c": 24.0,
+          "precip_days": 6,
+          "precip_mm": 55,
+          "sunshine_hours": 8,
+          "uv_index_avg": 11,
+          "wind_speed_avg_kmh": 12
+        },
+        {
+          "month": 9,
+          "temp_avg_c": 25,
+          "temp_max_avg_c": 29.0,
+          "temp_min_avg_c": 21.0,
+          "precip_days": 7,
+          "precip_mm": 70,
+          "sunshine_hours": 7.5,
+          "uv_index_avg": 9,
+          "wind_speed_avg_kmh": 14
+        },
+        {
+          "month": 10,
+          "temp_avg_c": 21,
+          "temp_max_avg_c": 25.0,
+          "temp_min_avg_c": 17.0,
+          "precip_days": 7,
+          "precip_mm": 65,
+          "sunshine_hours": 7,
+          "uv_index_avg": 7,
+          "wind_speed_avg_kmh": 15
+        },
+        {
+          "month": 11,
+          "temp_avg_c": 17,
+          "temp_max_avg_c": 21.0,
+          "temp_min_avg_c": 13.0,
+          "precip_days": 6,
+          "precip_mm": 50,
+          "sunshine_hours": 6.5,
+          "uv_index_avg": 5,
+          "wind_speed_avg_kmh": 16
+        },
+        {
+          "month": 12,
+          "temp_avg_c": 14,
+          "temp_max_avg_c": 18.0,
+          "temp_min_avg_c": 10.0,
+          "precip_days": 6,
+          "precip_mm": 45,
+          "sunshine_hours": 6,
+          "uv_index_avg": 4,
+          "wind_speed_avg_kmh": 16
+        }
+      ]
+    },
+    {
+      "id": 41,
+      "city": "Albuquerque",
+      "state": "NM",
+      "iata_code": "ABQ",
+      "latitude": 35.08,
+      "longitude": -106.65,
+      "timezone": "America/Denver",
+      "cost_level": 1,
+      "public_transport_score": 3,
+      "walkability_score": 4,
+      "tags": [
+        "nature",
+        "hiking",
+        "culture",
+        "history"
+      ],
+      "recommended_stay_days": 4,
+      "destination_type": "nature_gateway",
+      "gateway_airports": [
+        {
+          "iata": "ABQ",
+          "priority": 1
+        }
+      ],
+      "requires_car": true,
+      "country": "United States",
+      "country_code": "US",
+      "active": true,
+      "monthly_climate": [
+        {
+          "month": 1,
+          "temp_avg_c": 0,
+          "temp_max_avg_c": 6.0,
+          "temp_min_avg_c": -6.0,
+          "precip_days": 6,
+          "precip_mm": 45,
+          "sunshine_hours": 4,
+          "uv_index_avg": 1,
+          "wind_speed_avg_kmh": 17
+        },
+        {
+          "month": 2,
+          "temp_avg_c": 3,
+          "temp_max_avg_c": 9.0,
+          "temp_min_avg_c": -3.0,
+          "precip_days": 7,
+          "precip_mm": 55,
+          "sunshine_hours": 5,
+          "uv_index_avg": 2,
+          "wind_speed_avg_kmh": 16
+        },
+        {
+          "month": 3,
+          "temp_avg_c": 9,
+          "temp_max_avg_c": 15.0,
+          "temp_min_avg_c": 3.0,
+          "precip_days": 9,
+          "precip_mm": 75,
+          "sunshine_hours": 6.5,
+          "uv_index_avg": 4,
+          "wind_speed_avg_kmh": 15
+        },
+        {
+          "month": 4,
+          "temp_avg_c": 15,
+          "temp_max_avg_c": 21.0,
+          "temp_min_avg_c": 9.0,
+          "precip_days": 9,
+          "precip_mm": 80,
+          "sunshine_hours": 7,
+          "uv_index_avg": 6,
+          "wind_speed_avg_kmh": 13
+        },
+        {
+          "month": 5,
+          "temp_avg_c": 19,
+          "temp_max_avg_c": 25.0,
+          "temp_min_avg_c": 13.0,
+          "precip_days": 10,
+          "precip_mm": 85,
+          "sunshine_hours": 8,
+          "uv_index_avg": 7,
+          "wind_speed_avg_kmh": 12
+        },
+        {
+          "month": 6,
+          "temp_avg_c": 22,
+          "temp_max_avg_c": 28.0,
+          "temp_min_avg_c": 16.0,
+          "precip_days": 10,
+          "precip_mm": 80,
+          "sunshine_hours": 8,
+          "uv_index_avg": 8,
+          "wind_speed_avg_kmh": 12
+        },
+        {
+          "month": 7,
+          "temp_avg_c": 23,
+          "temp_max_avg_c": 29.0,
+          "temp_min_avg_c": 17.0,
+          "precip_days": 10,
+          "precip_mm": 80,
+          "sunshine_hours": 8,
+          "uv_index_avg": 8,
+          "wind_speed_avg_kmh": 12
+        },
+        {
+          "month": 8,
+          "temp_avg_c": 21,
+          "temp_max_avg_c": 27.0,
+          "temp_min_avg_c": 15.0,
+          "precip_days": 10,
+          "precip_mm": 80,
+          "sunshine_hours": 8,
+          "uv_index_avg": 7,
+          "wind_speed_avg_kmh": 13
+        },
+        {
+          "month": 9,
+          "temp_avg_c": 17,
+          "temp_max_avg_c": 23.0,
+          "temp_min_avg_c": 11.0,
+          "precip_days": 9,
+          "precip_mm": 80,
+          "sunshine_hours": 7,
+          "uv_index_avg": 6,
+          "wind_speed_avg_kmh": 14
+        },
+        {
+          "month": 10,
+          "temp_avg_c": 12,
+          "temp_max_avg_c": 18.0,
+          "temp_min_avg_c": 6.0,
+          "precip_days": 8,
+          "precip_mm": 70,
+          "sunshine_hours": 6,
+          "uv_index_avg": 4,
+          "wind_speed_avg_kmh": 15
+        },
+        {
+          "month": 11,
+          "temp_avg_c": 6,
+          "temp_max_avg_c": 12.0,
+          "temp_min_avg_c": 0.0,
+          "precip_days": 7,
+          "precip_mm": 55,
+          "sunshine_hours": 5,
+          "uv_index_avg": 2,
+          "wind_speed_avg_kmh": 16
+        },
+        {
+          "month": 12,
+          "temp_avg_c": 2,
+          "temp_max_avg_c": 8.0,
+          "temp_min_avg_c": -4.0,
+          "precip_days": 6,
+          "precip_mm": 50,
+          "sunshine_hours": 4,
+          "uv_index_avg": 1,
+          "wind_speed_avg_kmh": 17
+        }
+      ]
+    },
+    {
+      "id": 42,
+      "city": "Santa Fe",
+      "state": "NM",
+      "iata_code": "SAF",
+      "latitude": 35.69,
+      "longitude": -105.94,
+      "timezone": "America/Denver",
+      "cost_level": 3,
+      "public_transport_score": 2,
+      "walkability_score": 7,
+      "tags": [
+        "art",
+        "history",
+        "nature",
+        "hiking"
+      ],
+      "recommended_stay_days": 4,
+      "destination_type": "nature_gateway",
+      "gateway_airports": [
+        {
+          "iata": "SAF",
+          "priority": 1
+        },
+        {
+          "iata": "ABQ",
+          "priority": 2
+        }
+      ],
+      "requires_car": true,
+      "country": "United States",
+      "country_code": "US",
+      "active": true,
+      "monthly_climate": [
+        {
+          "month": 1,
+          "temp_avg_c": 0,
+          "temp_max_avg_c": 6.0,
+          "temp_min_avg_c": -6.0,
+          "precip_days": 6,
+          "precip_mm": 45,
+          "sunshine_hours": 4,
+          "uv_index_avg": 1,
+          "wind_speed_avg_kmh": 17
+        },
+        {
+          "month": 2,
+          "temp_avg_c": 3,
+          "temp_max_avg_c": 9.0,
+          "temp_min_avg_c": -3.0,
+          "precip_days": 7,
+          "precip_mm": 55,
+          "sunshine_hours": 5,
+          "uv_index_avg": 2,
+          "wind_speed_avg_kmh": 16
+        },
+        {
+          "month": 3,
+          "temp_avg_c": 9,
+          "temp_max_avg_c": 15.0,
+          "temp_min_avg_c": 3.0,
+          "precip_days": 9,
+          "precip_mm": 75,
+          "sunshine_hours": 6.5,
+          "uv_index_avg": 4,
+          "wind_speed_avg_kmh": 15
+        },
+        {
+          "month": 4,
+          "temp_avg_c": 15,
+          "temp_max_avg_c": 21.0,
+          "temp_min_avg_c": 9.0,
+          "precip_days": 9,
+          "precip_mm": 80,
+          "sunshine_hours": 7,
+          "uv_index_avg": 6,
+          "wind_speed_avg_kmh": 13
+        },
+        {
+          "month": 5,
+          "temp_avg_c": 19,
+          "temp_max_avg_c": 25.0,
+          "temp_min_avg_c": 13.0,
+          "precip_days": 10,
+          "precip_mm": 85,
+          "sunshine_hours": 8,
+          "uv_index_avg": 7,
+          "wind_speed_avg_kmh": 12
+        },
+        {
+          "month": 6,
+          "temp_avg_c": 22,
+          "temp_max_avg_c": 28.0,
+          "temp_min_avg_c": 16.0,
+          "precip_days": 10,
+          "precip_mm": 80,
+          "sunshine_hours": 8,
+          "uv_index_avg": 8,
+          "wind_speed_avg_kmh": 12
+        },
+        {
+          "month": 7,
+          "temp_avg_c": 23,
+          "temp_max_avg_c": 29.0,
+          "temp_min_avg_c": 17.0,
+          "precip_days": 10,
+          "precip_mm": 80,
+          "sunshine_hours": 8,
+          "uv_index_avg": 8,
+          "wind_speed_avg_kmh": 12
+        },
+        {
+          "month": 8,
+          "temp_avg_c": 21,
+          "temp_max_avg_c": 27.0,
+          "temp_min_avg_c": 15.0,
+          "precip_days": 10,
+          "precip_mm": 80,
+          "sunshine_hours": 8,
+          "uv_index_avg": 7,
+          "wind_speed_avg_kmh": 13
+        },
+        {
+          "month": 9,
+          "temp_avg_c": 17,
+          "temp_max_avg_c": 23.0,
+          "temp_min_avg_c": 11.0,
+          "precip_days": 9,
+          "precip_mm": 80,
+          "sunshine_hours": 7,
+          "uv_index_avg": 6,
+          "wind_speed_avg_kmh": 14
+        },
+        {
+          "month": 10,
+          "temp_avg_c": 12,
+          "temp_max_avg_c": 18.0,
+          "temp_min_avg_c": 6.0,
+          "precip_days": 8,
+          "precip_mm": 70,
+          "sunshine_hours": 6,
+          "uv_index_avg": 4,
+          "wind_speed_avg_kmh": 15
+        },
+        {
+          "month": 11,
+          "temp_avg_c": 6,
+          "temp_max_avg_c": 12.0,
+          "temp_min_avg_c": 0.0,
+          "precip_days": 7,
+          "precip_mm": 55,
+          "sunshine_hours": 5,
+          "uv_index_avg": 2,
+          "wind_speed_avg_kmh": 16
+        },
+        {
+          "month": 12,
+          "temp_avg_c": 2,
+          "temp_max_avg_c": 8.0,
+          "temp_min_avg_c": -4.0,
+          "precip_days": 6,
+          "precip_mm": 50,
+          "sunshine_hours": 4,
+          "uv_index_avg": 1,
+          "wind_speed_avg_kmh": 17
+        }
+      ]
+    },
+    {
+      "id": 43,
+      "city": "Tucson",
+      "state": "AZ",
+      "iata_code": "TUS",
+      "latitude": 32.22,
+      "longitude": -110.93,
+      "timezone": "America/Phoenix",
+      "cost_level": 1,
+      "public_transport_score": 3,
+      "walkability_score": 4,
+      "tags": [
+        "nature",
+        "hiking",
+        "history",
+        "outdoor"
+      ],
+      "recommended_stay_days": 4,
+      "destination_type": "nature_gateway",
+      "gateway_airports": [
+        {
+          "iata": "TUS",
+          "priority": 1
+        }
+      ],
+      "requires_car": true,
+      "country": "United States",
+      "country_code": "US",
+      "active": true,
+      "monthly_climate": [
+        {
+          "month": 1,
+          "temp_avg_c": 12,
+          "temp_max_avg_c": 18.0,
+          "temp_min_avg_c": 6.0,
+          "precip_days": 5,
+          "precip_mm": 30,
+          "sunshine_hours": 8,
+          "uv_index_avg": 4,
+          "wind_speed_avg_kmh": 14
+        },
+        {
+          "month": 2,
+          "temp_avg_c": 15,
+          "temp_max_avg_c": 21.0,
+          "temp_min_avg_c": 9.0,
+          "precip_days": 4,
+          "precip_mm": 25,
+          "sunshine_hours": 9,
+          "uv_index_avg": 5,
+          "wind_speed_avg_kmh": 14
+        },
+        {
+          "month": 3,
+          "temp_avg_c": 20,
+          "temp_max_avg_c": 26.0,
+          "temp_min_avg_c": 14.0,
+          "precip_days": 3,
+          "precip_mm": 20,
+          "sunshine_hours": 9.5,
+          "uv_index_avg": 7,
+          "wind_speed_avg_kmh": 14
+        },
+        {
+          "month": 4,
+          "temp_avg_c": 24,
+          "temp_max_avg_c": 30.0,
+          "temp_min_avg_c": 18.0,
+          "precip_days": 2,
+          "precip_mm": 15,
+          "sunshine_hours": 9.5,
+          "uv_index_avg": 9,
+          "wind_speed_avg_kmh": 11
+        },
+        {
+          "month": 5,
+          "temp_avg_c": 27,
+          "temp_max_avg_c": 33.0,
+          "temp_min_avg_c": 21.0,
+          "precip_days": 2,
+          "precip_mm": 15,
+          "sunshine_hours": 10,
+          "uv_index_avg": 10,
+          "wind_speed_avg_kmh": 10
+        },
+        {
+          "month": 6,
+          "temp_avg_c": 30,
+          "temp_max_avg_c": 36.0,
+          "temp_min_avg_c": 24.0,
+          "precip_days": 3,
+          "precip_mm": 25,
+          "sunshine_hours": 10,
+          "uv_index_avg": 11,
+          "wind_speed_avg_kmh": 9
+        },
+        {
+          "month": 7,
+          "temp_avg_c": 30,
+          "temp_max_avg_c": 36.0,
+          "temp_min_avg_c": 24.0,
+          "precip_days": 5,
+          "precip_mm": 45,
+          "sunshine_hours": 8.5,
+          "uv_index_avg": 11,
+          "wind_speed_avg_kmh": 10
+        },
+        {
+          "month": 8,
+          "temp_avg_c": 29,
+          "temp_max_avg_c": 35.0,
+          "temp_min_avg_c": 23.0,
+          "precip_days": 5,
+          "precip_mm": 45,
+          "sunshine_hours": 8.5,
+          "uv_index_avg": 10,
+          "wind_speed_avg_kmh": 10
+        },
+        {
+          "month": 9,
+          "temp_avg_c": 25,
+          "temp_max_avg_c": 31.0,
+          "temp_min_avg_c": 19.0,
+          "precip_days": 4,
+          "precip_mm": 30,
+          "sunshine_hours": 9.5,
+          "uv_index_avg": 9,
+          "wind_speed_avg_kmh": 12
+        },
+        {
+          "month": 10,
+          "temp_avg_c": 20,
+          "temp_max_avg_c": 26.0,
+          "temp_min_avg_c": 14.0,
+          "precip_days": 4,
+          "precip_mm": 25,
+          "sunshine_hours": 9,
+          "uv_index_avg": 7,
+          "wind_speed_avg_kmh": 13
+        },
+        {
+          "month": 11,
+          "temp_avg_c": 15,
+          "temp_max_avg_c": 21.0,
+          "temp_min_avg_c": 9.0,
+          "precip_days": 4,
+          "precip_mm": 25,
+          "sunshine_hours": 8.5,
+          "uv_index_avg": 5,
+          "wind_speed_avg_kmh": 14
+        },
+        {
+          "month": 12,
+          "temp_avg_c": 13,
+          "temp_max_avg_c": 19.0,
+          "temp_min_avg_c": 7.0,
+          "precip_days": 5,
+          "precip_mm": 30,
+          "sunshine_hours": 8,
+          "uv_index_avg": 4,
+          "wind_speed_avg_kmh": 14
+        }
+      ]
+    },
+    {
+      "id": 44,
+      "city": "Palm Springs",
+      "state": "CA",
+      "iata_code": "PSP",
+      "latitude": 33.83,
+      "longitude": -116.55,
+      "timezone": "America/Los_Angeles",
+      "cost_level": 4,
+      "public_transport_score": 2,
+      "walkability_score": 4,
+      "tags": [
+        "relaxation",
+        "outdoor",
+        "golf",
+        "shopping"
+      ],
+      "recommended_stay_days": 4,
+      "destination_type": "resort",
+      "gateway_airports": [
+        {
+          "iata": "PSP",
+          "priority": 1
+        }
+      ],
+      "requires_car": true,
+      "country": "United States",
+      "country_code": "US",
+      "active": true,
+      "monthly_climate": [
+        {
+          "month": 1,
+          "temp_avg_c": 0,
+          "temp_max_avg_c": 6.0,
+          "temp_min_avg_c": -6.0,
+          "precip_days": 6,
+          "precip_mm": 45,
+          "sunshine_hours": 4,
+          "uv_index_avg": 1,
+          "wind_speed_avg_kmh": 17
+        },
+        {
+          "month": 2,
+          "temp_avg_c": 3,
+          "temp_max_avg_c": 9.0,
+          "temp_min_avg_c": -3.0,
+          "precip_days": 7,
+          "precip_mm": 55,
+          "sunshine_hours": 5,
+          "uv_index_avg": 2,
+          "wind_speed_avg_kmh": 16
+        },
+        {
+          "month": 3,
+          "temp_avg_c": 9,
+          "temp_max_avg_c": 15.0,
+          "temp_min_avg_c": 3.0,
+          "precip_days": 9,
+          "precip_mm": 75,
+          "sunshine_hours": 6.5,
+          "uv_index_avg": 4,
+          "wind_speed_avg_kmh": 15
+        },
+        {
+          "month": 4,
+          "temp_avg_c": 15,
+          "temp_max_avg_c": 21.0,
+          "temp_min_avg_c": 9.0,
+          "precip_days": 9,
+          "precip_mm": 80,
+          "sunshine_hours": 7,
+          "uv_index_avg": 6,
+          "wind_speed_avg_kmh": 13
+        },
+        {
+          "month": 5,
+          "temp_avg_c": 19,
+          "temp_max_avg_c": 25.0,
+          "temp_min_avg_c": 13.0,
+          "precip_days": 10,
+          "precip_mm": 85,
+          "sunshine_hours": 8,
+          "uv_index_avg": 7,
+          "wind_speed_avg_kmh": 12
+        },
+        {
+          "month": 6,
+          "temp_avg_c": 22,
+          "temp_max_avg_c": 28.0,
+          "temp_min_avg_c": 16.0,
+          "precip_days": 10,
+          "precip_mm": 80,
+          "sunshine_hours": 8,
+          "uv_index_avg": 8,
+          "wind_speed_avg_kmh": 12
+        },
+        {
+          "month": 7,
+          "temp_avg_c": 23,
+          "temp_max_avg_c": 29.0,
+          "temp_min_avg_c": 17.0,
+          "precip_days": 10,
+          "precip_mm": 80,
+          "sunshine_hours": 8,
+          "uv_index_avg": 8,
+          "wind_speed_avg_kmh": 12
+        },
+        {
+          "month": 8,
+          "temp_avg_c": 21,
+          "temp_max_avg_c": 27.0,
+          "temp_min_avg_c": 15.0,
+          "precip_days": 10,
+          "precip_mm": 80,
+          "sunshine_hours": 8,
+          "uv_index_avg": 7,
+          "wind_speed_avg_kmh": 13
+        },
+        {
+          "month": 9,
+          "temp_avg_c": 17,
+          "temp_max_avg_c": 23.0,
+          "temp_min_avg_c": 11.0,
+          "precip_days": 9,
+          "precip_mm": 80,
+          "sunshine_hours": 7,
+          "uv_index_avg": 6,
+          "wind_speed_avg_kmh": 14
+        },
+        {
+          "month": 10,
+          "temp_avg_c": 12,
+          "temp_max_avg_c": 18.0,
+          "temp_min_avg_c": 6.0,
+          "precip_days": 8,
+          "precip_mm": 70,
+          "sunshine_hours": 6,
+          "uv_index_avg": 4,
+          "wind_speed_avg_kmh": 15
+        },
+        {
+          "month": 11,
+          "temp_avg_c": 6,
+          "temp_max_avg_c": 12.0,
+          "temp_min_avg_c": 0.0,
+          "precip_days": 7,
+          "precip_mm": 55,
+          "sunshine_hours": 5,
+          "uv_index_avg": 2,
+          "wind_speed_avg_kmh": 16
+        },
+        {
+          "month": 12,
+          "temp_avg_c": 2,
+          "temp_max_avg_c": 8.0,
+          "temp_min_avg_c": -4.0,
+          "precip_days": 6,
+          "precip_mm": 50,
+          "sunshine_hours": 4,
+          "uv_index_avg": 1,
+          "wind_speed_avg_kmh": 17
+        }
+      ]
+    },
+    {
+      "id": 45,
+      "city": "Sacramento",
+      "state": "CA",
+      "iata_code": "SMF",
+      "latitude": 38.58,
+      "longitude": -121.49,
+      "timezone": "America/Los_Angeles",
+      "cost_level": 3,
+      "public_transport_score": 5,
+      "walkability_score": 5,
+      "tags": [
+        "city",
+        "food",
+        "history",
+        "museum"
+      ],
+      "recommended_stay_days": 3,
+      "destination_type": "city",
+      "gateway_airports": [
+        {
+          "iata": "SMF",
+          "priority": 1
+        }
+      ],
+      "requires_car": false,
+      "country": "United States",
+      "country_code": "US",
+      "active": true,
+      "monthly_climate": [
+        {
+          "month": 1,
+          "temp_avg_c": 13,
+          "temp_max_avg_c": 16.5,
+          "temp_min_avg_c": 9.5,
+          "precip_days": 8,
+          "precip_mm": 80,
+          "sunshine_hours": 6,
+          "uv_index_avg": 3,
+          "wind_speed_avg_kmh": 16
+        },
+        {
+          "month": 2,
+          "temp_avg_c": 14,
+          "temp_max_avg_c": 17.5,
+          "temp_min_avg_c": 10.5,
+          "precip_days": 8,
+          "precip_mm": 75,
+          "sunshine_hours": 7,
+          "uv_index_avg": 4,
+          "wind_speed_avg_kmh": 16
+        },
+        {
+          "month": 3,
+          "temp_avg_c": 16,
+          "temp_max_avg_c": 19.5,
+          "temp_min_avg_c": 12.5,
+          "precip_days": 6,
+          "precip_mm": 55,
+          "sunshine_hours": 8,
+          "uv_index_avg": 5,
+          "wind_speed_avg_kmh": 15
+        },
+        {
+          "month": 4,
+          "temp_avg_c": 17,
+          "temp_max_avg_c": 20.5,
+          "temp_min_avg_c": 13.5,
+          "precip_days": 3,
+          "precip_mm": 30,
+          "sunshine_hours": 9,
+          "uv_index_avg": 6,
+          "wind_speed_avg_kmh": 13
+        },
+        {
+          "month": 5,
+          "temp_avg_c": 19,
+          "temp_max_avg_c": 22.5,
+          "temp_min_avg_c": 15.5,
+          "precip_days": 2,
+          "precip_mm": 15,
+          "sunshine_hours": 10,
+          "uv_index_avg": 8,
+          "wind_speed_avg_kmh": 11
+        },
+        {
+          "month": 6,
+          "temp_avg_c": 21,
+          "temp_max_avg_c": 24.5,
+          "temp_min_avg_c": 17.5,
+          "precip_days": 1,
+          "precip_mm": 10,
+          "sunshine_hours": 10,
+          "uv_index_avg": 9,
+          "wind_speed_avg_kmh": 11
+        },
+        {
+          "month": 7,
+          "temp_avg_c": 21,
+          "temp_max_avg_c": 24.5,
+          "temp_min_avg_c": 17.5,
+          "precip_days": 1,
+          "precip_mm": 10,
+          "sunshine_hours": 10,
+          "uv_index_avg": 9,
+          "wind_speed_avg_kmh": 11
+        },
+        {
+          "month": 8,
+          "temp_avg_c": 21,
+          "temp_max_avg_c": 24.5,
+          "temp_min_avg_c": 17.5,
+          "precip_days": 1,
+          "precip_mm": 10,
+          "sunshine_hours": 10,
+          "uv_index_avg": 9,
+          "wind_speed_avg_kmh": 11
+        },
+        {
+          "month": 9,
+          "temp_avg_c": 19,
+          "temp_max_avg_c": 22.5,
+          "temp_min_avg_c": 15.5,
+          "precip_days": 3,
+          "precip_mm": 25,
+          "sunshine_hours": 9,
+          "uv_index_avg": 7,
+          "wind_speed_avg_kmh": 13
+        },
+        {
+          "month": 10,
+          "temp_avg_c": 17,
+          "temp_max_avg_c": 20.5,
+          "temp_min_avg_c": 13.5,
+          "precip_days": 5,
+          "precip_mm": 45,
+          "sunshine_hours": 8,
+          "uv_index_avg": 5,
+          "wind_speed_avg_kmh": 15
+        },
+        {
+          "month": 11,
+          "temp_avg_c": 14,
+          "temp_max_avg_c": 17.5,
+          "temp_min_avg_c": 10.5,
+          "precip_days": 7,
+          "precip_mm": 65,
+          "sunshine_hours": 7,
+          "uv_index_avg": 4,
+          "wind_speed_avg_kmh": 16
+        },
+        {
+          "month": 12,
+          "temp_avg_c": 13,
+          "temp_max_avg_c": 16.5,
+          "temp_min_avg_c": 9.5,
+          "precip_days": 8,
+          "precip_mm": 80,
+          "sunshine_hours": 6,
+          "uv_index_avg": 3,
+          "wind_speed_avg_kmh": 16
+        }
+      ]
+    },
+    {
+      "id": 46,
+      "city": "Monterey",
+      "state": "CA",
+      "iata_code": "MRY",
+      "latitude": 36.6,
+      "longitude": -121.89,
+      "timezone": "America/Los_Angeles",
+      "cost_level": 4,
+      "public_transport_score": 3,
+      "walkability_score": 6,
+      "tags": [
+        "nature",
+        "beach",
+        "food",
+        "outdoor"
+      ],
+      "recommended_stay_days": 3,
+      "destination_type": "nature_gateway",
+      "gateway_airports": [
+        {
+          "iata": "MRY",
+          "priority": 1
+        }
+      ],
+      "requires_car": true,
+      "country": "United States",
+      "country_code": "US",
+      "active": true,
+      "monthly_climate": [
+        {
+          "month": 1,
+          "temp_avg_c": 13,
+          "temp_max_avg_c": 16.5,
+          "temp_min_avg_c": 9.5,
+          "precip_days": 8,
+          "precip_mm": 80,
+          "sunshine_hours": 6,
+          "uv_index_avg": 3,
+          "wind_speed_avg_kmh": 16
+        },
+        {
+          "month": 2,
+          "temp_avg_c": 14,
+          "temp_max_avg_c": 17.5,
+          "temp_min_avg_c": 10.5,
+          "precip_days": 8,
+          "precip_mm": 75,
+          "sunshine_hours": 7,
+          "uv_index_avg": 4,
+          "wind_speed_avg_kmh": 16
+        },
+        {
+          "month": 3,
+          "temp_avg_c": 16,
+          "temp_max_avg_c": 19.5,
+          "temp_min_avg_c": 12.5,
+          "precip_days": 6,
+          "precip_mm": 55,
+          "sunshine_hours": 8,
+          "uv_index_avg": 5,
+          "wind_speed_avg_kmh": 15
+        },
+        {
+          "month": 4,
+          "temp_avg_c": 17,
+          "temp_max_avg_c": 20.5,
+          "temp_min_avg_c": 13.5,
+          "precip_days": 3,
+          "precip_mm": 30,
+          "sunshine_hours": 9,
+          "uv_index_avg": 6,
+          "wind_speed_avg_kmh": 13
+        },
+        {
+          "month": 5,
+          "temp_avg_c": 19,
+          "temp_max_avg_c": 22.5,
+          "temp_min_avg_c": 15.5,
+          "precip_days": 2,
+          "precip_mm": 15,
+          "sunshine_hours": 10,
+          "uv_index_avg": 8,
+          "wind_speed_avg_kmh": 11
+        },
+        {
+          "month": 6,
+          "temp_avg_c": 21,
+          "temp_max_avg_c": 24.5,
+          "temp_min_avg_c": 17.5,
+          "precip_days": 1,
+          "precip_mm": 10,
+          "sunshine_hours": 10,
+          "uv_index_avg": 9,
+          "wind_speed_avg_kmh": 11
+        },
+        {
+          "month": 7,
+          "temp_avg_c": 21,
+          "temp_max_avg_c": 24.5,
+          "temp_min_avg_c": 17.5,
+          "precip_days": 1,
+          "precip_mm": 10,
+          "sunshine_hours": 10,
+          "uv_index_avg": 9,
+          "wind_speed_avg_kmh": 11
+        },
+        {
+          "month": 8,
+          "temp_avg_c": 21,
+          "temp_max_avg_c": 24.5,
+          "temp_min_avg_c": 17.5,
+          "precip_days": 1,
+          "precip_mm": 10,
+          "sunshine_hours": 10,
+          "uv_index_avg": 9,
+          "wind_speed_avg_kmh": 11
+        },
+        {
+          "month": 9,
+          "temp_avg_c": 19,
+          "temp_max_avg_c": 22.5,
+          "temp_min_avg_c": 15.5,
+          "precip_days": 3,
+          "precip_mm": 25,
+          "sunshine_hours": 9,
+          "uv_index_avg": 7,
+          "wind_speed_avg_kmh": 13
+        },
+        {
+          "month": 10,
+          "temp_avg_c": 17,
+          "temp_max_avg_c": 20.5,
+          "temp_min_avg_c": 13.5,
+          "precip_days": 5,
+          "precip_mm": 45,
+          "sunshine_hours": 8,
+          "uv_index_avg": 5,
+          "wind_speed_avg_kmh": 15
+        },
+        {
+          "month": 11,
+          "temp_avg_c": 14,
+          "temp_max_avg_c": 17.5,
+          "temp_min_avg_c": 10.5,
+          "precip_days": 7,
+          "precip_mm": 65,
+          "sunshine_hours": 7,
+          "uv_index_avg": 4,
+          "wind_speed_avg_kmh": 16
+        },
+        {
+          "month": 12,
+          "temp_avg_c": 13,
+          "temp_max_avg_c": 16.5,
+          "temp_min_avg_c": 9.5,
+          "precip_days": 8,
+          "precip_mm": 80,
+          "sunshine_hours": 6,
+          "uv_index_avg": 3,
+          "wind_speed_avg_kmh": 16
+        }
+      ]
+    },
+    {
+      "id": 47,
+      "city": "Reno",
+      "state": "NV",
+      "iata_code": "RNO",
+      "latitude": 39.53,
+      "longitude": -119.81,
+      "timezone": "America/Los_Angeles",
+      "cost_level": 2,
+      "public_transport_score": 3,
+      "walkability_score": 5,
+      "tags": [
+        "outdoor",
+        "skiing",
+        "nature",
+        "entertainment"
+      ],
+      "recommended_stay_days": 3,
+      "destination_type": "nature_gateway",
+      "gateway_airports": [
+        {
+          "iata": "RNO",
+          "priority": 1
+        }
+      ],
+      "requires_car": true,
+      "country": "United States",
+      "country_code": "US",
+      "active": true,
+      "monthly_climate": [
+        {
+          "month": 1,
+          "temp_avg_c": 0,
+          "temp_max_avg_c": 6.0,
+          "temp_min_avg_c": -6.0,
+          "precip_days": 6,
+          "precip_mm": 45,
+          "sunshine_hours": 4,
+          "uv_index_avg": 1,
+          "wind_speed_avg_kmh": 17
+        },
+        {
+          "month": 2,
+          "temp_avg_c": 3,
+          "temp_max_avg_c": 9.0,
+          "temp_min_avg_c": -3.0,
+          "precip_days": 7,
+          "precip_mm": 55,
+          "sunshine_hours": 5,
+          "uv_index_avg": 2,
+          "wind_speed_avg_kmh": 16
+        },
+        {
+          "month": 3,
+          "temp_avg_c": 9,
+          "temp_max_avg_c": 15.0,
+          "temp_min_avg_c": 3.0,
+          "precip_days": 9,
+          "precip_mm": 75,
+          "sunshine_hours": 6.5,
+          "uv_index_avg": 4,
+          "wind_speed_avg_kmh": 15
+        },
+        {
+          "month": 4,
+          "temp_avg_c": 15,
+          "temp_max_avg_c": 21.0,
+          "temp_min_avg_c": 9.0,
+          "precip_days": 9,
+          "precip_mm": 80,
+          "sunshine_hours": 7,
+          "uv_index_avg": 6,
+          "wind_speed_avg_kmh": 13
+        },
+        {
+          "month": 5,
+          "temp_avg_c": 19,
+          "temp_max_avg_c": 25.0,
+          "temp_min_avg_c": 13.0,
+          "precip_days": 10,
+          "precip_mm": 85,
+          "sunshine_hours": 8,
+          "uv_index_avg": 7,
+          "wind_speed_avg_kmh": 12
+        },
+        {
+          "month": 6,
+          "temp_avg_c": 22,
+          "temp_max_avg_c": 28.0,
+          "temp_min_avg_c": 16.0,
+          "precip_days": 10,
+          "precip_mm": 80,
+          "sunshine_hours": 8,
+          "uv_index_avg": 8,
+          "wind_speed_avg_kmh": 12
+        },
+        {
+          "month": 7,
+          "temp_avg_c": 23,
+          "temp_max_avg_c": 29.0,
+          "temp_min_avg_c": 17.0,
+          "precip_days": 10,
+          "precip_mm": 80,
+          "sunshine_hours": 8,
+          "uv_index_avg": 8,
+          "wind_speed_avg_kmh": 12
+        },
+        {
+          "month": 8,
+          "temp_avg_c": 21,
+          "temp_max_avg_c": 27.0,
+          "temp_min_avg_c": 15.0,
+          "precip_days": 10,
+          "precip_mm": 80,
+          "sunshine_hours": 8,
+          "uv_index_avg": 7,
+          "wind_speed_avg_kmh": 13
+        },
+        {
+          "month": 9,
+          "temp_avg_c": 17,
+          "temp_max_avg_c": 23.0,
+          "temp_min_avg_c": 11.0,
+          "precip_days": 9,
+          "precip_mm": 80,
+          "sunshine_hours": 7,
+          "uv_index_avg": 6,
+          "wind_speed_avg_kmh": 14
+        },
+        {
+          "month": 10,
+          "temp_avg_c": 12,
+          "temp_max_avg_c": 18.0,
+          "temp_min_avg_c": 6.0,
+          "precip_days": 8,
+          "precip_mm": 70,
+          "sunshine_hours": 6,
+          "uv_index_avg": 4,
+          "wind_speed_avg_kmh": 15
+        },
+        {
+          "month": 11,
+          "temp_avg_c": 6,
+          "temp_max_avg_c": 12.0,
+          "temp_min_avg_c": 0.0,
+          "precip_days": 7,
+          "precip_mm": 55,
+          "sunshine_hours": 5,
+          "uv_index_avg": 2,
+          "wind_speed_avg_kmh": 16
+        },
+        {
+          "month": 12,
+          "temp_avg_c": 2,
+          "temp_max_avg_c": 8.0,
+          "temp_min_avg_c": -4.0,
+          "precip_days": 6,
+          "precip_mm": 50,
+          "sunshine_hours": 4,
+          "uv_index_avg": 1,
+          "wind_speed_avg_kmh": 17
+        }
+      ]
+    },
+    {
+      "id": 48,
+      "city": "Boise",
+      "state": "ID",
+      "iata_code": "BOI",
+      "latitude": 43.62,
+      "longitude": -116.21,
+      "timezone": "America/Boise",
+      "cost_level": 2,
+      "public_transport_score": 3,
+      "walkability_score": 5,
+      "tags": [
+        "nature",
+        "outdoor",
+        "hiking",
+        "skiing"
+      ],
+      "recommended_stay_days": 4,
+      "destination_type": "nature_gateway",
+      "gateway_airports": [
+        {
+          "iata": "BOI",
+          "priority": 1
+        }
+      ],
+      "requires_car": true,
+      "country": "United States",
+      "country_code": "US",
+      "active": true,
+      "monthly_climate": [
+        {
+          "month": 1,
+          "temp_avg_c": -4,
+          "temp_max_avg_c": 2.0,
+          "temp_min_avg_c": -10.0,
+          "precip_days": 7,
+          "precip_mm": 25,
+          "sunshine_hours": 5,
+          "uv_index_avg": 1,
+          "wind_speed_avg_kmh": 17
+        },
+        {
+          "month": 2,
+          "temp_avg_c": -2,
+          "temp_max_avg_c": 4.0,
+          "temp_min_avg_c": -8.0,
+          "precip_days": 6,
+          "precip_mm": 25,
+          "sunshine_hours": 6,
+          "uv_index_avg": 2,
+          "wind_speed_avg_kmh": 17
+        },
+        {
+          "month": 3,
+          "temp_avg_c": 3,
+          "temp_max_avg_c": 9.0,
+          "temp_min_avg_c": -3.0,
+          "precip_days": 6,
+          "precip_mm": 30,
+          "sunshine_hours": 7,
+          "uv_index_avg": 4,
+          "wind_speed_avg_kmh": 16
+        },
+        {
+          "month": 4,
+          "temp_avg_c": 9,
+          "temp_max_avg_c": 15.0,
+          "temp_min_avg_c": 3.0,
+          "precip_days": 7,
+          "precip_mm": 35,
+          "sunshine_hours": 8,
+          "uv_index_avg": 6,
+          "wind_speed_avg_kmh": 13
+        },
+        {
+          "month": 5,
+          "temp_avg_c": 13,
+          "temp_max_avg_c": 19.0,
+          "temp_min_avg_c": 7.0,
+          "precip_days": 8,
+          "precip_mm": 40,
+          "sunshine_hours": 9,
+          "uv_index_avg": 7,
+          "wind_speed_avg_kmh": 12
+        },
+        {
+          "month": 6,
+          "temp_avg_c": 16,
+          "temp_max_avg_c": 22.0,
+          "temp_min_avg_c": 10.0,
+          "precip_days": 8,
+          "precip_mm": 40,
+          "sunshine_hours": 9,
+          "uv_index_avg": 8,
+          "wind_speed_avg_kmh": 12
+        },
+        {
+          "month": 7,
+          "temp_avg_c": 18,
+          "temp_max_avg_c": 24.0,
+          "temp_min_avg_c": 12.0,
+          "precip_days": 7,
+          "precip_mm": 35,
+          "sunshine_hours": 9,
+          "uv_index_avg": 8,
+          "wind_speed_avg_kmh": 12
+        },
+        {
+          "month": 8,
+          "temp_avg_c": 16,
+          "temp_max_avg_c": 22.0,
+          "temp_min_avg_c": 10.0,
+          "precip_days": 7,
+          "precip_mm": 35,
+          "sunshine_hours": 9,
+          "uv_index_avg": 7,
+          "wind_speed_avg_kmh": 13
+        },
+        {
+          "month": 9,
+          "temp_avg_c": 11,
+          "temp_max_avg_c": 17.0,
+          "temp_min_avg_c": 5.0,
+          "precip_days": 7,
+          "precip_mm": 35,
+          "sunshine_hours": 8,
+          "uv_index_avg": 5,
+          "wind_speed_avg_kmh": 15
+        },
+        {
+          "month": 10,
+          "temp_avg_c": 6,
+          "temp_max_avg_c": 12.0,
+          "temp_min_avg_c": 0.0,
+          "precip_days": 7,
+          "precip_mm": 30,
+          "sunshine_hours": 7,
+          "uv_index_avg": 3,
+          "wind_speed_avg_kmh": 16
+        },
+        {
+          "month": 11,
+          "temp_avg_c": 0,
+          "temp_max_avg_c": 6.0,
+          "temp_min_avg_c": -6.0,
+          "precip_days": 7,
+          "precip_mm": 25,
+          "sunshine_hours": 6,
+          "uv_index_avg": 2,
+          "wind_speed_avg_kmh": 17
+        },
+        {
+          "month": 12,
+          "temp_avg_c": -3,
+          "temp_max_avg_c": 3.0,
+          "temp_min_avg_c": -9.0,
+          "precip_days": 7,
+          "precip_mm": 25,
+          "sunshine_hours": 5,
+          "uv_index_avg": 1,
+          "wind_speed_avg_kmh": 17
+        }
+      ]
+    },
+    {
+      "id": 49,
+      "city": "Spokane",
+      "state": "WA",
+      "iata_code": "GEG",
+      "latitude": 47.66,
+      "longitude": -117.43,
+      "timezone": "America/Los_Angeles",
+      "cost_level": 1,
+      "public_transport_score": 3,
+      "walkability_score": 5,
+      "tags": [
+        "nature",
+        "outdoor",
+        "hiking",
+        "skiing"
+      ],
+      "recommended_stay_days": 3,
+      "destination_type": "nature_gateway",
+      "gateway_airports": [
+        {
+          "iata": "GEG",
+          "priority": 1
+        }
+      ],
+      "requires_car": true,
+      "country": "United States",
+      "country_code": "US",
+      "active": true,
+      "monthly_climate": [
+        {
+          "month": 1,
+          "temp_avg_c": 1,
+          "temp_max_avg_c": 6.0,
+          "temp_min_avg_c": -4.0,
+          "precip_days": 10,
+          "precip_mm": 55,
+          "sunshine_hours": 3,
+          "uv_index_avg": 1,
+          "wind_speed_avg_kmh": 14
+        },
+        {
+          "month": 2,
+          "temp_avg_c": 3,
+          "temp_max_avg_c": 8.0,
+          "temp_min_avg_c": -2.0,
+          "precip_days": 9,
+          "precip_mm": 50,
+          "sunshine_hours": 4,
+          "uv_index_avg": 2,
+          "wind_speed_avg_kmh": 13
+        },
+        {
+          "month": 3,
+          "temp_avg_c": 7,
+          "temp_max_avg_c": 12.0,
+          "temp_min_avg_c": 2.0,
+          "precip_days": 8,
+          "precip_mm": 45,
+          "sunshine_hours": 5,
+          "uv_index_avg": 3,
+          "wind_speed_avg_kmh": 12
+        },
+        {
+          "month": 4,
+          "temp_avg_c": 11,
+          "temp_max_avg_c": 16.0,
+          "temp_min_avg_c": 6.0,
+          "precip_days": 6,
+          "precip_mm": 30,
+          "sunshine_hours": 7,
+          "uv_index_avg": 4,
+          "wind_speed_avg_kmh": 11
+        },
+        {
+          "month": 5,
+          "temp_avg_c": 14,
+          "temp_max_avg_c": 19.0,
+          "temp_min_avg_c": 9.0,
+          "precip_days": 4,
+          "precip_mm": 20,
+          "sunshine_hours": 8,
+          "uv_index_avg": 5,
+          "wind_speed_avg_kmh": 10
+        },
+        {
+          "month": 6,
+          "temp_avg_c": 16,
+          "temp_max_avg_c": 21.0,
+          "temp_min_avg_c": 11.0,
+          "precip_days": 4,
+          "precip_mm": 20,
+          "sunshine_hours": 9,
+          "uv_index_avg": 6,
+          "wind_speed_avg_kmh": 10
+        },
+        {
+          "month": 7,
+          "temp_avg_c": 18,
+          "temp_max_avg_c": 23.0,
+          "temp_min_avg_c": 13.0,
+          "precip_days": 4,
+          "precip_mm": 20,
+          "sunshine_hours": 9,
+          "uv_index_avg": 6,
+          "wind_speed_avg_kmh": 10
+        },
+        {
+          "month": 8,
+          "temp_avg_c": 17,
+          "temp_max_avg_c": 22.0,
+          "temp_min_avg_c": 12.0,
+          "precip_days": 5,
+          "precip_mm": 25,
+          "sunshine_hours": 9,
+          "uv_index_avg": 6,
+          "wind_speed_avg_kmh": 10
+        },
+        {
+          "month": 9,
+          "temp_avg_c": 13,
+          "temp_max_avg_c": 18.0,
+          "temp_min_avg_c": 8.0,
+          "precip_days": 7,
+          "precip_mm": 35,
+          "sunshine_hours": 7,
+          "uv_index_avg": 4,
+          "wind_speed_avg_kmh": 12
+        },
+        {
+          "month": 10,
+          "temp_avg_c": 8,
+          "temp_max_avg_c": 13.0,
+          "temp_min_avg_c": 3.0,
+          "precip_days": 9,
+          "precip_mm": 50,
+          "sunshine_hours": 5,
+          "uv_index_avg": 2,
+          "wind_speed_avg_kmh": 13
+        },
+        {
+          "month": 11,
+          "temp_avg_c": 4,
+          "temp_max_avg_c": 9.0,
+          "temp_min_avg_c": -1.0,
+          "precip_days": 10,
+          "precip_mm": 55,
+          "sunshine_hours": 4,
+          "uv_index_avg": 1,
+          "wind_speed_avg_kmh": 14
+        },
+        {
+          "month": 12,
+          "temp_avg_c": 2,
+          "temp_max_avg_c": 7.0,
+          "temp_min_avg_c": -3.0,
+          "precip_days": 10,
+          "precip_mm": 55,
+          "sunshine_hours": 3,
+          "uv_index_avg": 1,
+          "wind_speed_avg_kmh": 14
+        }
+      ]
+    },
+    {
+      "id": 50,
+      "city": "Anchorage",
+      "state": "AK",
+      "iata_code": "ANC",
+      "latitude": 61.22,
+      "longitude": -149.9,
+      "timezone": "America/Anchorage",
+      "cost_level": 3,
+      "public_transport_score": 3,
+      "walkability_score": 4,
+      "tags": [
+        "nature",
+        "outdoor",
+        "hiking",
+        "wildlife"
+      ],
+      "recommended_stay_days": 5,
+      "destination_type": "nature_gateway",
+      "gateway_airports": [
+        {
+          "iata": "ANC",
+          "priority": 1
+        }
+      ],
+      "requires_car": true,
+      "country": "United States",
+      "country_code": "US",
+      "active": true,
+      "monthly_climate": [
+        {
+          "month": 1,
+          "temp_avg_c": -12,
+          "temp_max_avg_c": -8.0,
+          "temp_min_avg_c": -16.0,
+          "precip_days": 8,
+          "precip_mm": 30,
+          "sunshine_hours": 2,
+          "uv_index_avg": 1,
+          "wind_speed_avg_kmh": 20
+        },
+        {
+          "month": 2,
+          "temp_avg_c": -10,
+          "temp_max_avg_c": -6.0,
+          "temp_min_avg_c": -14.0,
+          "precip_days": 8,
+          "precip_mm": 35,
+          "sunshine_hours": 3,
+          "uv_index_avg": 1,
+          "wind_speed_avg_kmh": 19
+        },
+        {
+          "month": 3,
+          "temp_avg_c": -4,
+          "temp_max_avg_c": 0.0,
+          "temp_min_avg_c": -8.0,
+          "precip_days": 9,
+          "precip_mm": 45,
+          "sunshine_hours": 5,
+          "uv_index_avg": 2,
+          "wind_speed_avg_kmh": 17
+        },
+        {
+          "month": 4,
+          "temp_avg_c": 2,
+          "temp_max_avg_c": 6.0,
+          "temp_min_avg_c": -2.0,
+          "precip_days": 9,
+          "precip_mm": 45,
+          "sunshine_hours": 7,
+          "uv_index_avg": 3,
+          "wind_speed_avg_kmh": 14
+        },
+        {
+          "month": 5,
+          "temp_avg_c": 8,
+          "temp_max_avg_c": 12.0,
+          "temp_min_avg_c": 4.0,
+          "precip_days": 10,
+          "precip_mm": 50,
+          "sunshine_hours": 8,
+          "uv_index_avg": 4,
+          "wind_speed_avg_kmh": 13
+        },
+        {
+          "month": 6,
+          "temp_avg_c": 12,
+          "temp_max_avg_c": 16.0,
+          "temp_min_avg_c": 8.0,
+          "precip_days": 11,
+          "precip_mm": 55,
+          "sunshine_hours": 9,
+          "uv_index_avg": 5,
+          "wind_speed_avg_kmh": 12
+        },
+        {
+          "month": 7,
+          "temp_avg_c": 13,
+          "temp_max_avg_c": 17.0,
+          "temp_min_avg_c": 9.0,
+          "precip_days": 11,
+          "precip_mm": 60,
+          "sunshine_hours": 8,
+          "uv_index_avg": 5,
+          "wind_speed_avg_kmh": 12
+        },
+        {
+          "month": 8,
+          "temp_avg_c": 11,
+          "temp_max_avg_c": 15.0,
+          "temp_min_avg_c": 7.0,
+          "precip_days": 11,
+          "precip_mm": 60,
+          "sunshine_hours": 8,
+          "uv_index_avg": 4,
+          "wind_speed_avg_kmh": 13
+        },
+        {
+          "month": 9,
+          "temp_avg_c": 6,
+          "temp_max_avg_c": 10.0,
+          "temp_min_avg_c": 2.0,
+          "precip_days": 10,
+          "precip_mm": 50,
+          "sunshine_hours": 6,
+          "uv_index_avg": 3,
+          "wind_speed_avg_kmh": 15
+        },
+        {
+          "month": 10,
+          "temp_avg_c": -1,
+          "temp_max_avg_c": 3.0,
+          "temp_min_avg_c": -5.0,
+          "precip_days": 9,
+          "precip_mm": 40,
+          "sunshine_hours": 4,
+          "uv_index_avg": 1,
+          "wind_speed_avg_kmh": 17
+        },
+        {
+          "month": 11,
+          "temp_avg_c": -8,
+          "temp_max_avg_c": -4.0,
+          "temp_min_avg_c": -12.0,
+          "precip_days": 8,
+          "precip_mm": 30,
+          "sunshine_hours": 2,
+          "uv_index_avg": 1,
+          "wind_speed_avg_kmh": 19
+        },
+        {
+          "month": 12,
+          "temp_avg_c": -11,
+          "temp_max_avg_c": -7.0,
+          "temp_min_avg_c": -15.0,
+          "precip_days": 8,
+          "precip_mm": 30,
+          "sunshine_hours": 2,
+          "uv_index_avg": 1,
+          "wind_speed_avg_kmh": 20
+        }
+      ]
+    },
+    {
+      "id": 51,
+      "city": "Honolulu",
+      "state": "HI",
+      "iata_code": "HNL",
+      "latitude": 21.31,
+      "longitude": -157.86,
+      "timezone": "Pacific/Honolulu",
+      "cost_level": 4,
+      "public_transport_score": 5,
+      "walkability_score": 6,
+      "tags": [
+        "beach",
+        "nature",
+        "food",
+        "relaxation"
+      ],
+      "recommended_stay_days": 6,
+      "destination_type": "beach",
+      "gateway_airports": [
+        {
+          "iata": "HNL",
+          "priority": 1
+        }
+      ],
+      "requires_car": false,
+      "country": "United States",
+      "country_code": "US",
+      "active": true,
+      "monthly_climate": [
+        {
+          "month": 1,
+          "temp_avg_c": 23,
+          "temp_max_avg_c": 25.0,
+          "temp_min_avg_c": 21.0,
+          "precip_days": 13,
+          "precip_mm": 90,
+          "sunshine_hours": 7,
+          "uv_index_avg": 7,
+          "wind_speed_avg_kmh": 20
+        },
+        {
+          "month": 2,
+          "temp_avg_c": 23,
+          "temp_max_avg_c": 25.0,
+          "temp_min_avg_c": 21.0,
+          "precip_days": 12,
+          "precip_mm": 80,
+          "sunshine_hours": 8,
+          "uv_index_avg": 8,
+          "wind_speed_avg_kmh": 20
+        },
+        {
+          "month": 3,
+          "temp_avg_c": 24,
+          "temp_max_avg_c": 26.0,
+          "temp_min_avg_c": 22.0,
+          "precip_days": 11,
+          "precip_mm": 70,
+          "sunshine_hours": 8.5,
+          "uv_index_avg": 9,
+          "wind_speed_avg_kmh": 18
+        },
+        {
+          "month": 4,
+          "temp_avg_c": 24,
+          "temp_max_avg_c": 26.0,
+          "temp_min_avg_c": 22.0,
+          "precip_days": 9,
+          "precip_mm": 50,
+          "sunshine_hours": 8.5,
+          "uv_index_avg": 9,
+          "wind_speed_avg_kmh": 16
+        },
+        {
+          "month": 5,
+          "temp_avg_c": 25,
+          "temp_max_avg_c": 27.0,
+          "temp_min_avg_c": 23.0,
+          "precip_days": 7,
+          "precip_mm": 40,
+          "sunshine_hours": 9,
+          "uv_index_avg": 10,
+          "wind_speed_avg_kmh": 16
+        },
+        {
+          "month": 6,
+          "temp_avg_c": 26,
+          "temp_max_avg_c": 28.0,
+          "temp_min_avg_c": 24.0,
+          "precip_days": 6,
+          "precip_mm": 30,
+          "sunshine_hours": 9,
+          "uv_index_avg": 10,
+          "wind_speed_avg_kmh": 15
+        },
+        {
+          "month": 7,
+          "temp_avg_c": 26,
+          "temp_max_avg_c": 28.0,
+          "temp_min_avg_c": 24.0,
+          "precip_days": 6,
+          "precip_mm": 30,
+          "sunshine_hours": 9,
+          "uv_index_avg": 10,
+          "wind_speed_avg_kmh": 15
+        },
+        {
+          "month": 8,
+          "temp_avg_c": 26,
+          "temp_max_avg_c": 28.0,
+          "temp_min_avg_c": 24.0,
+          "precip_days": 7,
+          "precip_mm": 40,
+          "sunshine_hours": 9,
+          "uv_index_avg": 10,
+          "wind_speed_avg_kmh": 16
+        },
+        {
+          "month": 9,
+          "temp_avg_c": 25,
+          "temp_max_avg_c": 27.0,
+          "temp_min_avg_c": 23.0,
+          "precip_days": 8,
+          "precip_mm": 50,
+          "sunshine_hours": 8.5,
+          "uv_index_avg": 9,
+          "wind_speed_avg_kmh": 17
+        },
+        {
+          "month": 10,
+          "temp_avg_c": 24,
+          "temp_max_avg_c": 26.0,
+          "temp_min_avg_c": 22.0,
+          "precip_days": 10,
+          "precip_mm": 70,
+          "sunshine_hours": 8,
+          "uv_index_avg": 8,
+          "wind_speed_avg_kmh": 19
+        },
+        {
+          "month": 11,
+          "temp_avg_c": 23,
+          "temp_max_avg_c": 25.0,
+          "temp_min_avg_c": 21.0,
+          "precip_days": 11,
+          "precip_mm": 80,
+          "sunshine_hours": 7.5,
+          "uv_index_avg": 7,
+          "wind_speed_avg_kmh": 20
+        },
+        {
+          "month": 12,
+          "temp_avg_c": 23,
+          "temp_max_avg_c": 25.0,
+          "temp_min_avg_c": 21.0,
+          "precip_days": 13,
+          "precip_mm": 90,
+          "sunshine_hours": 7,
+          "uv_index_avg": 7,
+          "wind_speed_avg_kmh": 20
+        }
+      ]
+    },
+    {
+      "id": 52,
+      "city": "Kahului",
+      "state": "HI",
+      "iata_code": "OGG",
+      "latitude": 20.89,
+      "longitude": -156.43,
+      "timezone": "Pacific/Honolulu",
+      "cost_level": 4,
+      "public_transport_score": 2,
+      "walkability_score": 3,
+      "tags": [
+        "beach",
+        "nature",
+        "relaxation",
+        "outdoor"
+      ],
+      "recommended_stay_days": 6,
+      "destination_type": "beach",
+      "gateway_airports": [
+        {
+          "iata": "OGG",
+          "priority": 1
+        }
+      ],
+      "requires_car": true,
+      "country": "United States",
+      "country_code": "US",
+      "active": true,
+      "monthly_climate": [
+        {
+          "month": 1,
+          "temp_avg_c": 23,
+          "temp_max_avg_c": 25.0,
+          "temp_min_avg_c": 21.0,
+          "precip_days": 13,
+          "precip_mm": 90,
+          "sunshine_hours": 7,
+          "uv_index_avg": 7,
+          "wind_speed_avg_kmh": 20
+        },
+        {
+          "month": 2,
+          "temp_avg_c": 23,
+          "temp_max_avg_c": 25.0,
+          "temp_min_avg_c": 21.0,
+          "precip_days": 12,
+          "precip_mm": 80,
+          "sunshine_hours": 8,
+          "uv_index_avg": 8,
+          "wind_speed_avg_kmh": 20
+        },
+        {
+          "month": 3,
+          "temp_avg_c": 24,
+          "temp_max_avg_c": 26.0,
+          "temp_min_avg_c": 22.0,
+          "precip_days": 11,
+          "precip_mm": 70,
+          "sunshine_hours": 8.5,
+          "uv_index_avg": 9,
+          "wind_speed_avg_kmh": 18
+        },
+        {
+          "month": 4,
+          "temp_avg_c": 24,
+          "temp_max_avg_c": 26.0,
+          "temp_min_avg_c": 22.0,
+          "precip_days": 9,
+          "precip_mm": 50,
+          "sunshine_hours": 8.5,
+          "uv_index_avg": 9,
+          "wind_speed_avg_kmh": 16
+        },
+        {
+          "month": 5,
+          "temp_avg_c": 25,
+          "temp_max_avg_c": 27.0,
+          "temp_min_avg_c": 23.0,
+          "precip_days": 7,
+          "precip_mm": 40,
+          "sunshine_hours": 9,
+          "uv_index_avg": 10,
+          "wind_speed_avg_kmh": 16
+        },
+        {
+          "month": 6,
+          "temp_avg_c": 26,
+          "temp_max_avg_c": 28.0,
+          "temp_min_avg_c": 24.0,
+          "precip_days": 6,
+          "precip_mm": 30,
+          "sunshine_hours": 9,
+          "uv_index_avg": 10,
+          "wind_speed_avg_kmh": 15
+        },
+        {
+          "month": 7,
+          "temp_avg_c": 26,
+          "temp_max_avg_c": 28.0,
+          "temp_min_avg_c": 24.0,
+          "precip_days": 6,
+          "precip_mm": 30,
+          "sunshine_hours": 9,
+          "uv_index_avg": 10,
+          "wind_speed_avg_kmh": 15
+        },
+        {
+          "month": 8,
+          "temp_avg_c": 26,
+          "temp_max_avg_c": 28.0,
+          "temp_min_avg_c": 24.0,
+          "precip_days": 7,
+          "precip_mm": 40,
+          "sunshine_hours": 9,
+          "uv_index_avg": 10,
+          "wind_speed_avg_kmh": 16
+        },
+        {
+          "month": 9,
+          "temp_avg_c": 25,
+          "temp_max_avg_c": 27.0,
+          "temp_min_avg_c": 23.0,
+          "precip_days": 8,
+          "precip_mm": 50,
+          "sunshine_hours": 8.5,
+          "uv_index_avg": 9,
+          "wind_speed_avg_kmh": 17
+        },
+        {
+          "month": 10,
+          "temp_avg_c": 24,
+          "temp_max_avg_c": 26.0,
+          "temp_min_avg_c": 22.0,
+          "precip_days": 10,
+          "precip_mm": 70,
+          "sunshine_hours": 8,
+          "uv_index_avg": 8,
+          "wind_speed_avg_kmh": 19
+        },
+        {
+          "month": 11,
+          "temp_avg_c": 23,
+          "temp_max_avg_c": 25.0,
+          "temp_min_avg_c": 21.0,
+          "precip_days": 11,
+          "precip_mm": 80,
+          "sunshine_hours": 7.5,
+          "uv_index_avg": 7,
+          "wind_speed_avg_kmh": 20
+        },
+        {
+          "month": 12,
+          "temp_avg_c": 23,
+          "temp_max_avg_c": 25.0,
+          "temp_min_avg_c": 21.0,
+          "precip_days": 13,
+          "precip_mm": 90,
+          "sunshine_hours": 7,
+          "uv_index_avg": 7,
+          "wind_speed_avg_kmh": 20
+        }
+      ]
+    },
+    {
+      "id": 53,
+      "city": "Bozeman",
+      "state": "MT",
+      "iata_code": "BZN",
+      "latitude": 45.68,
+      "longitude": -111.05,
+      "timezone": "America/Denver",
+      "cost_level": 3,
+      "public_transport_score": 1,
+      "walkability_score": 4,
+      "tags": [
+        "nature",
+        "skiing",
+        "hiking",
+        "outdoor"
+      ],
+      "recommended_stay_days": 5,
+      "destination_type": "nature_gateway",
+      "gateway_airports": [
+        {
+          "iata": "BZN",
+          "priority": 1
+        }
+      ],
+      "requires_car": true,
+      "country": "United States",
+      "country_code": "US",
+      "active": true,
+      "monthly_climate": [
+        {
+          "month": 1,
+          "temp_avg_c": -4,
+          "temp_max_avg_c": 2.0,
+          "temp_min_avg_c": -10.0,
+          "precip_days": 7,
+          "precip_mm": 25,
+          "sunshine_hours": 5,
+          "uv_index_avg": 1,
+          "wind_speed_avg_kmh": 17
+        },
+        {
+          "month": 2,
+          "temp_avg_c": -2,
+          "temp_max_avg_c": 4.0,
+          "temp_min_avg_c": -8.0,
+          "precip_days": 6,
+          "precip_mm": 25,
+          "sunshine_hours": 6,
+          "uv_index_avg": 2,
+          "wind_speed_avg_kmh": 17
+        },
+        {
+          "month": 3,
+          "temp_avg_c": 3,
+          "temp_max_avg_c": 9.0,
+          "temp_min_avg_c": -3.0,
+          "precip_days": 6,
+          "precip_mm": 30,
+          "sunshine_hours": 7,
+          "uv_index_avg": 4,
+          "wind_speed_avg_kmh": 16
+        },
+        {
+          "month": 4,
+          "temp_avg_c": 9,
+          "temp_max_avg_c": 15.0,
+          "temp_min_avg_c": 3.0,
+          "precip_days": 7,
+          "precip_mm": 35,
+          "sunshine_hours": 8,
+          "uv_index_avg": 6,
+          "wind_speed_avg_kmh": 13
+        },
+        {
+          "month": 5,
+          "temp_avg_c": 13,
+          "temp_max_avg_c": 19.0,
+          "temp_min_avg_c": 7.0,
+          "precip_days": 8,
+          "precip_mm": 40,
+          "sunshine_hours": 9,
+          "uv_index_avg": 7,
+          "wind_speed_avg_kmh": 12
+        },
+        {
+          "month": 6,
+          "temp_avg_c": 16,
+          "temp_max_avg_c": 22.0,
+          "temp_min_avg_c": 10.0,
+          "precip_days": 8,
+          "precip_mm": 40,
+          "sunshine_hours": 9,
+          "uv_index_avg": 8,
+          "wind_speed_avg_kmh": 12
+        },
+        {
+          "month": 7,
+          "temp_avg_c": 18,
+          "temp_max_avg_c": 24.0,
+          "temp_min_avg_c": 12.0,
+          "precip_days": 7,
+          "precip_mm": 35,
+          "sunshine_hours": 9,
+          "uv_index_avg": 8,
+          "wind_speed_avg_kmh": 12
+        },
+        {
+          "month": 8,
+          "temp_avg_c": 16,
+          "temp_max_avg_c": 22.0,
+          "temp_min_avg_c": 10.0,
+          "precip_days": 7,
+          "precip_mm": 35,
+          "sunshine_hours": 9,
+          "uv_index_avg": 7,
+          "wind_speed_avg_kmh": 13
+        },
+        {
+          "month": 9,
+          "temp_avg_c": 11,
+          "temp_max_avg_c": 17.0,
+          "temp_min_avg_c": 5.0,
+          "precip_days": 7,
+          "precip_mm": 35,
+          "sunshine_hours": 8,
+          "uv_index_avg": 5,
+          "wind_speed_avg_kmh": 15
+        },
+        {
+          "month": 10,
+          "temp_avg_c": 6,
+          "temp_max_avg_c": 12.0,
+          "temp_min_avg_c": 0.0,
+          "precip_days": 7,
+          "precip_mm": 30,
+          "sunshine_hours": 7,
+          "uv_index_avg": 3,
+          "wind_speed_avg_kmh": 16
+        },
+        {
+          "month": 11,
+          "temp_avg_c": 0,
+          "temp_max_avg_c": 6.0,
+          "temp_min_avg_c": -6.0,
+          "precip_days": 7,
+          "precip_mm": 25,
+          "sunshine_hours": 6,
+          "uv_index_avg": 2,
+          "wind_speed_avg_kmh": 17
+        },
+        {
+          "month": 12,
+          "temp_avg_c": -3,
+          "temp_max_avg_c": 3.0,
+          "temp_min_avg_c": -9.0,
+          "precip_days": 7,
+          "precip_mm": 25,
+          "sunshine_hours": 5,
+          "uv_index_avg": 1,
+          "wind_speed_avg_kmh": 17
+        }
+      ]
+    },
+    {
+      "id": 54,
+      "city": "Jackson",
+      "state": "WY",
+      "iata_code": "JAC",
+      "latitude": 43.48,
+      "longitude": -110.76,
+      "timezone": "America/Denver",
+      "cost_level": 5,
+      "public_transport_score": 1,
+      "walkability_score": 4,
+      "tags": [
+        "nature",
+        "skiing",
+        "hiking",
+        "outdoor"
+      ],
+      "recommended_stay_days": 5,
+      "destination_type": "nature_gateway",
+      "gateway_airports": [
+        {
+          "iata": "JAC",
+          "priority": 1
+        }
+      ],
+      "requires_car": true,
+      "country": "United States",
+      "country_code": "US",
+      "active": true,
+      "monthly_climate": [
+        {
+          "month": 1,
+          "temp_avg_c": -4,
+          "temp_max_avg_c": 2.0,
+          "temp_min_avg_c": -10.0,
+          "precip_days": 7,
+          "precip_mm": 25,
+          "sunshine_hours": 5,
+          "uv_index_avg": 1,
+          "wind_speed_avg_kmh": 17
+        },
+        {
+          "month": 2,
+          "temp_avg_c": -2,
+          "temp_max_avg_c": 4.0,
+          "temp_min_avg_c": -8.0,
+          "precip_days": 6,
+          "precip_mm": 25,
+          "sunshine_hours": 6,
+          "uv_index_avg": 2,
+          "wind_speed_avg_kmh": 17
+        },
+        {
+          "month": 3,
+          "temp_avg_c": 3,
+          "temp_max_avg_c": 9.0,
+          "temp_min_avg_c": -3.0,
+          "precip_days": 6,
+          "precip_mm": 30,
+          "sunshine_hours": 7,
+          "uv_index_avg": 4,
+          "wind_speed_avg_kmh": 16
+        },
+        {
+          "month": 4,
+          "temp_avg_c": 9,
+          "temp_max_avg_c": 15.0,
+          "temp_min_avg_c": 3.0,
+          "precip_days": 7,
+          "precip_mm": 35,
+          "sunshine_hours": 8,
+          "uv_index_avg": 6,
+          "wind_speed_avg_kmh": 13
+        },
+        {
+          "month": 5,
+          "temp_avg_c": 13,
+          "temp_max_avg_c": 19.0,
+          "temp_min_avg_c": 7.0,
+          "precip_days": 8,
+          "precip_mm": 40,
+          "sunshine_hours": 9,
+          "uv_index_avg": 7,
+          "wind_speed_avg_kmh": 12
+        },
+        {
+          "month": 6,
+          "temp_avg_c": 16,
+          "temp_max_avg_c": 22.0,
+          "temp_min_avg_c": 10.0,
+          "precip_days": 8,
+          "precip_mm": 40,
+          "sunshine_hours": 9,
+          "uv_index_avg": 8,
+          "wind_speed_avg_kmh": 12
+        },
+        {
+          "month": 7,
+          "temp_avg_c": 18,
+          "temp_max_avg_c": 24.0,
+          "temp_min_avg_c": 12.0,
+          "precip_days": 7,
+          "precip_mm": 35,
+          "sunshine_hours": 9,
+          "uv_index_avg": 8,
+          "wind_speed_avg_kmh": 12
+        },
+        {
+          "month": 8,
+          "temp_avg_c": 16,
+          "temp_max_avg_c": 22.0,
+          "temp_min_avg_c": 10.0,
+          "precip_days": 7,
+          "precip_mm": 35,
+          "sunshine_hours": 9,
+          "uv_index_avg": 7,
+          "wind_speed_avg_kmh": 13
+        },
+        {
+          "month": 9,
+          "temp_avg_c": 11,
+          "temp_max_avg_c": 17.0,
+          "temp_min_avg_c": 5.0,
+          "precip_days": 7,
+          "precip_mm": 35,
+          "sunshine_hours": 8,
+          "uv_index_avg": 5,
+          "wind_speed_avg_kmh": 15
+        },
+        {
+          "month": 10,
+          "temp_avg_c": 6,
+          "temp_max_avg_c": 12.0,
+          "temp_min_avg_c": 0.0,
+          "precip_days": 7,
+          "precip_mm": 30,
+          "sunshine_hours": 7,
+          "uv_index_avg": 3,
+          "wind_speed_avg_kmh": 16
+        },
+        {
+          "month": 11,
+          "temp_avg_c": 0,
+          "temp_max_avg_c": 6.0,
+          "temp_min_avg_c": -6.0,
+          "precip_days": 7,
+          "precip_mm": 25,
+          "sunshine_hours": 6,
+          "uv_index_avg": 2,
+          "wind_speed_avg_kmh": 17
+        },
+        {
+          "month": 12,
+          "temp_avg_c": -3,
+          "temp_max_avg_c": 3.0,
+          "temp_min_avg_c": -9.0,
+          "precip_days": 7,
+          "precip_mm": 25,
+          "sunshine_hours": 5,
+          "uv_index_avg": 1,
+          "wind_speed_avg_kmh": 17
+        }
+      ]
+    },
+    {
+      "id": 55,
+      "city": "Key West",
+      "state": "FL",
+      "iata_code": "EYW",
+      "latitude": 24.56,
+      "longitude": -81.78,
+      "timezone": "America/New_York",
+      "cost_level": 4,
+      "public_transport_score": 2,
+      "walkability_score": 8,
+      "tags": [
+        "beach",
+        "relaxation",
+        "nightlife",
+        "outdoor"
+      ],
+      "recommended_stay_days": 4,
+      "destination_type": "beach",
+      "gateway_airports": [
+        {
+          "iata": "EYW",
+          "priority": 1
+        }
+      ],
+      "requires_car": true,
+      "country": "United States",
+      "country_code": "US",
+      "active": true,
+      "monthly_climate": [
+        {
+          "month": 1,
+          "temp_avg_c": 15,
+          "temp_max_avg_c": 18.5,
+          "temp_min_avg_c": 11.5,
+          "precip_days": 6,
+          "precip_mm": 50,
+          "sunshine_hours": 7,
+          "uv_index_avg": 4,
+          "wind_speed_avg_kmh": 16
+        },
+        {
+          "month": 2,
+          "temp_avg_c": 17,
+          "temp_max_avg_c": 20.5,
+          "temp_min_avg_c": 13.5,
+          "precip_days": 7,
+          "precip_mm": 60,
+          "sunshine_hours": 8,
+          "uv_index_avg": 5,
+          "wind_speed_avg_kmh": 16
+        },
+        {
+          "month": 3,
+          "temp_avg_c": 21,
+          "temp_max_avg_c": 24.5,
+          "temp_min_avg_c": 17.5,
+          "precip_days": 9,
+          "precip_mm": 80,
+          "sunshine_hours": 8.5,
+          "uv_index_avg": 7,
+          "wind_speed_avg_kmh": 15
+        },
+        {
+          "month": 4,
+          "temp_avg_c": 25,
+          "temp_max_avg_c": 28.5,
+          "temp_min_avg_c": 21.5,
+          "precip_days": 9,
+          "precip_mm": 90,
+          "sunshine_hours": 9,
+          "uv_index_avg": 9,
+          "wind_speed_avg_kmh": 13
+        },
+        {
+          "month": 5,
+          "temp_avg_c": 27,
+          "temp_max_avg_c": 30.5,
+          "temp_min_avg_c": 23.5,
+          "precip_days": 10,
+          "precip_mm": 100,
+          "sunshine_hours": 8.5,
+          "uv_index_avg": 10,
+          "wind_speed_avg_kmh": 12
+        },
+        {
+          "month": 6,
+          "temp_avg_c": 28,
+          "temp_max_avg_c": 31.5,
+          "temp_min_avg_c": 24.5,
+          "precip_days": 12,
+          "precip_mm": 130,
+          "sunshine_hours": 7.5,
+          "uv_index_avg": 10,
+          "wind_speed_avg_kmh": 12
+        },
+        {
+          "month": 7,
+          "temp_avg_c": 28,
+          "temp_max_avg_c": 31.5,
+          "temp_min_avg_c": 24.5,
+          "precip_days": 12,
+          "precip_mm": 130,
+          "sunshine_hours": 7.5,
+          "uv_index_avg": 10,
+          "wind_speed_avg_kmh": 12
+        },
+        {
+          "month": 8,
+          "temp_avg_c": 28,
+          "temp_max_avg_c": 31.5,
+          "temp_min_avg_c": 24.5,
+          "precip_days": 12,
+          "precip_mm": 130,
+          "sunshine_hours": 7.5,
+          "uv_index_avg": 10,
+          "wind_speed_avg_kmh": 12
+        },
+        {
+          "month": 9,
+          "temp_avg_c": 26,
+          "temp_max_avg_c": 29.5,
+          "temp_min_avg_c": 22.5,
+          "precip_days": 11,
+          "precip_mm": 120,
+          "sunshine_hours": 8,
+          "uv_index_avg": 9,
+          "wind_speed_avg_kmh": 13
+        },
+        {
+          "month": 10,
+          "temp_avg_c": 23,
+          "temp_max_avg_c": 26.5,
+          "temp_min_avg_c": 19.5,
+          "precip_days": 9,
+          "precip_mm": 90,
+          "sunshine_hours": 8.5,
+          "uv_index_avg": 7,
+          "wind_speed_avg_kmh": 15
+        },
+        {
+          "month": 11,
+          "temp_avg_c": 19,
+          "temp_max_avg_c": 22.5,
+          "temp_min_avg_c": 15.5,
+          "precip_days": 7,
+          "precip_mm": 60,
+          "sunshine_hours": 8,
+          "uv_index_avg": 5,
+          "wind_speed_avg_kmh": 16
+        },
+        {
+          "month": 12,
+          "temp_avg_c": 16,
+          "temp_max_avg_c": 19.5,
+          "temp_min_avg_c": 12.5,
+          "precip_days": 6,
+          "precip_mm": 50,
+          "sunshine_hours": 7.5,
+          "uv_index_avg": 4,
+          "wind_speed_avg_kmh": 16
+        }
+      ]
+    },
+    {
+      "id": 56,
+      "city": "Pensacola",
+      "state": "FL",
+      "iata_code": "PNS",
+      "latitude": 30.42,
+      "longitude": -87.22,
+      "timezone": "America/Chicago",
+      "cost_level": 1,
+      "public_transport_score": 2,
+      "walkability_score": 4,
+      "tags": [
+        "beach",
+        "history",
+        "budget",
+        "outdoor"
+      ],
+      "recommended_stay_days": 4,
+      "destination_type": "beach",
+      "gateway_airports": [
+        {
+          "iata": "PNS",
+          "priority": 1
+        }
+      ],
+      "requires_car": true,
+      "country": "United States",
+      "country_code": "US",
+      "active": true,
+      "monthly_climate": [
+        {
+          "month": 1,
+          "temp_avg_c": 15,
+          "temp_max_avg_c": 18.5,
+          "temp_min_avg_c": 11.5,
+          "precip_days": 6,
+          "precip_mm": 50,
+          "sunshine_hours": 7,
+          "uv_index_avg": 4,
+          "wind_speed_avg_kmh": 16
+        },
+        {
+          "month": 2,
+          "temp_avg_c": 17,
+          "temp_max_avg_c": 20.5,
+          "temp_min_avg_c": 13.5,
+          "precip_days": 7,
+          "precip_mm": 60,
+          "sunshine_hours": 8,
+          "uv_index_avg": 5,
+          "wind_speed_avg_kmh": 16
+        },
+        {
+          "month": 3,
+          "temp_avg_c": 21,
+          "temp_max_avg_c": 24.5,
+          "temp_min_avg_c": 17.5,
+          "precip_days": 9,
+          "precip_mm": 80,
+          "sunshine_hours": 8.5,
+          "uv_index_avg": 7,
+          "wind_speed_avg_kmh": 15
+        },
+        {
+          "month": 4,
+          "temp_avg_c": 25,
+          "temp_max_avg_c": 28.5,
+          "temp_min_avg_c": 21.5,
+          "precip_days": 9,
+          "precip_mm": 90,
+          "sunshine_hours": 9,
+          "uv_index_avg": 9,
+          "wind_speed_avg_kmh": 13
+        },
+        {
+          "month": 5,
+          "temp_avg_c": 27,
+          "temp_max_avg_c": 30.5,
+          "temp_min_avg_c": 23.5,
+          "precip_days": 10,
+          "precip_mm": 100,
+          "sunshine_hours": 8.5,
+          "uv_index_avg": 10,
+          "wind_speed_avg_kmh": 12
+        },
+        {
+          "month": 6,
+          "temp_avg_c": 28,
+          "temp_max_avg_c": 31.5,
+          "temp_min_avg_c": 24.5,
+          "precip_days": 12,
+          "precip_mm": 130,
+          "sunshine_hours": 7.5,
+          "uv_index_avg": 10,
+          "wind_speed_avg_kmh": 12
+        },
+        {
+          "month": 7,
+          "temp_avg_c": 28,
+          "temp_max_avg_c": 31.5,
+          "temp_min_avg_c": 24.5,
+          "precip_days": 12,
+          "precip_mm": 130,
+          "sunshine_hours": 7.5,
+          "uv_index_avg": 10,
+          "wind_speed_avg_kmh": 12
+        },
+        {
+          "month": 8,
+          "temp_avg_c": 28,
+          "temp_max_avg_c": 31.5,
+          "temp_min_avg_c": 24.5,
+          "precip_days": 12,
+          "precip_mm": 130,
+          "sunshine_hours": 7.5,
+          "uv_index_avg": 10,
+          "wind_speed_avg_kmh": 12
+        },
+        {
+          "month": 9,
+          "temp_avg_c": 26,
+          "temp_max_avg_c": 29.5,
+          "temp_min_avg_c": 22.5,
+          "precip_days": 11,
+          "precip_mm": 120,
+          "sunshine_hours": 8,
+          "uv_index_avg": 9,
+          "wind_speed_avg_kmh": 13
+        },
+        {
+          "month": 10,
+          "temp_avg_c": 23,
+          "temp_max_avg_c": 26.5,
+          "temp_min_avg_c": 19.5,
+          "precip_days": 9,
+          "precip_mm": 90,
+          "sunshine_hours": 8.5,
+          "uv_index_avg": 7,
+          "wind_speed_avg_kmh": 15
+        },
+        {
+          "month": 11,
+          "temp_avg_c": 19,
+          "temp_max_avg_c": 22.5,
+          "temp_min_avg_c": 15.5,
+          "precip_days": 7,
+          "precip_mm": 60,
+          "sunshine_hours": 8,
+          "uv_index_avg": 5,
+          "wind_speed_avg_kmh": 16
+        },
+        {
+          "month": 12,
+          "temp_avg_c": 16,
+          "temp_max_avg_c": 19.5,
+          "temp_min_avg_c": 12.5,
+          "precip_days": 6,
+          "precip_mm": 50,
+          "sunshine_hours": 7.5,
+          "uv_index_avg": 4,
+          "wind_speed_avg_kmh": 16
+        }
+      ]
+    },
+    {
+      "id": 57,
+      "city": "Providence",
+      "state": "RI",
+      "iata_code": "PVD",
+      "latitude": 41.82,
+      "longitude": -71.41,
+      "timezone": "America/New_York",
+      "cost_level": 2,
+      "public_transport_score": 6,
+      "walkability_score": 7,
+      "tags": [
+        "city",
+        "food",
+        "history",
+        "art"
+      ],
+      "recommended_stay_days": 3,
+      "destination_type": "city",
+      "gateway_airports": [
+        {
+          "iata": "PVD",
+          "priority": 1
+        }
+      ],
+      "requires_car": false,
+      "country": "United States",
+      "country_code": "US",
+      "active": true,
+      "monthly_climate": [
+        {
+          "month": 1,
+          "temp_avg_c": 0,
+          "temp_max_avg_c": 6.0,
+          "temp_min_avg_c": -6.0,
+          "precip_days": 6,
+          "precip_mm": 45,
+          "sunshine_hours": 4,
+          "uv_index_avg": 1,
+          "wind_speed_avg_kmh": 17
+        },
+        {
+          "month": 2,
+          "temp_avg_c": 3,
+          "temp_max_avg_c": 9.0,
+          "temp_min_avg_c": -3.0,
+          "precip_days": 7,
+          "precip_mm": 55,
+          "sunshine_hours": 5,
+          "uv_index_avg": 2,
+          "wind_speed_avg_kmh": 16
+        },
+        {
+          "month": 3,
+          "temp_avg_c": 9,
+          "temp_max_avg_c": 15.0,
+          "temp_min_avg_c": 3.0,
+          "precip_days": 9,
+          "precip_mm": 75,
+          "sunshine_hours": 6.5,
+          "uv_index_avg": 4,
+          "wind_speed_avg_kmh": 15
+        },
+        {
+          "month": 4,
+          "temp_avg_c": 15,
+          "temp_max_avg_c": 21.0,
+          "temp_min_avg_c": 9.0,
+          "precip_days": 9,
+          "precip_mm": 80,
+          "sunshine_hours": 7,
+          "uv_index_avg": 6,
+          "wind_speed_avg_kmh": 13
+        },
+        {
+          "month": 5,
+          "temp_avg_c": 19,
+          "temp_max_avg_c": 25.0,
+          "temp_min_avg_c": 13.0,
+          "precip_days": 10,
+          "precip_mm": 85,
+          "sunshine_hours": 8,
+          "uv_index_avg": 7,
+          "wind_speed_avg_kmh": 12
+        },
+        {
+          "month": 6,
+          "temp_avg_c": 22,
+          "temp_max_avg_c": 28.0,
+          "temp_min_avg_c": 16.0,
+          "precip_days": 10,
+          "precip_mm": 80,
+          "sunshine_hours": 8,
+          "uv_index_avg": 8,
+          "wind_speed_avg_kmh": 12
+        },
+        {
+          "month": 7,
+          "temp_avg_c": 23,
+          "temp_max_avg_c": 29.0,
+          "temp_min_avg_c": 17.0,
+          "precip_days": 10,
+          "precip_mm": 80,
+          "sunshine_hours": 8,
+          "uv_index_avg": 8,
+          "wind_speed_avg_kmh": 12
+        },
+        {
+          "month": 8,
+          "temp_avg_c": 21,
+          "temp_max_avg_c": 27.0,
+          "temp_min_avg_c": 15.0,
+          "precip_days": 10,
+          "precip_mm": 80,
+          "sunshine_hours": 8,
+          "uv_index_avg": 7,
+          "wind_speed_avg_kmh": 13
+        },
+        {
+          "month": 9,
+          "temp_avg_c": 17,
+          "temp_max_avg_c": 23.0,
+          "temp_min_avg_c": 11.0,
+          "precip_days": 9,
+          "precip_mm": 80,
+          "sunshine_hours": 7,
+          "uv_index_avg": 6,
+          "wind_speed_avg_kmh": 14
+        },
+        {
+          "month": 10,
+          "temp_avg_c": 12,
+          "temp_max_avg_c": 18.0,
+          "temp_min_avg_c": 6.0,
+          "precip_days": 8,
+          "precip_mm": 70,
+          "sunshine_hours": 6,
+          "uv_index_avg": 4,
+          "wind_speed_avg_kmh": 15
+        },
+        {
+          "month": 11,
+          "temp_avg_c": 6,
+          "temp_max_avg_c": 12.0,
+          "temp_min_avg_c": 0.0,
+          "precip_days": 7,
+          "precip_mm": 55,
+          "sunshine_hours": 5,
+          "uv_index_avg": 2,
+          "wind_speed_avg_kmh": 16
+        },
+        {
+          "month": 12,
+          "temp_avg_c": 2,
+          "temp_max_avg_c": 8.0,
+          "temp_min_avg_c": -4.0,
+          "precip_days": 6,
+          "precip_mm": 50,
+          "sunshine_hours": 4,
+          "uv_index_avg": 1,
+          "wind_speed_avg_kmh": 17
+        }
+      ]
+    },
+    {
+      "id": 58,
+      "city": "Portland",
+      "state": "ME",
+      "iata_code": "PWM",
+      "latitude": 43.66,
+      "longitude": -70.26,
+      "timezone": "America/New_York",
+      "cost_level": 3,
+      "public_transport_score": 4,
+      "walkability_score": 7,
+      "tags": [
+        "city",
+        "food",
+        "nature",
+        "art"
+      ],
+      "recommended_stay_days": 3,
+      "destination_type": "city",
+      "gateway_airports": [
+        {
+          "iata": "PWM",
+          "priority": 1
+        }
+      ],
+      "requires_car": false,
+      "country": "United States",
+      "country_code": "US",
+      "active": true,
+      "monthly_climate": [
+        {
+          "month": 1,
+          "temp_avg_c": 0,
+          "temp_max_avg_c": 6.0,
+          "temp_min_avg_c": -6.0,
+          "precip_days": 6,
+          "precip_mm": 45,
+          "sunshine_hours": 4,
+          "uv_index_avg": 1,
+          "wind_speed_avg_kmh": 17
+        },
+        {
+          "month": 2,
+          "temp_avg_c": 3,
+          "temp_max_avg_c": 9.0,
+          "temp_min_avg_c": -3.0,
+          "precip_days": 7,
+          "precip_mm": 55,
+          "sunshine_hours": 5,
+          "uv_index_avg": 2,
+          "wind_speed_avg_kmh": 16
+        },
+        {
+          "month": 3,
+          "temp_avg_c": 9,
+          "temp_max_avg_c": 15.0,
+          "temp_min_avg_c": 3.0,
+          "precip_days": 9,
+          "precip_mm": 75,
+          "sunshine_hours": 6.5,
+          "uv_index_avg": 4,
+          "wind_speed_avg_kmh": 15
+        },
+        {
+          "month": 4,
+          "temp_avg_c": 15,
+          "temp_max_avg_c": 21.0,
+          "temp_min_avg_c": 9.0,
+          "precip_days": 9,
+          "precip_mm": 80,
+          "sunshine_hours": 7,
+          "uv_index_avg": 6,
+          "wind_speed_avg_kmh": 13
+        },
+        {
+          "month": 5,
+          "temp_avg_c": 19,
+          "temp_max_avg_c": 25.0,
+          "temp_min_avg_c": 13.0,
+          "precip_days": 10,
+          "precip_mm": 85,
+          "sunshine_hours": 8,
+          "uv_index_avg": 7,
+          "wind_speed_avg_kmh": 12
+        },
+        {
+          "month": 6,
+          "temp_avg_c": 22,
+          "temp_max_avg_c": 28.0,
+          "temp_min_avg_c": 16.0,
+          "precip_days": 10,
+          "precip_mm": 80,
+          "sunshine_hours": 8,
+          "uv_index_avg": 8,
+          "wind_speed_avg_kmh": 12
+        },
+        {
+          "month": 7,
+          "temp_avg_c": 23,
+          "temp_max_avg_c": 29.0,
+          "temp_min_avg_c": 17.0,
+          "precip_days": 10,
+          "precip_mm": 80,
+          "sunshine_hours": 8,
+          "uv_index_avg": 8,
+          "wind_speed_avg_kmh": 12
+        },
+        {
+          "month": 8,
+          "temp_avg_c": 21,
+          "temp_max_avg_c": 27.0,
+          "temp_min_avg_c": 15.0,
+          "precip_days": 10,
+          "precip_mm": 80,
+          "sunshine_hours": 8,
+          "uv_index_avg": 7,
+          "wind_speed_avg_kmh": 13
+        },
+        {
+          "month": 9,
+          "temp_avg_c": 17,
+          "temp_max_avg_c": 23.0,
+          "temp_min_avg_c": 11.0,
+          "precip_days": 9,
+          "precip_mm": 80,
+          "sunshine_hours": 7,
+          "uv_index_avg": 6,
+          "wind_speed_avg_kmh": 14
+        },
+        {
+          "month": 10,
+          "temp_avg_c": 12,
+          "temp_max_avg_c": 18.0,
+          "temp_min_avg_c": 6.0,
+          "precip_days": 8,
+          "precip_mm": 70,
+          "sunshine_hours": 6,
+          "uv_index_avg": 4,
+          "wind_speed_avg_kmh": 15
+        },
+        {
+          "month": 11,
+          "temp_avg_c": 6,
+          "temp_max_avg_c": 12.0,
+          "temp_min_avg_c": 0.0,
+          "precip_days": 7,
+          "precip_mm": 55,
+          "sunshine_hours": 5,
+          "uv_index_avg": 2,
+          "wind_speed_avg_kmh": 16
+        },
+        {
+          "month": 12,
+          "temp_avg_c": 2,
+          "temp_max_avg_c": 8.0,
+          "temp_min_avg_c": -4.0,
+          "precip_days": 6,
+          "precip_mm": 50,
+          "sunshine_hours": 4,
+          "uv_index_avg": 1,
+          "wind_speed_avg_kmh": 17
+        }
+      ]
+    },
+    {
+      "id": 59,
+      "city": "Burlington",
+      "state": "VT",
+      "iata_code": "BTV",
+      "latitude": 44.48,
+      "longitude": -73.21,
+      "timezone": "America/New_York",
+      "cost_level": 3,
+      "public_transport_score": 3,
+      "walkability_score": 7,
+      "tags": [
+        "nature",
+        "outdoor",
+        "skiing",
+        "food"
+      ],
+      "recommended_stay_days": 4,
+      "destination_type": "nature_gateway",
+      "gateway_airports": [
+        {
+          "iata": "BTV",
+          "priority": 1
+        }
+      ],
+      "requires_car": true,
+      "country": "United States",
+      "country_code": "US",
+      "active": true,
+      "monthly_climate": [
+        {
+          "month": 1,
+          "temp_avg_c": 0,
+          "temp_max_avg_c": 6.0,
+          "temp_min_avg_c": -6.0,
+          "precip_days": 6,
+          "precip_mm": 45,
+          "sunshine_hours": 4,
+          "uv_index_avg": 1,
+          "wind_speed_avg_kmh": 17
+        },
+        {
+          "month": 2,
+          "temp_avg_c": 3,
+          "temp_max_avg_c": 9.0,
+          "temp_min_avg_c": -3.0,
+          "precip_days": 7,
+          "precip_mm": 55,
+          "sunshine_hours": 5,
+          "uv_index_avg": 2,
+          "wind_speed_avg_kmh": 16
+        },
+        {
+          "month": 3,
+          "temp_avg_c": 9,
+          "temp_max_avg_c": 15.0,
+          "temp_min_avg_c": 3.0,
+          "precip_days": 9,
+          "precip_mm": 75,
+          "sunshine_hours": 6.5,
+          "uv_index_avg": 4,
+          "wind_speed_avg_kmh": 15
+        },
+        {
+          "month": 4,
+          "temp_avg_c": 15,
+          "temp_max_avg_c": 21.0,
+          "temp_min_avg_c": 9.0,
+          "precip_days": 9,
+          "precip_mm": 80,
+          "sunshine_hours": 7,
+          "uv_index_avg": 6,
+          "wind_speed_avg_kmh": 13
+        },
+        {
+          "month": 5,
+          "temp_avg_c": 19,
+          "temp_max_avg_c": 25.0,
+          "temp_min_avg_c": 13.0,
+          "precip_days": 10,
+          "precip_mm": 85,
+          "sunshine_hours": 8,
+          "uv_index_avg": 7,
+          "wind_speed_avg_kmh": 12
+        },
+        {
+          "month": 6,
+          "temp_avg_c": 22,
+          "temp_max_avg_c": 28.0,
+          "temp_min_avg_c": 16.0,
+          "precip_days": 10,
+          "precip_mm": 80,
+          "sunshine_hours": 8,
+          "uv_index_avg": 8,
+          "wind_speed_avg_kmh": 12
+        },
+        {
+          "month": 7,
+          "temp_avg_c": 23,
+          "temp_max_avg_c": 29.0,
+          "temp_min_avg_c": 17.0,
+          "precip_days": 10,
+          "precip_mm": 80,
+          "sunshine_hours": 8,
+          "uv_index_avg": 8,
+          "wind_speed_avg_kmh": 12
+        },
+        {
+          "month": 8,
+          "temp_avg_c": 21,
+          "temp_max_avg_c": 27.0,
+          "temp_min_avg_c": 15.0,
+          "precip_days": 10,
+          "precip_mm": 80,
+          "sunshine_hours": 8,
+          "uv_index_avg": 7,
+          "wind_speed_avg_kmh": 13
+        },
+        {
+          "month": 9,
+          "temp_avg_c": 17,
+          "temp_max_avg_c": 23.0,
+          "temp_min_avg_c": 11.0,
+          "precip_days": 9,
+          "precip_mm": 80,
+          "sunshine_hours": 7,
+          "uv_index_avg": 6,
+          "wind_speed_avg_kmh": 14
+        },
+        {
+          "month": 10,
+          "temp_avg_c": 12,
+          "temp_max_avg_c": 18.0,
+          "temp_min_avg_c": 6.0,
+          "precip_days": 8,
+          "precip_mm": 70,
+          "sunshine_hours": 6,
+          "uv_index_avg": 4,
+          "wind_speed_avg_kmh": 15
+        },
+        {
+          "month": 11,
+          "temp_avg_c": 6,
+          "temp_max_avg_c": 12.0,
+          "temp_min_avg_c": 0.0,
+          "precip_days": 7,
+          "precip_mm": 55,
+          "sunshine_hours": 5,
+          "uv_index_avg": 2,
+          "wind_speed_avg_kmh": 16
+        },
+        {
+          "month": 12,
+          "temp_avg_c": 2,
+          "temp_max_avg_c": 8.0,
+          "temp_min_avg_c": -4.0,
+          "precip_days": 6,
+          "precip_mm": 50,
+          "sunshine_hours": 4,
+          "uv_index_avg": 1,
+          "wind_speed_avg_kmh": 17
+        }
+      ]
+    },
+    {
+      "id": 60,
+      "city": "Richmond",
+      "state": "VA",
+      "iata_code": "RIC",
+      "latitude": 37.54,
+      "longitude": -77.44,
+      "timezone": "America/New_York",
+      "cost_level": 2,
+      "public_transport_score": 4,
+      "walkability_score": 6,
+      "tags": [
+        "city",
+        "history",
+        "food",
+        "art"
+      ],
+      "recommended_stay_days": 3,
+      "destination_type": "city",
+      "gateway_airports": [
+        {
+          "iata": "RIC",
+          "priority": 1
+        }
+      ],
+      "requires_car": false,
+      "country": "United States",
+      "country_code": "US",
+      "active": true,
+      "monthly_climate": [
+        {
+          "month": 1,
+          "temp_avg_c": 8,
+          "temp_max_avg_c": 12.5,
+          "temp_min_avg_c": 3.5,
+          "precip_days": 6,
+          "precip_mm": 60,
+          "sunshine_hours": 6,
+          "uv_index_avg": 2,
+          "wind_speed_avg_kmh": 13
+        },
+        {
+          "month": 2,
+          "temp_avg_c": 10,
+          "temp_max_avg_c": 14.5,
+          "temp_min_avg_c": 5.5,
+          "precip_days": 7,
+          "precip_mm": 70,
+          "sunshine_hours": 7,
+          "uv_index_avg": 3,
+          "wind_speed_avg_kmh": 13
+        },
+        {
+          "month": 3,
+          "temp_avg_c": 14,
+          "temp_max_avg_c": 18.5,
+          "temp_min_avg_c": 9.5,
+          "precip_days": 8,
+          "precip_mm": 85,
+          "sunshine_hours": 7.5,
+          "uv_index_avg": 5,
+          "wind_speed_avg_kmh": 12
+        },
+        {
+          "month": 4,
+          "temp_avg_c": 18,
+          "temp_max_avg_c": 22.5,
+          "temp_min_avg_c": 13.5,
+          "precip_days": 8,
+          "precip_mm": 90,
+          "sunshine_hours": 8,
+          "uv_index_avg": 7,
+          "wind_speed_avg_kmh": 11
+        },
+        {
+          "month": 5,
+          "temp_avg_c": 21,
+          "temp_max_avg_c": 25.5,
+          "temp_min_avg_c": 16.5,
+          "precip_days": 9,
+          "precip_mm": 95,
+          "sunshine_hours": 8,
+          "uv_index_avg": 8,
+          "wind_speed_avg_kmh": 11
+        },
+        {
+          "month": 6,
+          "temp_avg_c": 23,
+          "temp_max_avg_c": 27.5,
+          "temp_min_avg_c": 18.5,
+          "precip_days": 9,
+          "precip_mm": 90,
+          "sunshine_hours": 7.5,
+          "uv_index_avg": 9,
+          "wind_speed_avg_kmh": 11
+        },
+        {
+          "month": 7,
+          "temp_avg_c": 23,
+          "temp_max_avg_c": 27.5,
+          "temp_min_avg_c": 18.5,
+          "precip_days": 9,
+          "precip_mm": 90,
+          "sunshine_hours": 7.5,
+          "uv_index_avg": 9,
+          "wind_speed_avg_kmh": 11
+        },
+        {
+          "month": 8,
+          "temp_avg_c": 22,
+          "temp_max_avg_c": 26.5,
+          "temp_min_avg_c": 17.5,
+          "precip_days": 9,
+          "precip_mm": 95,
+          "sunshine_hours": 8,
+          "uv_index_avg": 8,
+          "wind_speed_avg_kmh": 11
+        },
+        {
+          "month": 9,
+          "temp_avg_c": 19,
+          "temp_max_avg_c": 23.5,
+          "temp_min_avg_c": 14.5,
+          "precip_days": 8,
+          "precip_mm": 90,
+          "sunshine_hours": 8,
+          "uv_index_avg": 7,
+          "wind_speed_avg_kmh": 12
+        },
+        {
+          "month": 10,
+          "temp_avg_c": 15,
+          "temp_max_avg_c": 19.5,
+          "temp_min_avg_c": 10.5,
+          "precip_days": 7,
+          "precip_mm": 80,
+          "sunshine_hours": 7.5,
+          "uv_index_avg": 5,
+          "wind_speed_avg_kmh": 13
+        },
+        {
+          "month": 11,
+          "temp_avg_c": 11,
+          "temp_max_avg_c": 15.5,
+          "temp_min_avg_c": 6.5,
+          "precip_days": 6,
+          "precip_mm": 65,
+          "sunshine_hours": 6.5,
+          "uv_index_avg": 3,
+          "wind_speed_avg_kmh": 13
+        },
+        {
+          "month": 12,
+          "temp_avg_c": 9,
+          "temp_max_avg_c": 13.5,
+          "temp_min_avg_c": 4.5,
+          "precip_days": 6,
+          "precip_mm": 60,
+          "sunshine_hours": 6,
+          "uv_index_avg": 2,
+          "wind_speed_avg_kmh": 13
         }
       ]
     }

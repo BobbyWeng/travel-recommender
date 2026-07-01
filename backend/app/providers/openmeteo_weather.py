@@ -5,12 +5,15 @@ from datetime import date, timedelta
 import httpx
 
 from app.providers.base import WeatherProvider
-from app.schemas.search import ClimateAverage, WeatherDay, WeatherResult
+from app.schemas.search import ClimateAverage, DataKind, SourceMetadata, WeatherDay, WeatherResult
 
 
 class OpenMeteoWeatherProvider(WeatherProvider):
     FORECAST_URL = "https://api.open-meteo.com/v1/forecast"
     ARCHIVE_URL = "https://archive-api.open-meteo.com/v1/archive"
+
+    def __init__(self, destination_service=None):
+        self._dest_svc = destination_service
 
     async def get_forecast(
         self, lat: float, lon: float, start_date: date, end_date: date
@@ -41,16 +44,26 @@ class OpenMeteoWeatherProvider(WeatherProvider):
                 resp.raise_for_status()
                 data = resp.json()
         except (httpx.HTTPError, httpx.TimeoutException):
-            return WeatherResult(destination_iata="", days=[], source="open-meteo-unavailable")
+            return WeatherResult(
+                destination_iata="",
+                days=[],
+                source="open-meteo-unavailable",
+                source_metadata=SourceMetadata(provider="open-meteo", data_kind=DataKind.UNAVAILABLE),
+            )
 
-        return self._parse_daily_response(data, "open-meteo")
+        return self._parse_daily_response(data, "open-meteo", DataKind.LIVE)
 
     async def _get_climate_forecast(
         self, lat: float, lon: float, start_date: date, end_date: date
     ) -> WeatherResult:
         climate = await self.get_climate_average(lat, lon, start_date.month)
         if not climate:
-            return WeatherResult(destination_iata="", days=[], source="open-meteo-climate-unavailable")
+            return WeatherResult(
+                destination_iata="",
+                days=[],
+                source="open-meteo-climate-unavailable",
+                source_metadata=SourceMetadata(provider="open-meteo", data_kind=DataKind.UNAVAILABLE),
+            )
 
         days = []
         current = start_date
@@ -66,21 +79,29 @@ class OpenMeteoWeatherProvider(WeatherProvider):
                     uv_index=climate.uv_index_avg,
                     weather_code=0,
                     source="open-meteo-climate",
+                    source_metadata=SourceMetadata(provider="open-meteo", data_kind=DataKind.HISTORICAL),
                 )
             )
             current += timedelta(days=1)
 
-        return WeatherResult(destination_iata="", days=days, source="open-meteo-climate")
+        return WeatherResult(
+            destination_iata="",
+            days=days,
+            source="open-meteo-climate",
+            source_metadata=SourceMetadata(provider="open-meteo", data_kind=DataKind.HISTORICAL),
+        )
 
     async def get_climate_average(self, lat: float, lon: float, month: int) -> ClimateAverage | None:
-        from app.services.destination_service import DestinationService
-        from pathlib import Path
+        dest_svc = self._dest_svc
+        if dest_svc is None:
+            from app.services.destination_service import DestinationService
+            from pathlib import Path
 
-        data_path = Path(__file__).parent.parent.parent.parent / "data" / "destinations.json"
-        if not data_path.exists():
-            return None
+            data_path = Path(__file__).parent.parent.parent.parent / "data" / "destinations.json"
+            if not data_path.exists():
+                return None
+            dest_svc = DestinationService(str(data_path))
 
-        dest_svc = DestinationService(str(data_path))
         for d in dest_svc.get_all_destinations():
             if abs(d.latitude - lat) < 1.0 and abs(d.longitude - lon) < 1.0:
                 climate = dest_svc.get_climate(d.id, month)
@@ -99,7 +120,7 @@ class OpenMeteoWeatherProvider(WeatherProvider):
                     )
         return None
 
-    def _parse_daily_response(self, data: dict, source: str) -> WeatherResult:
+    def _parse_daily_response(self, data: dict, source: str, data_kind: DataKind) -> WeatherResult:
         daily = data.get("daily", {})
         dates = daily.get("time", [])
         temp_max = daily.get("temperature_2m_max", [])
@@ -109,6 +130,8 @@ class OpenMeteoWeatherProvider(WeatherProvider):
         wind_max = daily.get("wind_speed_10m_max", [])
         uv_max = daily.get("uv_index_max", [])
         weather_code = daily.get("weather_code", [])
+
+        metadata = SourceMetadata(provider="open-meteo", data_kind=data_kind)
 
         days = []
         for i in range(len(dates)):
@@ -128,10 +151,11 @@ class OpenMeteoWeatherProvider(WeatherProvider):
                     uv_index=self._safe_float(uv_max, i),
                     weather_code=self._safe_int(weather_code, i),
                     source=source,
+                    source_metadata=metadata,
                 )
             )
 
-        return WeatherResult(destination_iata="", days=days, source=source)
+        return WeatherResult(destination_iata="", days=days, source=source, source_metadata=metadata)
 
     @staticmethod
     def _safe_float(arr: list, idx: int) -> float:

@@ -4,7 +4,7 @@ from datetime import date, timedelta
 
 from app.core.config import settings
 from app.providers.base import FlightProvider
-from app.schemas.search import FlightResult
+from app.schemas.search import FlightResult, SourceMetadata, DataKind
 
 _HUB_AIRPORTS = {
     "ATL", "DFW", "DEN", "ORD", "LAX", "CLT", "LAS", "PHX", "MIA",
@@ -84,6 +84,7 @@ class MockFlightProvider(FlightProvider):
             total_duration_min=max(total_duration_min, 60),
             airline=airline,
             source="mock",
+            source_metadata=SourceMetadata(provider="mock", data_kind=DataKind.MOCK),
         )
 
     async def search_cheapest_dates(

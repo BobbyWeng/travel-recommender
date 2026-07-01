@@ -1,0 +1,39 @@
+services:
+  - type: web
+    name: travel-recommender-api
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn app.main:app --host 0.0.0.0 --port $PORT
+    rootDir: backend
+    envVars:
+      - key: APP_ENV
+        value: production
+      - key: ALLOW_MOCK_FALLBACK
+        value: "false"
+      - key: CORS_ORIGINS
+        sync: false
+      - key: DATABASE_URL
+        sync: false
+      - key: OPEN_METEO_BASE_URL
+        value: https://archive-api.open-meteo.com
+      - key: LLM_API_KEY
+        sync: false
+      - key: LLM_BASE_URL
+        sync: false
+      - key: LLM_MODEL
+        value: gemini-flash-latest
+      - key: LLM_API_TYPE
+        value: gemini
+      - key: AMADEUS_CLIENT_ID
+        sync: false
+      - key: AMADEUS_CLIENT_SECRET
+        sync: false
+      - key: AMADEUS_ENV
+        value: sandbox
+      - key: DUFFEL_ACCESS_TOKEN
+        sync: false
+      - key: DUFFEL_ENABLED
+        value: "false"
+      - key: FLIGHT_PROVIDER
+        value: auto
+    healthCheckPath: /health

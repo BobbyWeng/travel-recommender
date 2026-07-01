@@ -17,6 +17,7 @@ interface SearchFormProps {
     avoidHotWeather: boolean;
     avoidColdWeather: boolean;
     noCarRental: boolean;
+    domesticOnly: boolean;
   }) => void;
   isLoading?: boolean;
 }
@@ -34,6 +35,7 @@ export default function SearchForm({ onSearch, isLoading }: SearchFormProps) {
   const [avoidHotWeather, setAvoidHotWeather] = useState(true);
   const [avoidColdWeather, setAvoidColdWeather] = useState(false);
   const [noCarRental, setNoCarRental] = useState(true);
+  const [domesticOnly, setDomesticOnly] = useState(true);
   const [showAdvanced, setShowAdvanced] = useState(false);
 
   const togglePreference = (val: string) => {
@@ -57,6 +59,7 @@ export default function SearchForm({ onSearch, isLoading }: SearchFormProps) {
       avoidHotWeather,
       avoidColdWeather,
       noCarRental,
+      domesticOnly,
     });
   };
 
@@ -249,7 +252,17 @@ export default function SearchForm({ onSearch, isLoading }: SearchFormProps) {
               />
               <span className="text-sm text-gray-700">不租车</span>
             </label>
+            <label className="flex items-center gap-2 cursor-pointer">
+              <input
+                type="checkbox"
+                checked={domesticOnly}
+                onChange={(e) => setDomesticOnly(e.target.checked)}
+                className="w-4 h-4 text-blue-600 rounded"
+              />
+              <span className="text-sm text-gray-700">仅美国国内</span>
+            </label>
           </div>
+          <div className="text-xs text-gray-400 mt-1">当前数据集以美国目的地为主</div>
         </div>
       )}
 

@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { naturalLanguageSearch } from "@/lib/api";
-import type { NaturalLanguageSearchResponse, SearchRequest } from "@/lib/types";
+import type { NaturalLanguageSearchResponse, SearchRequest, APIError } from "@/lib/types";
 
 interface NaturalLanguageSearchProps {
   onSearchResult: (response: NaturalLanguageSearchResponse) => void;
@@ -38,7 +38,7 @@ export default function NaturalLanguageSearch({
         setError(result.parse_error);
       }
     } catch (err) {
-      setError(err instanceof Error ? err.message : "搜索失败");
+      setError((err as APIError)?.message || (err instanceof Error ? err.message : "搜索失败"));
     } finally {
       setIsLoading(false);
     }

@@ -1,11 +1,129 @@
 "use client";
 
 import type { ScoredDestination } from "@/lib/types";
-import { formatPrice, formatDate } from "@/lib/utils";
+import { formatPrice, formatDate, dataKindLabel } from "@/lib/utils";
+
+type CompareMetric = {
+  label: string;
+  getValue: (item: ScoredDestination) => number | string | null;
+  better: "higher" | "lower" | "none";
+  format?: (value: number | string | null) => string;
+  key: string;
+};
 
 interface ComparePanelProps {
   destinations: ScoredDestination[];
   onRemove: (id: number) => void;
+}
+
+const metrics: CompareMetric[] = [
+  {
+    label: "日期",
+    key: "date",
+    better: "none",
+    getValue: (d) => `${formatDate(d.departure_date)} ~ ${formatDate(d.return_date)} (${d.nights}晚)`,
+  },
+  {
+    label: "总分",
+    key: "score",
+    better: "higher",
+    getValue: (d) => d.total_score,
+  },
+  {
+    label: "机票",
+    key: "flight_price",
+    better: "lower",
+    getValue: (d) => d.flight_price,
+  },
+  {
+    label: "酒店",
+    key: "hotel_price",
+    better: "lower",
+    getValue: (d) => d.hotel_price,
+  },
+  {
+    label: "总计",
+    key: "estimated_total",
+    better: "lower",
+    getValue: (d) => d.estimated_total,
+  },
+  {
+    label: "天气",
+    key: "weather_summary",
+    better: "none",
+    getValue: (d) => d.weather_summary,
+  },
+  {
+    label: "机票评分",
+    key: "scores.flight",
+    better: "higher",
+    getValue: (d) => d.scores.flight,
+  },
+  {
+    label: "酒店评分",
+    key: "scores.hotel",
+    better: "higher",
+    getValue: (d) => d.scores.hotel,
+  },
+  {
+    label: "天气评分",
+    key: "scores.weather",
+    better: "higher",
+    getValue: (d) => d.scores.weather,
+  },
+  {
+    label: "偏好匹配",
+    key: "scores.preference_match",
+    better: "higher",
+    getValue: (d) => d.scores.preference_match,
+  },
+  {
+    label: "交通评分",
+    key: "scores.transport",
+    better: "higher",
+    getValue: (d) => d.scores.transport,
+  },
+  {
+    label: "活动评分",
+    key: "scores.activities",
+    better: "higher",
+    getValue: (d) => d.scores.activities,
+  },
+  {
+    label: "航班数据类型",
+    key: "flight_data_kind",
+    better: "none",
+    getValue: (d) => dataKindLabel(d.flight_data_kind) || "-",
+  },
+  {
+    label: "酒店数据类型",
+    key: "hotel_data_kind",
+    better: "none",
+    getValue: (d) => dataKindLabel(d.hotel_data_kind) || "-",
+  },
+  {
+    label: "天气数据类型",
+    key: "weather_data_kind",
+    better: "none",
+    getValue: (d) => dataKindLabel(d.weather_data_kind) || "-",
+  },
+];
+
+function renderMetricValue(metric: CompareMetric, d: ScoredDestination): React.ReactNode {
+  const val = metric.getValue(d);
+  if (metric.key === "score" && typeof val === "number") {
+    return <span className="font-bold text-lg">{val.toFixed(1)}</span>;
+  }
+  if ((metric.key === "flight_price" || metric.key === "hotel_price") && typeof val === "number") {
+    return val === 0 ? <span className="text-gray-400 text-xs">暂无数据</span> : formatPrice(val);
+  }
+  if (metric.key === "estimated_total" && typeof val === "number") {
+    return <span className="font-bold text-blue-700">{formatPrice(val)}</span>;
+  }
+  if (metric.key.startsWith("scores.") && typeof val === "number") {
+    return val.toFixed(0);
+  }
+  return String(val ?? "");
 }
 
 export default function ComparePanel({
@@ -14,29 +132,33 @@ export default function ComparePanel({
 }: ComparePanelProps) {
   if (destinations.length < 2) return null;
 
-  const rows: { label: string; key: string; render: (d: ScoredDestination) => React.ReactNode }[] = [
-    { label: "日期", key: "date", render: (d) => `${formatDate(d.departure_date)} ~ ${formatDate(d.return_date)} (${d.nights}晚)` },
-    { label: "总分", key: "score", render: (d) => <span className="font-bold text-lg">{d.total_score.toFixed(1)}</span> },
-    { label: "机票", key: "flight", render: (d) => formatPrice(d.flight_price) },
-    { label: "酒店", key: "hotel", render: (d) => formatPrice(d.hotel_price) },
-    { label: "总计", key: "total", render: (d) => <span className="font-bold text-blue-700">{formatPrice(d.estimated_total)}</span> },
-    { label: "天气", key: "weather", render: (d) => d.weather_summary },
-    { label: "机票评分", key: "s_flight", render: (d) => d.scores.flight.toFixed(0) },
-    { label: "酒店评分", key: "s_hotel", render: (d) => d.scores.hotel.toFixed(0) },
-    { label: "天气评分", key: "s_weather", render: (d) => d.scores.weather.toFixed(0) },
-    { label: "偏好匹配", key: "s_pref", render: (d) => d.scores.preference_match.toFixed(0) },
-    { label: "交通评分", key: "s_transport", render: (d) => d.scores.transport.toFixed(0) },
-    { label: "活动评分", key: "s_activity", render: (d) => d.scores.activities.toFixed(0) },
-  ];
-
-  const getBest = (key: string): number => {
-    const vals = destinations.map((d) => {
-      const scoreKey = key.startsWith("s_") ? key.slice(2) : key;
-      if (key === "score" || key.startsWith("s_")) return d.scores[scoreKey as keyof typeof d.scores] as number;
-      if (key === "total" || key === "flight" || key === "hotel") return -d[key as keyof typeof d] as number;
-      return d.total_score;
+  const getBest = (metric: CompareMetric): number => {
+    if (metric.better === "none") return -1;
+    const numericVals = destinations.map((d) => {
+      const v = metric.getValue(d);
+      return typeof v === "number" ? v : null;
     });
-    return vals.indexOf(Math.max(...vals));
+    if (numericVals.every((v) => v === null)) return -1;
+    if (metric.better === "lower") {
+      let minVal = Infinity;
+      let minIdx = -1;
+      numericVals.forEach((v, i) => {
+        if (v !== null && v < minVal) {
+          minVal = v;
+          minIdx = i;
+        }
+      });
+      return minIdx;
+    }
+    let maxVal = -Infinity;
+    let maxIdx = -1;
+    numericVals.forEach((v, i) => {
+      if (v !== null && v > maxVal) {
+        maxVal = v;
+        maxIdx = i;
+      }
+    });
+    return maxIdx;
   };
 
   return (
@@ -69,11 +191,11 @@ export default function ComparePanel({
             </tr>
           </thead>
           <tbody>
-            {rows.map((row) => {
-              const bestIdx = getBest(row.key);
+            {metrics.map((metric) => {
+              const bestIdx = getBest(metric);
               return (
-                <tr key={row.key} className="border-b border-gray-50">
-                  <td className="py-2 pr-4 text-gray-500">{row.label}</td>
+                <tr key={metric.key} className="border-b border-gray-50">
+                  <td className="py-2 pr-4 text-gray-500">{metric.label}</td>
                   {destinations.map((d, i) => (
                     <td
                       key={d.destination_id}
@@ -81,7 +203,7 @@ export default function ComparePanel({
                         i === bestIdx ? "bg-emerald-50 font-medium" : ""
                       }`}
                     >
-                      {row.render(d)}
+                      {renderMetricValue(metric, d)}
                     </td>
                   ))}
                 </tr>
